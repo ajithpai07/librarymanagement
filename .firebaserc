@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "takshashila-lib",
+    "staging": "takshashila-lib"
+  }
+}
