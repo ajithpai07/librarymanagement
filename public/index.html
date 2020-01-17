@@ -3,33 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Online</title>
+    <title>Firebase Phone Authentication</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
-      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
+ <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
+
+ 
+ <script>
+   // Your web app's Firebase configuration
+   var firebaseConfig = {
+     apiKey: "AIzaSyD785HpCFg_dudUjcuTy66k3mQ-zNXQgA4",
+     authDomain: "takshashila-lib.firebaseapp.com",
+     databaseURL: "https://takshashila-lib.firebaseio.com",
+     projectId: "takshashila-lib",
+     storageBucket: "takshashila-lib.appspot.com",
+     messagingSenderId: "100677328500",
+     appId: "1:100677328500:web:b9c9a4bb54f7af77463b21",
+     measurementId: "G-PW6GQEYMM9"
+   };
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+  
+
+ </script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+  <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+ 
     </style>
   </head>
   <body>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-
-    
-    
-      <button>Login Management</button>
-      <button>Wallet Management</button>
-      <button>Booking Management</button>
-      <button>Profile Management</button>
+   <div id="container">
+    <h3>Firebase Phone Number Auth. Demo</h3>
+    <div id="loading">Loading...</div>
+    <div id="loaded" class="hidden">
+      <div id="main">
+        <div id="user-signed-in" class="hidden">
+          <div id="user-info">
+            <div id="photo-container">
+              <img id="photo">
+            </div>
+            <div id="name"></div>
+            <div id="email"></div>
+            <div id="phone"></div>
+            <div class="clearfix"></div>
+          </div>
+          <p>
+            <button id="sign-out">Sign Out</button>
+            <button id="delete-account">Delete account</button>
+          </p>
+        </div>
+        <div id="user-signed-out" class="hidden">
+          <h4>You are signed out.</h4>
+          <div id="firebaseui-spa">
+            <h3>Single Page App mode:</h3>
+            <div id="firebaseui-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
 
 
   </body>
