@@ -39,7 +39,11 @@ var handleSignedOutUser = function() {
   document.getElementById('user-signed-out').style.display = 'block';
   ui.start('#firebaseui-container', getUiConfig());
 };
-
+firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    window.location = 'registeration.html'; //After successful login, user will be redirected to registeration.html
+  }
+});
 firebase.auth().onAuthStateChanged(function(user) {
   document.getElementById('loading').style.display = 'none';
   document.getElementById('loaded').style.display = 'block';
