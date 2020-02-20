@@ -3,7 +3,8 @@
     <head>
         <title>Login-Page</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/css3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/str1.css">
     </head>
     <body>
         <div class="header">
@@ -20,10 +21,66 @@
                 <input class="un" type="text" align="center" placeholder="Username" required>
                 <input class="pass" type="password" align="center" placeholder="Password" required>
                 <input type="submit" name="Submit" value="LOGIN" class="submit">
-                </form>
-                <a href="signin.html" align="center">Login with other Option</a>
+            </form>
+            <a class="login-links-left" href="#">Forgot Password</a>
+            <a class="login-links-right" href="#">New User? Sign Up</a>
+
+
+
+            <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
+
+ 
+ <script>
+   // Your web app's Firebase configuration
+   var firebaseConfig = {
+     apiKey: "AIzaSyD785HpCFg_dudUjcuTy66k3mQ-zNXQgA4",
+     authDomain: "takshashila-lib.firebaseapp.com",
+     databaseURL: "https://takshashila-lib.firebaseio.com",
+     projectId: "takshashila-lib",
+     storageBucket: "takshashila-lib.appspot.com",
+     messagingSenderId: "100677328500",
+     appId: "1:100677328500:web:b9c9a4bb54f7af77463b21",
+     measurementId: "G-PW6GQEYMM9"
+   };
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+  
+
+ </script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+ <link href="manifest.json" rel="manifest">
+    </style>
+  </head>
+  <div id="container">
+    <h3>Other Sign In Options</h3>
+    <div id="loading">Loading...</div>
+    <div id="loaded" class="hidden">
+      <div id="main">
+        <div id="user-signed-in" class="hidden">
+          <div id="user-info">
+            <div id="phone"></div>
+            <div class="clearfix"></div>
+          </div>
+          <p>
+            <button id="sign-out">Sign Out</button>
+          </p>
         </div>
-        
+        <div id="user-signed-out" class="hidden">
+          <div id="firebaseui-spa">
+            <div id="firebaseui-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+            
+
+
+
+        </div>
         <div class="footer">
             <div class="footer-cright">
                 <p>&#169 Takshashila Library 2020</p>
