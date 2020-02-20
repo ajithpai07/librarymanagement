@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/regstyle.css" />
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <form action="" method="POST" id="registrationform">
+    <h1>Register</h1>
+    <div class="alert">Message Sent</div>
+    <fieldset>
+      <!-- Section 1 -->
+      <legend><span class="section">1</span>Your Basic Info</legend>
+      <label class="" for="name">Name:</label>
+      <input type="text" name="name" value="" id="name" required />
+
+      <label class="" for="email">Email:</label>
+      <input type="email" name="email" value="" id="email" required />
+
+      <label for="password">password:</label>
+      <input type="password" name="password" value="" id="password" required />
+    </fieldset>
+
+    <fieldset>
+      <!-- section 2 -->
+      <legend><span class="section">2</span>Profile</legend>
+
+      <label class="" for="bio">Bio:</label>
+      <textarea name="bio" id="bio" required></textarea>
+
+      <label for="job">Job Role:</label>
+      <select name="job" id="job" required>
+        <optgroup label="Web">
+          <option value="front_end_developer" id="frontend">Frontend Developer</option>
+          <option value="back_end_developer" id="backend">Backend Developer</option>
+          <option value="fullstack_developer" id="fullstack">Fullstack Developer</option>
+        </optgroup>
+        <optgroup label="Mobile">
+          <option value="android" id="android">Android</option>
+          <option value="ionic" id="ionic">Ionic</option>
+          <option value="phonegap" id="phonegap">PhoneGap</option>
+        </optgroup>
+      </select>
+      <br /><br />
+      <label>Interest:</label>
+
+      <select id="interest" required>
+        <option value="development">Development</option>
+        <option value="design">Design</option>
+        <option value="business">Business</option>
+      </select>
+
+
+      <button type="submit" sendMessage()>Register</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
