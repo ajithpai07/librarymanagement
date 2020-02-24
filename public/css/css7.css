@@ -79,8 +79,8 @@ li {
     padding-right: 70px;
     background-color: black;
     width: 350px;
-    height: 950px;
-    border: 4px solid orange;    
+    height: 1800px;
+    border: 4px solid #be5504;    
     margin: 100px auto;
     border-radius: 30px;
 }
@@ -92,7 +92,7 @@ form {
     margin: auto;
     max-width: 300px;
     background: black;
-    color: orange;
+    color: #be5504;
   }
   
   input[type="text"],
@@ -147,7 +147,7 @@ form {
   }
   
   .number {
-    background-color: orange;
+    background-color: #be5504;
     color:black;
     height: 30px;
     width: 30px;
@@ -162,7 +162,7 @@ form {
   .submit {
     border-radius: 5em;
     color: #fff;
-    background: orange;
+    background: #be5504;
     border: 0;
     padding-left: 50px;
     padding-right: 50px;
@@ -170,6 +170,25 @@ form {
     padding-top: 10px;
     margin-left: 35%;
     font-size: 15px;
+}
+
+.slct:focus{
+  border: 4px solid #003355;  
+  color: #FFA07A;      
+}
+
+.slct-img{  
+    border-radius: 30px;
+    border: 4px solid grey; 
+    background-color: black;
+    border-color: grey;
+    color: #FFA07A;
+    width:115%;
+}
+
+.slct-img:focus{
+  border: 4px solid #003355;  
+  color: #EF7215;      
 }
   
 @media screen and (min-width: 480px) {
