@@ -83,7 +83,7 @@ li {
     padding-right: 80px;
     background-color: black;
     width: 300px;
-    height: 300px;
+    height: 180px;
     border: 4px solid rgb(6, 116, 79);    
     margin: 6em auto;
     border-radius: 1.5em;
@@ -93,12 +93,12 @@ li {
 
 
 .un {
-    width: 86%;
-    color: black;
+    width: 100%;
+    color: rgb(6, 116, 79);
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    background: white;
+    background: black;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -106,7 +106,7 @@ li {
     box-sizing: border-box;
     border: 4px solid grey;
     margin-bottom: 50px;
-    margin-left: 28px;
+    margin-left: 5px;
     text-align: center;
     margin-bottom: 27px;
     }
@@ -116,12 +116,12 @@ li {
     }
     
     .pass {
-    width: 86%;
-    color: black;
+    width: 100%;
+    color: rgb(6, 116, 79);
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    background: white;
+    background: black;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -129,14 +129,15 @@ li {
     box-sizing: border-box;
     border: 4px solid grey;
     margin-bottom: 50px;
-    margin-left: 28px;
+    margin-left: 5px;
     text-align: center;
     margin-bottom: 27px;
     }
     
    
     .un:focus, .pass:focus {
-        border: 4px solid rgb(6, 116, 79) !important;        
+        border: 4px solid #003355;  
+        color: rgb(6, 116, 79);      
     }
     
     .submit {
@@ -191,3 +192,70 @@ li {
     padding-left: 30px;
     padding-right: 20px;
 }
+
+/*Other Login Options Button*/
+
+.glow-on-hover {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-left: 60px;
+    width: 180px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: rgb(6, 116, 79);
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, green, lightgreen, #06744F);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 10s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .glow-on-hover:active {
+    color: #000
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  

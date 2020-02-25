@@ -39,11 +39,7 @@
         height: 90px;        
         border: 2px solid white; 
     }
-
-    /*.header:hover{
-        background-color: #000000;
-    }*/
-
+    
     .header-logo {
         font-weight: bolder;
         float: left;
@@ -64,10 +60,20 @@
         text-decoration: none ;
         color: white;
     }
-
+    
+    .active a{
+        text-decoration: none ;
+        color: orange;
+    }
+    
     .header-menu a:hover{
         text-decoration: none ;
         color: orange;
+    }
+    
+    .active a:hover{
+        text-decoration: none ;
+        color: red;
     }
     
     .main {
