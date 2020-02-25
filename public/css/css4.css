@@ -113,20 +113,38 @@ li {
     color: grey;
 }
 
+.main-profile h2{    
+    font-weight: 600;    
+    font-size: 35px;
+    color: grey;
+}
+
 .main-profile h3{    
     color: white;
     font-weight: normal;    
-    font-size: large;
+    font-size: 30px;
 }
 
 .main-profile span{
-    color: red;    
+    color: orangered;    
     font-weight: normal;
-    font-size: larger;
+    font-size: 30px;
+}
+
+.main-profile p{
+    color: skyblue;    
+    font-weight: 200;
+    font-size: 25px;
 }
 
 .show-profile{
     margin-left: 270px;
+    color: grey;
+}
+
+.show-profile h2{    
+    font-weight: 600;    
+    font-size: 35px;
     color: grey;
 }
 
@@ -137,7 +155,7 @@ li {
 }
 
 .show-profile span{
-    color: red;    
+    color: orangered;    
     font-weight: normal;
     font-size: larger;
 }
