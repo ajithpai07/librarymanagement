@@ -132,6 +132,7 @@ li {
 }
 
 .main-profile p{
+    text-align: justify;
     color: skyblue;    
     font-weight: 200;
     font-size: 25px;
