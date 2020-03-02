@@ -37,8 +37,15 @@ body {
     padding-bottom: 5px;
     font-size: 30px;
     color: black;
-    background-color: yellowgreen;
+    background-color: yellow;
     font-weight: 400;
+    outline-style: dashed;    
+    outline-color: blue;
+}
+
+span{
+  color: blue;
+  font-weight: bolder;
 }
 
 .footer {
