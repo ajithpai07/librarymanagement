@@ -25,11 +25,11 @@
                   <label>Date Of Birth</label>
                   <input type="date" class="slct" required>
                   <label>E-mail</label>
-                  <input type="text" class="slct" required>
+                  <input type="email" class="slct" required>
                   <label>Phone Number</label>
-                  <input type="email" class="slct" required>  
+                  <input type="text" class="slct" pattern=".{10}" required title="Exactly 10 digits are required">  
                   <label>New Password</label>
-                  <input type="password" class="slct" required>
+                  <input type="password" class="slct" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required title="Password must be of 8 to 16 characters including 1 uppercase letter, 1 lowercase letter and numeric characters">
                   <label>Upload Your Selfie</label>
                   <input type="file" class="slct-img" accept="image/*">
                 </fieldset>     
@@ -43,7 +43,7 @@
                   <label>City</label>
                   <input type="text" class="slct" required>
                   <label>Postal code</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" pattern=".{6}" required title="Exactly 6 digits are required">
                 </fieldset>      
                 
                 <fieldset>
@@ -98,7 +98,7 @@
                         <option value="driving license">Driving license</option>
                     </select>
                     <label>KYC id number</label>
-                    <input type="text" class="slct" required>
+                    <input type="text" class="slct" pattern=".{14}" required title="Exactly 14 characters are required">
                     <label for="img">KYC document image</label>
                     <input type="file" class="slct-img" accept="image/*">
                 </fieldset> 
