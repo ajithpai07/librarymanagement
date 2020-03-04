@@ -29,7 +29,7 @@ signupForm.addEventListener('submit',(e) =>{
   const Kycid=signupForm['Kycid'].value;
   const Kycimg=signupForm['Kycimg'].value;
 
-  db.collection('users').add({
+  db.collection('Users').add({
     
     name: name,
     Dob: Dob,
