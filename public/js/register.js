@@ -44,5 +44,5 @@ signupForm.addEventListener('submit',(e) =>{
     console.log(cred.user.uid);
   });
   
-  signupForm.reset();
+  window.location="8_clogin.html"
 });
