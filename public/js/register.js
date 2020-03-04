@@ -31,6 +31,20 @@ signupForm.addEventListener('submit',(e) =>{
   const p3=signupForm['p3'].value;
   const Kycid=signupForm['Kycid'].value;
   const Kycimg=signupForm['Kycimg'].value;
+<<<<<<< HEAD
+=======
+
+  db.collection('Users').add({
+    
+    name: name,
+    Dob: Dob,
+    email: email,
+    phno: phno,
+    password: password,
+    KYCtype: KYCtype,
+    Kycid: Kycid
+  });
+>>>>>>> 9bf6859d3f736bb87ab1bb51d823e5d5dd2a9870
   
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
     //signing user in
@@ -68,5 +82,9 @@ signupForm.addEventListener('submit',(e) =>{
       console.log('User signedout')
     });
   });
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9bf6859d3f736bb87ab1bb51d823e5d5dd2a9870
   window.location="8_clogin.html"
 });
