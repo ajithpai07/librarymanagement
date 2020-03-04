@@ -26,23 +26,47 @@ signupForm.addEventListener('submit',(e) =>{
   const phno=signupForm['phno'].value;
   const password=signupForm['password'].value;
   const KYCtype=signupForm['KYCtype'].value;
+  const p1=signupForm['p1'].value;
+  const p2=signupForm['p2'].value;
+  const p3=signupForm['p3'].value;
   const Kycid=signupForm['Kycid'].value;
   const Kycimg=signupForm['Kycimg'].value;
-
-  db.collection('users').add({
-    
-    name: name,
-    Dob: Dob,
-    email: email,
-    phno: phno,
-    password: password,
-    KYCtype: KYCtype,
-    Kycid: Kycid
-  });
   
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
-    console.log(cred.user.uid);
+    //signing user in
+    auth.signInWithEmailAndPassword(email, password).then(function(user){
+      if(user){
+        auth.onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            userId=user.uid;
+            db.collection('Users').doc(userId).set({
+              name: name,
+              Dob: Dob,
+              email: email,
+              phno: phno,
+              password: password,
+              p1: p1,
+              p2: p2,
+              p3: p3,
+              KYCtype: KYCtype,
+              Kycid: Kycid
+            });
+          }
+          else{
+            //no user signed in
+          }
+        });
+        
+      }
+      
+    })
+    .catch(function(error){
+      console.log(error.message);
+    });
+    auth.signOut().then(() => {
+      console.log('User signedout')
+    });
   });
-  
-  signupForm.reset();
+  window.location="8_clogin.html"
 });
