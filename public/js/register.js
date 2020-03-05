@@ -31,29 +31,16 @@ signupForm.addEventListener('submit',(e) =>{
   const p3=signupForm['p3'].value;
   const Kycid=signupForm['Kycid'].value;
   const Kycimg=signupForm['Kycimg'].value;
-<<<<<<< HEAD
-=======
-
-  db.collection('Users').add({
-    
-    name: name,
-    Dob: Dob,
-    email: email,
-    phno: phno,
-    password: password,
-    KYCtype: KYCtype,
-    Kycid: Kycid
-  });
->>>>>>> 9bf6859d3f736bb87ab1bb51d823e5d5dd2a9870
-  
+ 
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
     //signing user in
-    auth.signInWithEmailAndPassword(email, password).then(function(user){
+    console.log("nothing");
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
       if(user){
-        auth.onAuthStateChanged(function(user) {
+        firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
-            userId=user.uid;
+            const userId=user.uid;
             db.collection('Users').doc(userId).set({
               name: name,
               Dob: Dob,
@@ -73,18 +60,12 @@ signupForm.addEventListener('submit',(e) =>{
         });
         
       }
-      
     })
     .catch(function(error){
       console.log(error.message);
     });
-    auth.signOut().then(() => {
-      console.log('User signedout')
-    });
+  })
+  .catch(function(error){
+    console.log(error.message);
   });
-<<<<<<< HEAD
-=======
-  
->>>>>>> 9bf6859d3f736bb87ab1bb51d823e5d5dd2a9870
-  window.location="8_clogin.html"
 });
