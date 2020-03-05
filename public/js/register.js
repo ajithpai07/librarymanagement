@@ -31,7 +31,12 @@ signupForm.addEventListener('submit',(e) =>{
   const p3=signupForm['p3'].value;
   const Kycid=signupForm['Kycid'].value;
   const Kycimg=signupForm['Kycimg'].value;
+<<<<<<< HEAD
  
+=======
+
+  
+>>>>>>> ce316d93fe36bcc27ae33e3d36737cc40ae6da6f
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
     //signing user in
     console.log("nothing");
@@ -68,4 +73,9 @@ signupForm.addEventListener('submit',(e) =>{
   .catch(function(error){
     console.log(error.message);
   });
+<<<<<<< HEAD
+=======
+  
+  window.location="8_clogin.html"
+>>>>>>> ce316d93fe36bcc27ae33e3d36737cc40ae6da6f
 });
