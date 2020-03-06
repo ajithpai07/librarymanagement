@@ -5,13 +5,15 @@
         <meta charset="UTF-8">
         <link rel="icon" type="image/icon type" href="\logo_tbar.png">
         <link rel="stylesheet" href="css/css2.css">
+                  
+        
     </head>
     <body>
         <div class="header">
             <div class="header-logo">Takshashila Library</div>
             <div class="header-menu">
                 <ul>
-                    <li><p href="#" class="button button3">Logout</p></li>
+                    <li><input  class="button button3" id="logout" value="Logout" type="submit"></li>
                     <li><a href="#">Booking</a></li>
                     <li><a href="#">Wallet</a></li>
                     <li><a href="#">Profile management</a></li>
@@ -55,5 +57,11 @@
                 </address>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+        <script src="js/logout.js"></script>
     </body>
 </html>
