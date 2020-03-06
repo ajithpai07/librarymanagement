@@ -37,13 +37,13 @@
                 <fieldset>
                   <legend><span class="number">2</span>Address details</legend>
                   <label>Door No</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" id="dno" required>
                   <label>Street name</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" id="strtname" required>
                   <label>City</label>
-                  <input type="text" class="slct" required>
+                  <input type="text" class="slct" id="City" required>
                   <label>Postal code</label>
-                  <input type="text" class="slct" pattern=".{6}" required title="Exactly 6 digits are required">
+                  <input type="text" class="slct" id="pcode" pattern=".{6}" required title="Exactly 6 digits are required">
                 </fieldset>      
                 
                 <fieldset>
@@ -96,13 +96,9 @@
                         <option value="aadhaar">Aadhaar card</option>
                     </select>
                     <label>KYC id number</label>
-<<<<<<< HEAD
-                    <input type="text" class="slct" pattern=".{12}" required title="Exactly 12 characters are required">
-=======
                     <input type="text" class="slct" pattern="(?=.*\d)(?=.*[a-z])(?=.*[a-z]).{12}" required title="Exactly 12 digits are required">
->>>>>>> ff14a19ebfcf9a0bf0c56cfb1cf12390e57c836b
-                    <label for="img">KYC document image</label>
-                    <input type="file" class="slct-img" accept="image/*">
+                    <!-- <label for="img">KYC document image</label>
+                    <input type="file" class="slct-img" accept="image/*"> -->
                 </fieldset> 
                 
                 <input type="submit" value="Sign Up" class="submit">

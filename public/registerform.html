@@ -31,9 +31,21 @@
                   <label>New Password</label>
                   <input type="password" class="slct" id="password" required>
                 </fieldset>          
-                                        
+                           
                 <fieldset>
-                    <legend><span class="number">2</span>Book preferences</legend>
+                    <legend><span class="number">2</span>Address details</legend>
+                    <label>Door No</label>
+                    <input type="text" class="slct" id="dno" required>
+                    <label>Street name</label>
+                    <input type="text" class="slct" id="strtname" required>
+                    <label>City</label>
+                    <input type="text" class="slct" id="City" required>
+                    <label>Postal code</label>
+                    <input type="text" class="slct" id="pcode" pattern=".{6}" required title="Exactly 6 digits are required">
+                  </fieldset>
+
+                <fieldset>
+                    <legend><span class="number">3</span>Book preferences</legend>
                     <label>Preference - 1</label>
                     <select class="slct" id="p1" required>
                         <option value="historical fiction">Historical fiction</option>
@@ -76,7 +88,7 @@
                 </fieldset>      
                 
                 <fieldset>
-                    <legend><span class="number">3</span>KYC Details</legend>
+                    <legend><span class="number">4</span>KYC Details</legend>
                     <label>KYC document type</label>
                     <select class="slct" id="KYCtype" required>
                         <option value="aadhaar">Aadhaar card</option>
@@ -85,8 +97,8 @@
                     </select>
                     <label>KYC id number</label>
                     <input type="text" class="slct" id="Kycid" required>
-                    <label for="img">KYC image</label>
-                    <input type="file" class="slct-img" id="Kycimg" accept="image/*">
+                    <!-- <label for="img">KYC image</label>
+                    <input type="file" class="slct-img" id="Kycimg" accept="image/*"> -->
                 </fieldset> 
                 
                 <input type="submit" value="Sign Up" class="submit">

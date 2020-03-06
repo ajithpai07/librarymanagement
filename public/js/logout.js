@@ -21,5 +21,8 @@ logout.addEventListener('click', (e)=>{
         console.log('user is signed out');
         alert('You are now logged out');
         window.location="3_login.html";
-    });
+    })
+    .catch(function(error){
+        alert('unable to log out');
+    });;
 });

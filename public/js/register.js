@@ -25,12 +25,16 @@ signupForm.addEventListener('submit',(e) =>{
   const email=signupForm['email'].value;
   const phno=signupForm['phno'].value;
   const password=signupForm['password'].value;
-  const KYCtype=signupForm['KYCtype'].value;
+  const dno=signupForm['dno'].value;
+  const strtname=signupForm['strtname'].value;
+  const City=signupForm['City'].value;
+  const pcode=signupForm['pcode'].value;
   const p1=signupForm['p1'].value;
   const p2=signupForm['p2'].value;
   const p3=signupForm['p3'].value;
+  const KYCtype=signupForm['KYCtype'].value;
   const Kycid=signupForm['Kycid'].value;
-  const Kycimg=signupForm['Kycimg'].value;
+  // const Kycimg=signupForm['Kycimg'].value;
   
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
     //signing user in
@@ -46,6 +50,10 @@ signupForm.addEventListener('submit',(e) =>{
               email: email,
               phno: phno,
               password: password,
+              dno: dno,
+              strtname: strtname,
+              City: City,
+              pcode: pcode,
               p1: p1,
               p2: p2,
               p3: p3,

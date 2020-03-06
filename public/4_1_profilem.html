@@ -3,7 +3,7 @@
     <head>
         <title>Profile Management</title>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/icon type" href="file:///C:/Users/Sravan%20Kumar/Desktop/takshashila-lib/logo_tbar.png">
+        <link rel="icon" type="image/icon type" href="logo_tbar.png">
         <link rel="stylesheet" href="css/css4.css">
     </head>
     <body>
@@ -11,24 +11,24 @@
             <div class="header-logo">Takshashila Library</div>
             <div class="header-menu">
                 <ul>
-                    <li><p href="#" class="button button3">Logout</p></li>
-                    <li><a href="#">Booking</a></li>
-                    <li><a href="#">Wallet</a></li>
-                    <li class="active"><a href="#">Profile management</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="logout.html" class="button button3">Logout</a></li>
+                    <li><a href="6_booking.html">Booking</a></li>
+                    <li><a href="5_wallet.html">Wallet</a></li>
+                    <li class="active"><a href="4_2_profilem.html">Profile management</a></li>
+                    <li><a href="2_home.html">Home</a></li>
                 </ul>
             </div>
         </div>        
         <div class="main">
             <div class="sidebar">
-                <a href="#">Profile Management</a>
-                <a href="#">Show My Profile</a>
-                <a href="#">Update My Profile</a>
-                <a href="#">KYC Status</a>
+                <a href="4_2_profilem.html">Show My Profile</a>
+                <a href="4_3_profilem.html">Update My Profile</a>
+                <a href="4_4_profilem.html">KYC Status</a>
+                <a href="4_1_profilem.html">Home</a>
             </div>                      
             <div class="main-profile">
                 <h2>Profile Management</h2><br><br>
-                <h3>Hello, <span><!--PHP CODE TO GET THE Name AND SHOW THE OUTPUT--></span></h3>
+                <h3>Hello, </h3>
                 <br>
                 <p>In "Profile Management", you can do the following operations:<br>
                 1. You can view the profile.<br>
@@ -51,5 +51,12 @@
                 </address>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/profile1.js"></script>
     </body>
 </html>

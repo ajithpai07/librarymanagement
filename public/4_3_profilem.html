@@ -3,7 +3,7 @@
     <head>
         <title>Profile Management</title>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/icon type" href="file:///C:/Users/Sravan%20Kumar/Desktop/takshashila-lib/logo_tbar.png">
+        <link rel="icon" type="image/icon type" href="logo_tbar.png">
         <link rel="stylesheet" href="css/css4.css">
     </head>
     <body>
@@ -11,33 +11,33 @@
             <div class="header-logo">Takshashila Library</div>
             <div class="header-menu">
                 <ul>
-                    <li><p href="#" class="button button3">Logout</p></li>
-                    <li><a href="#">Booking</a></li>
-                    <li><a href="#">Wallet</a></li>
-                    <li class="active"><a href="#">Profile management</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="logout.html" class="button button3">Logout</a></li>
+                    <li><a href="6_booking.html">Booking</a></li>
+                    <li><a href="5_wallet.html">Wallet</a></li>
+                    <li class="active"><a href="4_2_profilem.html">Profile management</a></li>
+                    <li><a href="2_home.html">Home</a></li>
                 </ul>
             </div>
         </div>        
         <div class="main">
             <div class="sidebar">
-                <a href="#">Profile Management</a>
-                <a href="#">Show My Profile</a>
-                <a href="#">Update My Profile</a>
-                <a href="#">KYC Status</a>
+                <a href="4_2_profilem.html">Show My Profile</a>
+                <a href="4_3_profilem.html">Update My Profile</a>
+                <a href="4_4_profilem.html">KYC Status</a>
+                <a href="4_1_profilem.html">Help</a>
             </div>                      
             <div class="main-profile">
                 <h2>Update Profile</h2><br>
-                <form>
+                <form id="update">
                     <fieldset>
                       <label>Name</label>
-                      <input type="text" class="slct" required>
+                      <input type="text" class="slct" value="" id="fd1" required>
                       <label>Date Of Birth</label>
-                      <input type="date" class="slct" required>
-                      <label>New Password</label>
-                      <input type="password" class="slct" required>
+                      <input type="date" class="slct" id="fd2" value="" required>
+                      <!-- <label>New Password</label>
+                      <input type="password" class="slct" value="" id="fd3" required> -->
                       <label>Preference - 1</label>
-                        <select class="slct" required>
+                        <select class="slct" id="fd4" value="" required>
                             <option value="historical fiction">Historical fiction</option>
                             <option value="science fiction">Science fiction</option>
                             <option value="short story">Short story</option>
@@ -50,7 +50,7 @@
                             <option value="art">Art</option>
                         </select>
                         <label>Preference - 2</label>
-                        <select class="slct">
+                        <select class="slct" id="fd5" value="">
                             <option value="historical fiction">Historical fiction</option>
                             <option value="science fiction">Science fiction</option>
                             <option value="short story">Short story</option>
@@ -63,7 +63,7 @@
                             <option value="art">Art</option>
                         </select>
                         <label>Preference - 3</label>
-                        <select class="slct">
+                        <select class="slct" id="fd6" value="">
                             <option value="historical fiction">Historical fiction</option>
                             <option value="science fiction">Science fiction</option>
                             <option value="short story">Short story</option>
@@ -75,14 +75,14 @@
                             <option value="drama">Drama</option>
                             <option value="art">Art</option>
                         </select>
-                      <label>Door No</label>
+                      <!-- <label>Door No</label>
                       <input type="text" class="slct" required>
                       <label>Street name</label>
                       <input type="text" class="slct" required>
                       <label>City</label>
                       <input type="text" class="slct" required>
                       <label>Postal code</label>
-                      <input type="text" class="slct" required>
+                      <input type="text" class="slct" required> -->
                     </fieldset>  
                     <input type="submit" value="Update" class="submit">
                 </form>
@@ -103,5 +103,12 @@
                 </address>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/profile3.js"></script>
     </body>
 </html>
