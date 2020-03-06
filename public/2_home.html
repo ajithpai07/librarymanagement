@@ -5,7 +5,11 @@
         <meta charset="UTF-8">
         <link rel="icon" type="image/icon type" href="\logo_tbar.png">
         <link rel="stylesheet" href="css/css2.css">
-                  
+        <script type="text/javascript">
+            function preventBack(){ window.history.forward(); }
+            setTimeout("preventBack()",0);
+            window.onunload =function () { null };
+        </script>
         
     </head>
     <body>
