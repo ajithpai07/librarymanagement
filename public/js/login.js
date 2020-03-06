@@ -36,6 +36,7 @@ loginForm.addEventListener('submit',(e) =>{
     }
     })
     .catch(function(error) {
-      console.log(error.message);
+      alert("Username or Password entered is wrong");
+      window.location="3_login.html";
     });
 });
