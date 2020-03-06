@@ -27,9 +27,9 @@
                   <label>E-mail</label>
                   <input type="email" class="slct" required>
                   <label>Phone Number</label>
-                  <input type="number" class="slct" required>  
+                  <input type="text" class="slct" pattern=".{10}" required title="Exactly 10 digits are required">  
                   <label>New Password</label>
-                  <input type="password" class="slct" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required title="Password must be of 8 to 16 characters including 1 uppercase letter, 1 lowercase letter and numeric characters">
+                  <input type="password" class="slct" pattern="(?=.*\d).{8,16}" required title="Password must be of 8 to 16 characters including 1 uppercase letter, 1 lowercase letter and numeric characters">
                   <label>Upload Your Selfie</label>
                   <input type="file" class="slct-img" accept="image/*">
                 </fieldset>     
@@ -96,7 +96,11 @@
                         <option value="aadhaar">Aadhaar card</option>
                     </select>
                     <label>KYC id number</label>
+<<<<<<< HEAD
                     <input type="text" class="slct" pattern=".{12}" required title="Exactly 12 characters are required">
+=======
+                    <input type="text" class="slct" pattern="(?=.*\d)(?=.*[a-z])(?=.*[a-z]).{12}" required title="Exactly 12 digits are required">
+>>>>>>> ff14a19ebfcf9a0bf0c56cfb1cf12390e57c836b
                     <label for="img">KYC document image</label>
                     <input type="file" class="slct-img" accept="image/*">
                 </fieldset> 

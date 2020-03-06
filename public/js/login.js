@@ -14,7 +14,7 @@ var firebaseConfig = {
   const db=firebase.firestore();
   const auth=firebase.auth();
   
-  const loinForm=document.querySelector("#login")
+  const loginForm=document.querySelector("#login")
 
 loginForm.addEventListener('submit',(e) =>{
 

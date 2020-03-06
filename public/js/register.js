@@ -31,13 +31,12 @@ signupForm.addEventListener('submit',(e) =>{
   const p3=signupForm['p3'].value;
   const Kycid=signupForm['Kycid'].value;
   const Kycimg=signupForm['Kycimg'].value;
-
   
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
     //signing user in
-    auth.signInWithEmailAndPassword(email, password).then(function(user){
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
       if(user){
-        auth.onAuthStateChanged(function(user) {
+        firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
             const userId=user.uid;
@@ -60,15 +59,12 @@ signupForm.addEventListener('submit',(e) =>{
         });
         
       }
-      
     })
     .catch(function(error){
       console.log(error.message);
     });
-    auth.signOut().then(() => {
-      console.log('User signedout')
-    });
+  })
+  .catch(function(error){
+    console.log(error.message);
   });
-  
-  window.location="8_clogin.html"
 });
