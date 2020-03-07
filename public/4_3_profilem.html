@@ -75,14 +75,14 @@
                             <option value="drama">Drama</option>
                             <option value="art">Art</option>
                         </select>
-                      <label>Door No</label>
-                      <input type="text" class="slct" id="fd7" required>
+                      <label>Door/Flat number</label>
+                      <input type="text" class="slct" id="fd7" required pattern="[A-Za-z0-9]+[A-Za-z0-9|' '|-]*" title="Example: E-503, 1-808-1A.">
                       <label>Street name</label>
-                      <input type="text" class="slct" id="fd8" required>
+                      <input type="text" class="slct" id="fd8" required pattern="[A-Za-z0-9|' '|-]+" title="Example: Central Jail Road, John Street-1.">
                       <label>City</label>
-                      <input type="text" class="slct" id="fd9" required>
+                      <input type="text" class="slct" id="fd9" required pattern="[A-Za-z|' ']+" title="Sorry, only letters and spaces are allowed.">
                       <label>Postal code</label>
-                      <input type="text" class="slct" id="fd10" required>
+                      <input type="text" class="slct" id="fd10" required pattern="[1-9]{1}[0-9]{5}" required title="Sorry, only 6 digits without spaces are allowed.">
                     </fieldset>
                     <input type="submit" value="Update" class="submit">
                 </form>
