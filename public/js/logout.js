@@ -21,4 +21,4 @@ auth.signOut().then(() =>{
     })
     .catch(function(error){
         alert('unable to log out');
-    });
+});
