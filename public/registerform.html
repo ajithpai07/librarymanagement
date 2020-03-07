@@ -34,14 +34,14 @@
                            
                 <fieldset>
                     <legend><span class="number">2</span>Address details</legend>
-                    <label>Door No</label>
-                    <input type="text" class="slct" id="dno" required>
+                    <label>Door/Flat number</label>
+                    <input type="text" class="slct" id="dno" required pattern="[A-Za-z0-9]+[A-Za-z0-9|' '|-]*" title="Example: E-503, 1-808-1A.">
                     <label>Street name</label>
-                    <input type="text" class="slct" id="strtname" required>
+                    <input type="text" class="slct" id="strtname" required pattern="[A-Za-z0-9|' '|-]+" title="Example: Central Jail Road, John Street-1.">
                     <label>City</label>
-                    <input type="text" class="slct" id="City" required>
+                    <input type="text" class="slct" id="City" required pattern="[A-Za-z|' ']+" title="Sorry, only letters and spaces are allowed.">
                     <label>Postal code</label>
-                    <input type="text" class="slct" id="pcode" pattern=".{6}" required title="Exactly 6 digits are required">
+                    <input type="text" class="slct" id="pcode" pattern="[1-9]{1}[0-9]{5}" required title="Sorry, only 6 digits without spaces are allowed.">
                   </fieldset>
 
                 <fieldset>
@@ -61,6 +61,7 @@
                     </select>
                     <label>Preference - 2</label>
                     <select class="slct" id="p2">
+                        <option value="">-</option>
                         <option value="historical fiction">Historical fiction</option>
                         <option value="science fiction">Science fiction</option>
                         <option value="short story">Short story</option>
@@ -74,6 +75,7 @@
                     </select>
                     <label>Preference - 3</label>
                     <select class="slct" id="p3">
+                        <option value="">-</option>
                         <option value="historical fiction">Historical fiction</option>
                         <option value="science fiction">Science fiction</option>
                         <option value="short story">Short story</option>
@@ -92,11 +94,11 @@
                     <label>KYC document type</label>
                     <select class="slct" id="KYCtype" required>
                         <option value="aadhaar">Aadhaar card</option>
-                        <option value="pan">PAN card</option>
-                        <option value="driving license">Driving license</option>
+                        <!--<option value="pan">PAN card</option>
+                        <option value="driving license">Driving license</option>-->
                     </select>
                     <label>KYC id number</label>
-                    <input type="text" class="slct" id="Kycid" required>
+                    <input type="text" class="slct" id="Kycid" required pattern="[0-9]{12}" title="Aadhaar Card identification number is of 12 digits." class="slct">
                     <!-- <label for="img">KYC image</label>
                     <input type="file" class="slct-img" id="Kycimg" accept="image/*"> -->
                 </fieldset> 
