@@ -64,19 +64,33 @@ auth.onAuthStateChanged(function(user) {
             const fd4=update['fd4'].value;
             const fd5=update['fd5'].value;
             const fd6=update['fd6'].value;
+            const fd7=update['fd7'].value;
+            const fd8=update['fd8'].value;
+            const fd9=update['fd9'].value;
+            const fd10=update['fd10'].value;
+            
 
             db.collection("Users").doc(user.uid).update({
                 name: fd1,
                 Dob: fd2,
                 p1: fd4,
                 p2: fd5,
-                p3: fd6
+                p3: fd6,
+                dno:fd7,
+                strtname:fd8,
+                City:fd9,
+                pcode:fd10
               });
 
-          update.reset();
-          
         })
-    } else {
+        
+
+          // Move to a new location or you can do something else
+          
+  
+   
+    } 
+    else {
       // No user is signed in.
       console.log("not present");
       window.location="3_login.html";

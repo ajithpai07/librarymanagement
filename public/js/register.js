@@ -60,7 +60,7 @@ signupForm.addEventListener('submit',(e) =>{
               KYCtype: KYCtype,
               Kycid: Kycid
             });
-            signupForm.reset();
+            
             
           }
           else{
