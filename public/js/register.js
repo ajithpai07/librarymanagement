@@ -61,6 +61,7 @@ signupForm.addEventListener('submit',(e) =>{
               Kycid: Kycid
             });
             signupForm.reset();
+            
           }
           else{
             //no user signed in

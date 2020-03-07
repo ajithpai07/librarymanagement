@@ -74,6 +74,7 @@ auth.onAuthStateChanged(function(user) {
               });
 
           update.reset();
+          
         })
     } else {
       // No user is signed in.

@@ -17,7 +17,7 @@ var firebaseConfig = {
 auth.signOut().then(() =>{
         console.log('user is signed out');
         alert('You are now logged out');
-        window.location="3_login.html";
+        window.location="8_clogin.html";
     })
     .catch(function(error){
         alert('unable to log out');
