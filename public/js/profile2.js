@@ -26,6 +26,10 @@ auth.onAuthStateChanged(function(user) {
       const fld7=document.querySelector("#fld7");
       const fld8=document.querySelector("#fld8");
       const fld9=document.querySelector("#fld9");
+      const fld10=document.querySelector("#fld10");
+      const fld11=document.querySelector("#fld11");
+      const fld12=document.querySelector("#fld12");
+      const fld13=document.querySelector("#fld12");
       
       function render(doc){
         const fd1= document.createElement('span');
@@ -37,16 +41,25 @@ auth.onAuthStateChanged(function(user) {
         const fd7= document.createElement('span');
         const fd8= document.createElement('span');
         const fd9= document.createElement('span');
+        const fd10= document.createElement('span');
+        const fd11= document.createElement('span');
+        const fd12= document.createElement('span');
+        const fd13= document.createElement('span');
 
         fd1.textContent=doc.data().name;
         fd2.textContent=doc.data().email;
         fd3.textContent=doc.data().phno;
         fd4.textContent=doc.data().Dob;
         fd5.textContent=doc.data().dno;
+        fd10.textContent=doc.data().strtname;
+        fd11.textContent=doc.data().City;
+        fd12.textContent=doc.data().pcode;
         fd6.textContent=doc.data().p1;
-        fd7.textContent=doc.data().p1;
+        fd7.textContent=doc.data().p2;
+        fd13.textContent=doc.data().p3;
         fd8.textContent=doc.data().KYCtype;
         fd9.textContent=doc.data().Kycid;
+        
 
         fld1.appendChild(fd1);
         fld2.appendChild(fd2);
@@ -57,6 +70,10 @@ auth.onAuthStateChanged(function(user) {
         fld7.appendChild(fd7);
         fld8.appendChild(fd8);
         fld9.appendChild(fd9);
+        fld10.appendChild(fd10);
+        fld11.appendChild(fd11);
+        fld12.appendChild(fd12);
+        fld13.appendChild(fd13);
       }
 
       db.collection('Users').doc(user.uid).get().then(function(doc) {
