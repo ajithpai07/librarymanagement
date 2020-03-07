@@ -11,24 +11,24 @@
             <div class="header-logo">Takshashila Library</div>
             <div class="header-menu">
                 <ul>
-                    <li><p href="#" class="button button3">Logout</p></li>
-                    <li><a href="#">Booking</a></li>
-                    <li><a href="#">Wallet</a></li>
-                    <li class="active"><a href="#">Profile management</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="logout.html" class="button button3">Logout</a></li>
+                    <li><a href="6_booking.html">Booking</a></li>
+                    <li><a href="5_wallet.html">Wallet</a></li>
+                    <li class="active"><a href="4_2_profilem.html">Profile management</a></li>
+                    <li><a href="2_home.html">Home</a></li>
                 </ul>
             </div>
         </div>        
         <div class="main">
             <div class="sidebar">
-                <a href="#">Profile Management</a>
-                <a href="#">Show My Profile</a>
-                <a href="#">Update My Profile</a>
-                <a href="#">KYC Status</a>
+                <a href="4_2_profilem.html">Show My Profile</a>
+                <a href="4_3_profilem.html">Update My Profile</a>
+                <a href="4_4_profilem.html">KYC Status</a>
+                <a href="4_1_profilem.html">Help</a>
             </div>                      
             <div class="main-profile">
                 <h2>KYC Status</h2><br>
-                <h3>Status: <span><!--PHP CODE TO GET THE {Approved | Rejected | Pending} AND SHOW THE OUTPUT--></span></h3>
+                <h3>Status: <span>Pending</span></h3>
                 <p>What are the requirements of the documents to be submitted for KYC?<br><br>
                     Selfie<br>
                     - Photo of yourself, with your entire face visible.<br>
@@ -64,5 +64,12 @@
                 </address>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/profile4.js"></script>
     </body>
 </html>

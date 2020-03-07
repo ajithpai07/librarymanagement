@@ -14,29 +14,29 @@ var firebaseConfig = {
   const db=firebase.firestore();
   const auth=firebase.auth();
   
-  const loginForm=document.querySelector("#login")
+  const loginForm=document.querySelector("#login"); 
 
 loginForm.addEventListener('submit',(e) =>{
-
-    const email=loinForm['email'].value;
-    const password=loinForm['password'].value;
+  e.preventDefault();
+    const email=loginForm['email'].value;
+    const password=loginForm['password'].value;
 
     auth.signInWithEmailAndPassword(email,password).then(function(user){
       if(user){
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
-            // User is signed in.
-            userId=user.uid;
-            console.log(userId);
+            // User is signed in. 
+            alert("login successful");
+            window.location="2_home.html";
           } else {
             // No user is signed in.
           }
         });
-        alert("login successful");
-        window.location="2_home.html";
+       
     }
     })
     .catch(function(error) {
-      console.log(error.message);
+      alert("Username or Password entered is invalid");
+      window.location="3_login.html";
     });
 });
