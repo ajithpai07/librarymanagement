@@ -150,13 +150,13 @@ li {
 }
 
 .show-profile h3{
-    color: white;
+    color: orangered;
     font-weight: normal;    
-    font-size: large;
+    font-size: larger;
 }
 
 .show-profile span{
-    color: orangered;    
+    color:white; 
     font-weight: normal;
     font-size: larger;
 }
