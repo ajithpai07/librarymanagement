@@ -23,10 +23,10 @@ auth.onAuthStateChanged(function(user) {
       const fd4=document.querySelector("#fd4");
       const fd5=document.querySelector("#fd5");
       const fd6=document.querySelector("#fd6");
-      const fd7=document.querySelector("#fd6");
-      const fd8=document.querySelector("#fd6");
-      const fd9=document.querySelector("#fd6");
-      const fd10=document.querySelector("#fd6");    
+      const fd7=document.querySelector("#fd7");
+      const fd8=document.querySelector("#fd8");
+      const fd9=document.querySelector("#fd9");
+      const fd10=document.querySelector("#fd10");    
 
       function render(doc){
 
@@ -35,10 +35,10 @@ auth.onAuthStateChanged(function(user) {
         fd4.value=doc.data().p1;
         fd5.value=doc.data().p2;
         fd6.value=doc.data().p3;
-        fd7.value=doc.data().p3;
-        fd8.value=doc.data().p3;
-        fd9.value=doc.data().p3;
-        fd10.value=doc.data().p3;
+        fd7.value=doc.data().dno;
+        fd8.value=doc.data().strtname;
+        fd9.value=doc.data().City;
+        fd10.value=doc.data().pcode;
       }
 
       db.collection('Users').doc(user.uid).get().then(function(doc) {
