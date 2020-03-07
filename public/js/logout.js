@@ -14,15 +14,11 @@ var firebaseConfig = {
   const db=firebase.firestore();
   const auth=firebase.auth();
 //logout 
-const logout=document.querySelector('#logout');
-logout.addEventListener('click', (e)=>{
-    e.preventDefault();
-    auth.signOut().then(() =>{
+auth.signOut().then(() =>{
         console.log('user is signed out');
         alert('You are now logged out');
         window.location="3_login.html";
     })
     .catch(function(error){
         alert('unable to log out');
-    });;
-});
+    });
