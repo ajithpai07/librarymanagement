@@ -15,20 +15,23 @@ body {
     cursor: pointer;
 }
 
-.button3 {        
+.button3 {             
+    text-decoration: none ;   
     padding: 2px 24px;
     border-radius: 5px;
-    background-color: #ffffff; 
+    background-color: red; 
     color: black; 
-    border: 2px solid black;
+    border: 2px solid white;
 }
   
 .button3:hover {
-    background-color: red;
-    color: black;        
-    border: 2px solid white;        
+    background-color: black;
+    color: black;    
+    border: 2px solid red;        
     transition-duration: 0.5s;
 }
+
+
 li {
     list-style: none;
 }
