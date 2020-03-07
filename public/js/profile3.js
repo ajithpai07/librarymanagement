@@ -23,7 +23,11 @@ auth.onAuthStateChanged(function(user) {
       const fd4=document.querySelector("#fd4");
       const fd5=document.querySelector("#fd5");
       const fd6=document.querySelector("#fd6");
-      
+      const fd7=document.querySelector("#fd6");
+      const fd8=document.querySelector("#fd6");
+      const fd9=document.querySelector("#fd6");
+      const fd10=document.querySelector("#fd6");    
+
       function render(doc){
 
         fd1.value=doc.data().name;
@@ -31,6 +35,10 @@ auth.onAuthStateChanged(function(user) {
         fd4.value=doc.data().p1;
         fd5.value=doc.data().p2;
         fd6.value=doc.data().p3;
+        fd7.value=doc.data().p3;
+        fd8.value=doc.data().p3;
+        fd9.value=doc.data().p3;
+        fd10.value=doc.data().p3;
       }
 
       db.collection('Users').doc(user.uid).get().then(function(doc) {
@@ -65,6 +73,7 @@ auth.onAuthStateChanged(function(user) {
                 p3: fd6
               });
 
+          update.reset();
         })
     } else {
       // No user is signed in.
