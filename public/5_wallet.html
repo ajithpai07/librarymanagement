@@ -20,20 +20,26 @@
             </div>
         </div>
         <div class="main">
+          <div class="top">
+            <h1>Wallet</h1>
+            <h3>Total balance = <span>&#8377</span></h3>
+          </div>
+                 
+          <form id="#">
             <div id="card-success" class="hidden">
                 <i class="fa fa-check"></i>
                 <p>Payment Successful!</p>
               </div>
-              <div id="form-errors" class="hidden">
+              <!-- <div id="form-errors" class="hidden">
                 <i class="fa fa-exclamation-triangle"></i>
                 <p id="card-error">Card error</p>
-              </div>
+              </div> -->
               <div id="form-container">
               
                 <div id="card-front">
                   <div id="shadow"></div>
                   <div id="image-container">
-                    <span id="amount">paying: <strong>$99</strong></span>
+                    <span id="amount">Amount: &#8377 <strong><input type="number" required pattern="[0-9]{4}" max="2000" min="100" title="The amount must be in the range 100 to 2000"></strong></span>
                     <span id="card-image">
                     
                       </span>
@@ -43,23 +49,23 @@
                   <label for="card-number">
                       Card Number
                     </label>
-                  <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+                  <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16" required pattern="[0-9]{16}" title="Sorry, only numbers are allowed with length of 16 digits">
                   <div id="cardholder-container">
                     <label for="card-holder">Card Holder
                     </label>
-                    <input type="text" id="card-holder" placeholder="e.g. John Doe" />
+                    <input type="text" id="card-holder" placeholder="e.g. John Doe" required pattern="[a-zA-Z|' ']{3,30}" title="Sorry, only letters and spaces are allowed with a maximum length of 3-30 letters.">
                   </div>
                   <!--- end card holder container --->
                   <div id="exp-container">
                     <label for="card-exp">
                         Expiration
                       </label>
-                    <input id="card-month" type="text" placeholder="MM" length="2">
-                    <input id="card-year" type="text" placeholder="YY" length="2">
+                    <input id="card-month" type="text" placeholder="MM" length="2" required pattern="(00|01|02|03|04|05|06|07|08|09|10|11|12)" title="Sorry, only numbers are allowed with exact length of 2 digits">
+                    <input id="card-year" type="text" placeholder="YY" length="2" required pattern="(2|3|4|5|6|7|8|9) {1}[0-9]{1}" title="Sorry, only numbers are allowed with exact length of 2 digits">
                   </div>
-                      <div id="cvc-container">
+                  <div id="cvc-container">
                     <label for="card-cvc"> CVC/CVV</label>
-                    <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+                    <input id="card-cvc" placeholder="XXX-X" type="password" min-length="3" max-length="4" required pattern="[0-9]{3}[0-9]?">
                     <p>Last 3 or 4 digits</p>
                   </div>
                   <!--- end CVC container --->
@@ -68,19 +74,34 @@
                 <!--- end card front --->
                 <div id="card-back">
                   <div id="card-stripe">
-                  </div>
-              
+                  </div>              
                 </div>
-                <!--- end card back --->
+                <!-- - end card back -
                 <input type="text" id="card-token" />
-                <button type="button" id="card-btn">Submit</button>
+                <a href="#" type="button" id="card-btn">Add</a> -->
+                <input type="submit" value="ADD" id="card-btn">
               
               </div>
               <!--- end form container --->
-              
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-              <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-              <script src="https://use.fontawesome.com/f1e0bf0cbc.js"></script>
+            </form>   
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>        
+          <div class="tsn">
+            <h2>Transactions</h2>
+            <table>
+              <tr>
+                  <th>Transaction ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+          </table>
+          </div>
         </div>
         <div class="footer">
             <div class="footer-cright">

@@ -80,10 +80,24 @@ li {
 
 .main {
     padding-top: 20px;
-    padding-bottom: 160px; 
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-bottom: 50px; 
+    padding-left: 50px;
+    padding-right: 50px;    
+}
+h1{
+  color:red;
+}
 
+h2{
+  color:burlywood;
+}
+
+.tsn{
+  float: none;
+}
+
+span{
+  color:darkolivegreen;
 }
 
 .footer {
@@ -109,4 +123,314 @@ li {
 
 
 
+#amount {
+  font-size: 22px;
+}
 
+#amount strong {
+  font-size: 24px;
+}
+
+#card-back {
+  top: 40px;
+  right: 0;
+  z-index: -2;
+}
+
+#card-btn {
+  text-decoration: none;
+  background-color: darkolivegreen;
+  color: white;
+  top: 310px;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  width: 100px;
+  border-radius: 6px;
+  border: 2px solid white;
+  height: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+#card-btn:hover {
+  background-color: darkgreen;
+  color: white;
+  bottom: -55px;
+  right: 0;
+  top: 2;
+  width: 100px;
+  border-radius: 6px;
+  border: 2px solid white;
+  height: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+#card-cvc {
+  width: 60px;
+  margin-bottom: 0;
+}
+
+#card-front{
+  position: absolute;
+  background-image: url(https://cdn.pixabay.com/photo/2019/08/09/17/29/rupee-4395465_1280.jpg);
+  background-repeat: no-repeat ;
+  background-size: cover;
+  width: 430px;
+  height: 260px;
+  border-radius: 6px;
+  padding: 20px 30px 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: Black;
+  font-weight: normal;
+  border: 2px solid white;
+}
+
+#card-back{
+  position: absolute;
+  background-image: url(https://cdn.pixabay.com/photo/2019/08/09/17/29/rupee-4395465_1280.jpg);
+  background-repeat: no-repeat ;
+  background-size: cover;
+  width: 430px;
+  height: 260px;
+  border-radius: 6px;
+  padding: 20px 30px 10px;
+  box-sizing: border-box;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: white;
+  border: 2px solid white;
+}
+
+#card-image {
+  float: right;
+  height: 100%;
+}
+
+#card-image i {
+  font-size: 40px;
+}
+
+#card-month {
+  width: 45% !important;
+}
+
+#card-number,
+#card-holder {
+  width: 100%;
+}
+
+#card-stripe {
+  width: 100%;
+  height: 55px;
+  background-color: black;
+  position: absolute;
+  right: 0;
+}
+
+#card-success {
+  color: #00b349;
+}
+
+#card-token {
+  display: none;
+}
+
+#card-year {
+  width: 45%;
+  float: right;
+}
+
+#cardholder-container {
+  width: 60%;
+  display: inline-block;
+}
+
+#cvc-container {
+  position: absolute;
+  width: 110px;
+  right: -105px;
+  bottom: -10px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+#cvc-container label {
+  width: 100%;
+}
+
+#cvc-container p {
+  font-size: 10px;
+  opacity: 0.6;
+  letter-spacing: .5px;
+}
+
+#form-container {
+  float: inherit;
+  float: right;
+  position: fixed;
+  margin-top: 50px;
+  width: 530px;
+  height: 290px;
+  position: relative;
+}
+
+.divide{
+  border-right: 10px solid red;
+  float: left;
+}
+
+#form-errors {
+  color: #eb0000;
+}
+
+#form-errors,
+#card-success {
+  background-color: white;
+  width: 500px;
+  margin: 0 auto 10px;
+  height: 50px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 46px;
+  letter-spacing: .5px;
+  text-transform: none;
+}
+
+#form-errors p,
+#card-success p {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+#exp-container {  
+  margin-left: 10px;
+  width: 32%;
+  display: inline-block;
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+#image-container {
+  width: 100%;
+  position: relative;
+  height: 65px;
+  margin-bottom: 5px;
+  line-height: 55px;
+}
+
+#image-container img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+input[type=number]{
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: darkolivegreen;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0 0 25px;
+    color: white;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    letter-spacing: .7px;
+  }
+
+input {
+  border: none;
+  outline: none;
+  background-color: darkolivegreen;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0 0 25px;
+  color: white;
+  font-size: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  letter-spacing: .7px;
+}
+
+
+input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input:-moz-placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+input.invalid {
+  border: solid 2px #eb0000;
+  height: 34px;
+}
+
+label {
+  display: block;
+  margin: 0 auto 7px;
+}
+
+#shadow {
+  position: absolute;
+  right: 0;
+  width: 284px;
+  height: 214px;
+  top: 36px;
+  background-color: #000;
+  z-index: -1;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.top{
+  float:left;
+}
