@@ -42,10 +42,6 @@ li {
     border: 2px solid white; 
 }
 
-/*.header:hover{
-    background-color: #000000;
-}*/
-
 .header-logo {
     font-weight: bolder;
     float: left;
@@ -110,3 +106,7 @@ li {
     padding-left: 30px;
     padding-right: 20px;
 }
+
+
+
+
