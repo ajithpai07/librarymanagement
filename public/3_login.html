@@ -19,7 +19,7 @@
         <div class="main">
             <form id="login">
                 <input class="un" type="text" align="center" id="email" placeholder="Username" required pattern="[a-zA-Z0-9|.]+@[a-zA-z]+[.][a-zA-Z]+" title="Sorry, only letters, numbers, periods(.) are allowed.">
-                <input type="password" class="pass"  align="center" id="password" placeholder="Password" name="psw" required pattern="(?=.*\d).{8,16}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
+                <input type="password" class="pass"  align="center" id="password" placeholder="Password" name="psw" required pattern="(?=.*\d).{8,16}" onkeydown="if(event.ctrlKey && event.keyCode==86){return false;}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
                 <input type="submit" value="LOGIN" class="submit">
             </form>            
             <a class="login-links-left" href="#">Forgot Password</a>
