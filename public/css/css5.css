@@ -85,7 +85,7 @@ li {
     padding-right: 50px;    
 }
 h1{
-  color:red;
+  color:rgb(112, 101, 101);
 }
 
 h2{
@@ -123,21 +123,21 @@ span{
 
 
 
-#amount {
+.amount {
   font-size: 22px;
 }
 
-#amount strong {
+.amount strong {
   font-size: 24px;
 }
 
-#card-back {
+.card-back {
   top: 40px;
   right: 0;
   z-index: -2;
 }
 
-#card-btn {
+.card-btn {
   text-decoration: none;
   background-color: darkolivegreen;
   color: white;
@@ -157,7 +157,7 @@ span{
   text-align: center;
 }
 
-#card-btn:hover {
+.card-btn:hover {
   background-color: darkgreen;
   color: white;
   bottom: -55px;
@@ -175,12 +175,12 @@ span{
   text-align: center;
 }
 
-#card-cvc {
+.card-cvc {
   width: 60px;
   margin-bottom: 0;
 }
 
-#card-front{
+.card-front{
   position: absolute;
   background-image: url(https://cdn.pixabay.com/photo/2019/08/09/17/29/rupee-4395465_1280.jpg);
   background-repeat: no-repeat ;
@@ -198,7 +198,7 @@ span{
   border: 2px solid white;
 }
 
-#card-back{
+.card-back{
   position: absolute;
   background-image: url(https://cdn.pixabay.com/photo/2019/08/09/17/29/rupee-4395465_1280.jpg);
   background-repeat: no-repeat ;
@@ -215,25 +215,25 @@ span{
   border: 2px solid white;
 }
 
-#card-image {
+.card-image {
   float: right;
   height: 100%;
 }
 
-#card-image i {
+.card-image i {
   font-size: 40px;
 }
 
-#card-month {
+.card-month {
   width: 45% !important;
 }
 
-#card-number,
-#card-holder {
+.card-number,
+.card-holder {
   width: 100%;
 }
 
-#card-stripe {
+.card-stripe {
   width: 100%;
   height: 55px;
   background-color: black;
@@ -241,25 +241,25 @@ span{
   right: 0;
 }
 
-#card-success {
+.card-success {
   color: #00b349;
 }
 
-#card-token {
+.card-token {
   display: none;
 }
 
-#card-year {
+.card-year {
   width: 45%;
   float: right;
 }
 
-#cardholder-container {
+.cardholder-container {
   width: 60%;
   display: inline-block;
 }
 
-#cvc-container {
+.cvc-container {
   position: absolute;
   width: 110px;
   right: -105px;
@@ -268,17 +268,17 @@ span{
   box-sizing: border-box;
 }
 
-#cvc-container label {
+.cvc-container label {
   width: 100%;
 }
 
-#cvc-container p {
+.cvc-container p {
   font-size: 10px;
   opacity: 0.6;
   letter-spacing: .5px;
 }
 
-#form-container {
+.form-container {
   float: inherit;
   float: right;
   position: fixed;
@@ -293,32 +293,7 @@ span{
   float: left;
 }
 
-#form-errors {
-  color: #eb0000;
-}
-
-#form-errors,
-#card-success {
-  background-color: white;
-  width: 500px;
-  margin: 0 auto 10px;
-  height: 50px;
-  border-radius: 8px;
-  padding: 0 20px;
-  font-weight: 400;
-  box-sizing: border-box;
-  line-height: 46px;
-  letter-spacing: .5px;
-  text-transform: none;
-}
-
-#form-errors p,
-#card-success p {
-  margin: 0 5px;
-  display: inline-block;
-}
-
-#exp-container {  
+.exp-container {  
   margin-left: 10px;
   width: 32%;
   display: inline-block;
@@ -329,7 +304,7 @@ span{
   display: none;
 }
 
-#image-container {
+.image-container {
   width: 100%;
   position: relative;
   height: 65px;
@@ -337,7 +312,7 @@ span{
   line-height: 55px;
 }
 
-#image-container img {
+.image-container img {
   position: absolute;
   right: 0;
   top: 0;
@@ -417,7 +392,7 @@ label {
   margin: 0 auto 7px;
 }
 
-#shadow {
+.shadow {
   position: absolute;
   right: 0;
   width: 284px;
@@ -433,4 +408,19 @@ label {
 
 .top{
   float:left;
+}
+
+th{
+  border: 6px solid white;
+  border-style: solid;
+  padding: 10px;
+  text-align: left;
+  width: 45%;
+}
+tr,td{
+  border: 2px solid blueviolet;
+  border-style: solid;
+  padding: 10px;
+  text-align: left;
+  width: 45%;
 }
