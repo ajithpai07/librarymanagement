@@ -439,7 +439,7 @@ th{
   width: 45%;
 }
 tr,td{
-  border: 2px solid blueviolet;
+  border: 2px solid lightgreen;
   border-style: solid;
   padding: 10px;
   text-align: left;

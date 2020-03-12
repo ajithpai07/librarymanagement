@@ -58,7 +58,8 @@ signupForm.addEventListener('submit',(e) =>{
               p2: p2,
               p3: p3,
               KYCtype: KYCtype,
-              Kycid: Kycid
+              Kycid: Kycid,
+              wallet:0
             });
             setTimeout(function() {
               alert("Successfully logged in");
