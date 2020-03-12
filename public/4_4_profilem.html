@@ -3,7 +3,7 @@
     <head>
         <title>Profile Management</title>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/icon type" href="file:///C:/Users/Sravan%20Kumar/Desktop/takshashila-lib/logo_tbar.png">
+        <link rel="icon" type="image/icon type" href="logo_tbar.png">
         <link rel="stylesheet" href="css/css4.css">
     </head>
     <body>
@@ -25,7 +25,16 @@
                 <a href="4_3_profilem.html">Update My Profile</a>
                 <a href="4_4_profilem.html">KYC Status</a>
                 <a href="4_1_profilem.html">Help</a>
-            </div>                      
+            </div>      
+           <!-- <form> 
+                <progress value="0" id="uploader" max="100">0%</progress><br><br> 
+                
+                <input id="photo"class="file"type="file" name="mainimage"
+                                value="" onchange="getfile()"><br><br> 
+                 
+                <button id="submit_link"type="submit" name="button">Save</button> 
+                </form> -->
+                                
             <div class="main-profile">
                 <h2>KYC Status</h2><br>
                 <h3>Status: <span>Pending</span></h3>
@@ -69,6 +78,9 @@
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
     
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+      <!--  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script> -->
+
     
         <script src="js/profile4.js"></script>
     </body>
