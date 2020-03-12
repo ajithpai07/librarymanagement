@@ -60,7 +60,10 @@ signupForm.addEventListener('submit',(e) =>{
               KYCtype: KYCtype,
               Kycid: Kycid
             });
-            
+            setTimeout(function() {
+              alert("Successfully logged in");
+              location="8_clogin.html"
+            }, 5000);
             
           }
           else{

@@ -22,37 +22,37 @@
         <div class="main">
           <div class="top">
             <h1>Wallet</h1>
-            <h3>Total balance = <span>&#8377</span></h3>
+            <h3 id="fld8">Total balance = <span>&#8377</span></h3>
           </div>
                  
-          <form>
+          <form id="card">
             <div class="form-container">
                 <div class="card-front">
                   <div class="shadow"></div>
                     <div class="image-container">
-                      <span class="amount">Amount: &#8377 <strong><input type="number" required pattern="[0-9]{4}" max="2000" min="100" title="The amount must be in the range 100 to 2000"></strong></span>
+                      <span class="amount">Amount: &#8377 <strong><input type="number" id="fld1" required pattern="[0-9]{4}" max="2000" min="100" title="The amount must be in the range 100 to 2000"></strong></span>
                       <span class="card-image"></span>
                     </div>            
                   <label for="card-number">Card Number</label>
-                  <input type="text" class="card-number" placeholder="1234 5678 9101 1112" length="16" required pattern="[0-9]{16}" title="Sorry, only numbers are allowed with length of 16 digits">
+                  <input type="text" class="card-number" id="fld2" placeholder="1234 5678 9101 1112" length="16" required pattern="[0-9]{16}" title="Sorry, only numbers are allowed with length of 16 digits">
                   <div class="cardholder-container">
                     <label for="card-holder">Card Holder</label>
-                    <input type="text" class="card-holder" placeholder="e.g. John Doe" required pattern="[a-zA-Z|' ']{3,30}" title="Sorry, only letters and spaces are allowed with a maximum length of 3-30 letters.">
+                    <input type="text" class="card-holder" id="fld3" placeholder="e.g. John Doe" required pattern="[a-zA-Z|' ']{3,30}" title="Sorry, only letters and spaces are allowed with a length of 3-30 letters.">
                   </div>
                   <div class="exp-container">
                     <label for="card-exp">Expiration</label>
-                    <input class="card-month" type="text" placeholder="MM" length="2" required pattern="(00|01|02|03|04|05|06|07|08|09|10|11|12)" title="Sorry, only numbers are allowed with exact length of 2 digits">
-                    <input class="card-year" type="text" placeholder="YY" length="2" required pattern="(2|3|4|5|6|7|8|9){1}[0-9]{1}" title="Sorry, only numbers are allowed with exact length of 2 digits">
+                    <input class="card-month" type="text" id="fld4" placeholder="MM" length="2" required pattern="(00|01|02|03|04|05|06|07|08|09|10|11|12)" title="Sorry, only numbers are allowed with exact length of 2 digits">
+                    <input class="card-year" type="text" id="fld5" placeholder="YY" length="2" required pattern="(2|3|4|5|6|7|8|9){1}[0-9]{1}" title="Sorry, only numbers are allowed with exact length of 2 digits">
                   </div>
                   <div class="cvc-container">
                     <label for="card-cvc"> CVC/CVV</label>
-                    <input class="card-cvc" placeholder="XXX-X" type="password" min-length="3" max-length="4" required pattern="[0-9]{3}[0-9]?">
+                    <input class="card-cvc" placeholder="XXX-X" id="fld6" type="password" min-length="3" max-length="4" required pattern="[0-9]{3}[0-9]?">
                     <p>Last 3 or 4 digits</p>
                   </div>                          
                   <br>
                   <br>
                   <br>       
-                  <input type="checkbox"><a class="check">I want to save my card details.</a>                  
+                  <input type="checkbox" id="fld7"><a class="check">I want to save my card details.</a>                  
                 </div>
                 <div class="card-back">
                   <div class="card-stripe">
