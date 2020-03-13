@@ -56,9 +56,9 @@ auth.onAuthStateChanged(function(user) {
         fd12.textContent=doc.data().pcode;
         fd6.textContent=doc.data().p1;
         fd7.textContent=doc.data().p2;
-        fd13.textContent=doc.data().p3;
         fd8.textContent=doc.data().KYCtype;
         fd9.textContent=doc.data().Kycid;
+        fd13.textContent=doc.data().p3;
         
 
         fld1.appendChild(fd1);
