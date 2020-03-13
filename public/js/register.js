@@ -62,8 +62,8 @@ signupForm.addEventListener('submit',(e) =>{
               wallet:0
             });
             setTimeout(function() {
-              alert("Successfully logged in");
-              location="8_clogin.html"
+              alert("Successfully signed up");
+              location="9_clogin.html"
             }, 5000);
             
           }
