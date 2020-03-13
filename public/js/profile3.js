@@ -45,6 +45,7 @@ auth.onAuthStateChanged(function(user) {
         if(doc.exists) {
           console.log("data is ", doc.data());
           render(doc);
+          
         }
         else {
           console.log("no document");
