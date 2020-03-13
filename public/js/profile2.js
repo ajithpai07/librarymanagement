@@ -29,7 +29,7 @@ auth.onAuthStateChanged(function(user) {
       const fld10=document.querySelector("#fld10");
       const fld11=document.querySelector("#fld11");
       const fld12=document.querySelector("#fld12");
-      const fld13=document.querySelector("#fld12");
+      const fld13=document.querySelector("#fld13");
       
       function render(doc){
         const fd1= document.createElement('span');
