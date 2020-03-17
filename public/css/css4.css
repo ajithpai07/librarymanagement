@@ -36,6 +36,51 @@ li {
     list-style: none;
 }
 
+
+
+iframe{
+    border: 2px solid darkgrey;
+    border-style: double;
+    border-radius: 10px;
+}
+
+.red h3{
+    font-weight: bold;
+    background-color: red;
+    border: 2px solid white;
+    border-style: dotted;
+}
+
+.m-profile{        
+    margin-left: 30px;
+    color: grey;
+}
+
+.m-profile h2{    
+    font-weight: 600;    
+    font-size: 35px;
+    color: grey;
+}
+
+.m-profile h3{    
+    color: white;
+    font-weight: normal;    
+    font-size: 30px;
+}
+
+.m-profile span{
+    color: orangered;    
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.m-profile p{
+    text-align: justify;
+    color: skyblue;    
+    font-weight: 200;
+    font-size: 25px;
+}
+
 .header {
     background-color: black;
     color: green;
