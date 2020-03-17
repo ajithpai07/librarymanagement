@@ -57,16 +57,20 @@
 
 
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
+    background-color: gold;
+    color: black;
+    font-weight: 600;
+    padding: 10px;
     font-size: 16px;
-    border: none;
+    border: 2px double yellow;
     cursor: pointer;
+    border-radius: 10px;
+    text-emphasis: none;
+    text-decoration: none;
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: darkgoldenrod;
   }
   
   #myInputGenre, #myInputAuthor {
@@ -85,7 +89,7 @@
   .dropdown {
     float: right;
     padding-left: 100px;
-    margin-right: 45px;
+    margin-right: 52px;
     position: relative;
     display: inline-block;
   }
@@ -94,7 +98,7 @@
     display: none;
     position: absolute;
     background-color: #f6f6f6;
-    min-width: 230px;
+    min-width: 20px;
     overflow: auto;
     border: 1px solid #ddd;
     z-index: 1;
@@ -107,7 +111,10 @@
     display: block;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+  .dropdown a:hover {
+      font-weight: 500;
+      background-color: #ddd;
+  }
   
   .show {display: block;}
 
