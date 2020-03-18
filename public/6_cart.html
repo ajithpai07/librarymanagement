@@ -27,10 +27,9 @@
                 <!-- <a href="">Feedback/Billing</a> -->
             </div> 
             <div class="main-book">
-              <iframe src="cart_item.html" width="100%" height="190" frameborder="1" marginheight="1" marginwidth="0"></iframe>                 
+              <iframe src="cart_item.html" width="80%" height="190" frameborder="22" marginheight="0" marginwidth="0"></iframe>                 
             </div>       
-            
-            
+            <a href="#" type="button">CHECKOUT</a>
             
             <br>
         </div>
@@ -49,48 +48,6 @@
                 </address>
             </div>
         </div>
-
-        <script>
-            function myFunctionGenre() {
-              document.getElementById("myDropdownGenre").classList.toggle("show");
-            }
-              
-            function filterFunctionGenre() {
-              var input, filter, ul, li, a, i;
-              input = document.getElementById("myInputGenre");
-              filter = input.value.toUpperCase();
-              div = document.getElementById("myDropdownGenre");
-              a = div.getElementsByTagName("a");
-              for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  a[i].style.display = "";
-                } else {
-                  a[i].style.display = "none";
-                }
-              }
-            }
-    
-            function myFunctionAuthor() {
-              document.getElementById("myDropdownAuthor").classList.toggle("show");
-            }
-              
-            function filterFunctionAuthor() {
-              var input, filter, ul, li, a, i;
-              input = document.getElementById("myInputAuthor");
-              filter = input.value.toUpperCase();
-              div = document.getElementById("myDropdownAuthor");
-              a = div.getElementsByTagName("a");
-              for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  a[i].style.display = "";
-                } else {
-                  a[i].style.display = "none";
-                }
-              }
-            }
-            </script>
 
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
