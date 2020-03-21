@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
         <link rel="stylesheet" href="css/css2.css">
-    </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    </head>
     <body>
         <div class="header">
             <div class="header-logo">Takshashila Library</div>
@@ -15,30 +15,92 @@
                     <li><a href="6_cart.html">Booking</a></li>
                     <li><a href="5_wallet.html">Wallet</a></li>
                     <li><a href="4_2_profilem.html">Profile management</a></li>
-                    <li class="active"><a href="2_home.html">Home</a></li>
+                    <li class="activ"><a href="2_home.html">Home</a></li>
                 </ul>
             </div>
         </div>
         <div class="main">
             <div class="intro-txt">
-                <h2>Welcome to <span>Takshashila Library</span>.</h2>
-            </div>
-            <div class="contents">
-                <div class="contents-item">
-                    <div class="right-img">
-                        <img src="https://images.pexels.com/photos/48020/books-education-school-literature-48020.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-                    </div>
-                    <h3>Takshashila Libraries A-Z</h3>
-                    <p>The library also houses many departmental and museum libraries, such as the Museum of the History of Science Library and the Takshashila Museum of Natural History Library. Further information on all libraries can be found using the 'Libraries A-Z' or ‘Subjects A-Z’ indexes.</p>
-                </div>            
-                <div class="contents-item">
-                    <div class="left-img">
-                        <img src="https://images.pexels.com/photos/1301585/pexels-photo-1301585.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-                    </div>
-                    <h3>Digital projects and services</h3>
-                    <p>The Bodleian is actively involved in developing new digital collections and services in close collaboration with students, researchers who visit library. To learn more about these services please see this overview or have a look at a selection of our past or current projects.</p>
+                <h2>Welcome to <span>Takshashila Library</span> online portal.</h2>
+            </div>            
+              <br><br><br>
+            
+              <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <q>Libraries were full of ideas – perhaps the most dangerous and powerful of all weapons.</q>
+                    <p class="author">- Sarah J. Maas</p>
+                  </div>
+
+                <div class="mySlides">
+                    <q>Libraries will get you through times of no money better than money will get you through times of no libraries.</q>
+                    <p class="author">- Anne Herbert</p>
+                  </div>
+
+                <div class="mySlides">
+                  <q>Bad libraries build collections, good libraries build services, great libraries build communities.</q>
+                  <p class="author">- R. David Lankes</p>
                 </div>
-            </div>
+                
+                <div class="mySlides">
+                  <q>An original idea. That can’t be too hard. The library must be full of them.</q>
+                  <p class="author">- Stephen Fry</p>
+                </div>
+                
+                <div class="mySlides">
+                  <q>To build up a library is to create a life. It’s never just a random collection of books.</q>
+                  <p class="author">- Carlos María Domínguez</p>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                <div class="dot-container">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span>                   
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+
+                <br><br><br>
+
+                <div class="row">
+                    <div class="column">
+                      <div class="card">
+                        <p><i class="fa fa-credit-card-alt"></i></p>
+                        <h3>10+</h3>
+                        <p>Secure Payment Options</p>
+                      </div>
+                    </div>
+                  
+                    <div class="column">
+                      <div class="card">
+                        <p><i class="fa fa-book"></i></p>
+                        <h3>100+</h3>
+                        <p>Books</p>
+                      </div>
+                    </div>
+                    
+                    <div class="column">
+                      <div class="card">
+                        <p><i class="fa fa-smile-o"></i></p>
+                        <h3>100+</h3>
+                        <p>Happy Customers</p>
+                      </div>
+                    </div>
+                    
+                    <div class="column">
+                      <div class="card">
+                        <p><i class="fa fa-user"></i></p>
+                        <h3>70+</h3>
+                        <p>Authors</p>
+                      </div>
+                    </div>
+                  </div>
+                  
         </div>
         <div class="footer">
             <div class="footer-cright">
@@ -55,6 +117,36 @@
                 </address>
             </div>
         </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
