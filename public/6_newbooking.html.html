@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booking: New</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/icon type" href="logo_tbar.png">
+        <link rel="stylesheet" href="democss2.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-logo">Takshashila Library</div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="logout.html" class="button3">Logout</a></li>
+                    <li class="active"><a href="6_cart.html">Booking</a></li>
+                    <li><a href="5_wallet.html">Wallet</a></li>
+                    <li><a href="4_2_profilem.html">Profile management</a></li>
+                    <li><a href="2_home.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <a href="6_cart.html">Cart</a>
+                <a href="6_newbooking.html">New booking</a>
+                <a href="">Previous bookings</a>
+                <!-- <a href="">Feedback/Billing</a> -->
+            </div> 
+            <div class="main-book">
+                <div class="dropdown">
+                    <button onclick="myFunctionGenre()" class="dropbtn">Search-Genre</button>
+                    <div id="myDropdownGenre" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="myInputGenre" onkeyup="filterFunctionGenre()">
+                      <a href="#">Historical fiction</a>
+                      <a href="#">Science fiction</a>
+                      <a href="#">Short story</a>
+                      <a href="#">Fantasy</a>
+                      <a href="#">Horror</a>
+                      <a href="#">Poetry</a>
+                      <a href="#">Satire</a>
+                      <a href="#">Travel</a>
+                      <a href="#">Drama</a>
+                      <a href="#">Art</a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button onclick="myFunctionAuthor()" class="dropbtn">Search-Author</button>
+                    <div id="myDropdownAuthor" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="myInputAuthor" onkeyup="filterFunctionAuthor()">
+                      <a href="#">RK</a>
+                      <a href="#">A1</a>
+                      <a href="#">BS7</a>
+                      <a href="#">AJ</a>
+                      <a href="#">S</a>
+                      <a href="#">SR</a>
+                      <a href="#">PR</a>
+                    </div>
+                  </div>   
+                </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            
+
+            
+
+
+
+
+
+            <div class="container">
+              
+
+              <div class="grid">
+
+                  <div class="content">
+                      <ul class="rig columns-4">  
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li>     
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          <li>                           
+                            <div class=" overlay-image _bp ">
+                              <a href="book2.png">
+                                <img class=" image _bq " src="book2.png" alt="Alt text" />
+                                <div class=" hover _br ">
+                                  <div class=" text _q ">
+                                    <h4>Book Title</h4>
+                                    <p>Edition: <br>Genre : <br>Author : <br>Publisher :</p>
+                                  <div class="price">Book Price</div>
+                                </div>
+                              </a>
+                            </div>
+                            <hr>
+                            <div class="addtoc">
+                              <a href="">Add to cart</a>
+                            </div>
+                          </li> 
+                          
+                      </ul>
+        </div>
+        </div></div></div>
+      
+            
+            
+            
+        </div>
+        <div class="footer">
+            <div class="footer-cright">
+                <p>Copyright &#169 2020 Takshashila Lib. All rights reserved</p>
+            </div>
+            <div class="footer-menu">
+                <address>
+                    Contact us at:<br>
+                    takshashila.lib@bl.edu<br>
+                    Amrita Vishwa Vidyapeetham, Kasavanahalli<br>
+                    Bengaluru-560035<br>
+                    Karnataka<br>
+                    India<br>
+                </address>
+            </div>
+        </div>
+
+        <script>
+            function myFunctionGenre() {
+              document.getElementById("myDropdownGenre").classList.toggle("show");
+            }
+              
+            function filterFunctionGenre() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("myInputGenre");
+              filter = input.value.toUpperCase();
+              div = document.getElementById("myDropdownGenre");
+              a = div.getElementsByTagName("a");
+              for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  a[i].style.display = "";
+                } else {
+                  a[i].style.display = "none";
+                }
+              }
+            }
+    
+            function myFunctionAuthor() {
+              document.getElementById("myDropdownAuthor").classList.toggle("show");
+            }
+              
+            function filterFunctionAuthor() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("myInputAuthor");
+              filter = input.value.toUpperCase();
+              div = document.getElementById("myDropdownAuthor");
+              a = div.getElementsByTagName("a");
+              for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  a[i].style.display = "";
+                } else {
+                  a[i].style.display = "none";
+                }
+              }
+            }
+            </script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+      
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+      
+        <script src="js/booking.js"></script>
+    </body>
+</html>
