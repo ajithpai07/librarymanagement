@@ -1,16 +1,13 @@
-/********* Simple or original overlay *******/
-/* Main container */
+
 .overlay-image {
   position: relative;
   width: 100%;
  }
- /* Original image */
  .overlay-image .image {
   display: block;
   width: 100%;
   height: auto;
  }
- /* Original text overlay */
  .overlay-image .text {
   color: #fff;
   font-size: 14px;
@@ -31,7 +28,6 @@
   opacity: 0;
   transition: .5s ease;
  }
- /* New overlay appearance on hover */
  .overlay-image:hover .hover {
   opacity: 1;
   background-color: black;
@@ -175,7 +171,10 @@ ul.rig.columns-4 li {
     margin: 0 0 10px;
   }
 }
-
+.ppd{
+  padding-left: 10px;
+  float: left;
+}
 .addtoc a{
     text-decoration: none;
     font-weight: bold;
