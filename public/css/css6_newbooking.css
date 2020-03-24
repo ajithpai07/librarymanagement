@@ -165,7 +165,7 @@ ul.rig.columns-4 li {
   }
   ul.rig li {
     width: 100% !important;
-    /* over-ride all li styles */
+    /* over-ride all li styles
     margin: 0 0 10px;
   }
 } */
