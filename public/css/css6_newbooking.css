@@ -108,7 +108,6 @@ ul.rig li {
 }
 
 ul.rig li img {
-  align-items: center;
   max-width: 100%;
   height: auto;
   border-image-repeat: none;
@@ -153,10 +152,9 @@ ul.rig.columns-4 li {
     border-radius: 5px;
 }
 
-@media (max-width: 680px) {
+/* @media (max-width: 680px) {
   ul.grid-nav li {
     display: inline-block;
-    margin: 0 0 2px;
   }
   ul.grid-nav li a {
     display: inline-block;
@@ -170,7 +168,7 @@ ul.rig.columns-4 li {
     /* over-ride all li styles */
     margin: 0 0 10px;
   }
-}
+} */
 .ppd{
   padding-left: 10px;
   float: left;
@@ -178,7 +176,7 @@ ul.rig.columns-4 li {
 .addtoc a{
     text-decoration: none;
     font-weight: bold;
-    text-decoration: none ;   
+    text-decoration: none ;  
     padding: 2px 15px;
     background-color: skyblue; 
     color: black; 
@@ -244,28 +242,28 @@ iframe{
 
 
 .sidebar {   
-    float: left;
-    border-radius: 5px;
-    border: 4px solid gold;
-    height: 186px;
-    width: 215px;
-    background-color: #111;
+  float: left;
+  border-radius: 5px;
+  border: 4px solid gold;
+  height: 194px;
+  width: 223px;
+  background-color: #111;
 }
-  
+
 .sidebar a {
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: goldenrod;
-    display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: goldenrod;
+  display: block;
 }
-  
+
 .sidebar a:hover {
-    background-color: gold;    
-    font-size: 20px;
-    font-weight: 300;
-    color: black;
-    font-weight: bold;
+  background-color: gold;    
+  font-size: 20px;
+  font-weight: 300;
+  color: black;
+  font-weight: bold;
 }
 
 
@@ -374,7 +372,7 @@ li {
 .header {
     background-color: black;
     color: green;
-    height: 90px;        
+    height: 94px;        
     border: 2px solid white; 
 }
 
