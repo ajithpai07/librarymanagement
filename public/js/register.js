@@ -34,6 +34,7 @@ signupForm.addEventListener('submit',(e) =>{
   const p3=signupForm['p3'].value;
   const KYCtype=signupForm['KYCtype'].value;
   const Kycid=signupForm['Kycid'].value;
+  const pending='pending';
   // const Kycimg=signupForm['Kycimg'].value;
   
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
@@ -59,9 +60,14 @@ signupForm.addEventListener('submit',(e) =>{
               p3: p3,
               KYCtype: KYCtype,
               Kycid: Kycid,
+<<<<<<< HEAD
               Kycstatus: "Pending",
               wallet:0,
               role: "customer"
+=======
+              wallet:0,
+              Kstatus:pending
+>>>>>>> acbfed90e4ceced2b68e9d30ec9a746fa4b5f509
             });
             setTimeout(function() {
               alert("Successfully signed up");
