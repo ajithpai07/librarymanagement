@@ -26,10 +26,33 @@ loginForm.addEventListener('submit',(e) =>{
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in. 
-            alert("login successful");
-            window.location="2_home.html";
+            db.collection('Users').doc(user.uid).get().then(function(doc) {
+              if(doc.exists) {
+                console.log("data is ", doc.data());
+                if(doc.data().role=="customer"){
+                  alert("login successful");
+                  window.location="2_home.html";
+                }
+                else{
+                  if(doc.data().role=="admin"){
+                    alert("login successful");
+                    window.location="2_home.html";
+                  }
+                  else{
+                    alert("login unsuccessful");
+                  }
+                }
+              }
+              else {
+                console.log("no document");
+              }
+            })
+              .catch(function(error) {
+                console.log("error"+error);
+              });
           } else {
             // No user is signed in.
+            console.log("no user is signed in");
           }
         });
        
