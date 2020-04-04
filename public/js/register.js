@@ -59,7 +59,9 @@ signupForm.addEventListener('submit',(e) =>{
               p3: p3,
               KYCtype: KYCtype,
               Kycid: Kycid,
-              wallet:0
+              Kycstatus: "Pending",
+              wallet:0,
+              role: "customer"
             });
             setTimeout(function() {
               alert("Successfully signed up");
