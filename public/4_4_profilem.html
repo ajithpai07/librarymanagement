@@ -34,11 +34,18 @@
                  
                 <button id="submit_link"type="submit" name="button">Save</button> 
                 </form> -->
-                                
+                
+                      
             <div class="main-profile">
+                
                 <h2>KYC Status</h2><br>
+                <label class="upload-group">
+                    Upload KYC:<br>
+                    <input type="file" class="upload" id="file" accept="image/*">
+                </label>
+               <button type="button" class="uploadbutton" id="uploadButton" onclick="uploadFile()">SUBMIT</button>
                 <h3>Status: <span>Pending</span></h3>
-                <iframe src="kyc_details.html" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>              
+                   <iframe src="kyc_details.html" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>              
             </div>
         </div>
         <div class="footer">
@@ -66,5 +73,6 @@
 
     
         <script src="js/profile4.js"></script>
+ 
     </body>
 </html>
