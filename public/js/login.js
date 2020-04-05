@@ -36,7 +36,7 @@ loginForm.addEventListener('submit',(e) =>{
                 else{
                   if(doc.data().role=="admin"){
                     alert("login successful");
-                    window.location="2_home.html";
+                    window.location="1lib_home.html";
                   }
                   else{
                     alert("login unsuccessful");
