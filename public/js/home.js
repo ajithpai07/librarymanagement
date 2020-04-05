@@ -20,7 +20,7 @@ auth.onAuthStateChanged(function(user) {
       console.log(user.uid);
     } else {
       // No user is signed in.
-      console.log("not present");
+      console.log("not signed-in");
       window.location="3_login.html";
     }
   });

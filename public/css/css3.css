@@ -1,4 +1,5 @@
 body {
+    user-select: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #000000;
     color: white;
@@ -138,8 +139,11 @@ li {
     }
     
     .submit {
-        border-radius: 5em;
+        font-weight: 550;
+        outline: none;
+        border-radius: 1em;
         color: #fff;
+        transition: 0.5s;
         background: rgb(6, 116, 79);
         border: 0;
         padding-left: 40px;
@@ -149,6 +153,25 @@ li {
         margin-left: 30%;
         font-size: 13px;
     }
+
+    .submit:hover {
+        box-shadow: inset;
+        font-weight: 550;
+        cursor: pointer;
+        outline: none;
+        transition: 5s;
+        border-radius: 10em;
+        color: #fff;
+        background: green;
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-left: 30%;
+        font-size: 13px;
+    }
+
 .submit1 {
         border-radius: 5em;
         color: #fff;
