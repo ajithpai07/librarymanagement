@@ -7,8 +7,21 @@
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
         <link rel="stylesheet" href="css/1lib_home.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    </head>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <script>
+            $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
+        
     </head>
     <body>
+        <!-- Loader icon -->
+        <div class="se-pre-con"></div>
+        <!-- Loader icon -->
         <br><br><br><br><br><br>
         <div class="start">
             <img src="logo_tbar.png">
