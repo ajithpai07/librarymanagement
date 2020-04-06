@@ -192,6 +192,7 @@ form {
     border-radius: 100%;
   }
   .submit {
+    cursor: pointer;
     outline:none;
     border-radius: 1em;
     color: #fff;
@@ -206,6 +207,7 @@ form {
     font-weight: 550;
 }
 .submit:hover {  
+  cursor: pointer;
   font-weight: 550;
   transition: 5s;
   outline:none;
