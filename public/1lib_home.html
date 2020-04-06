@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Lib | Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
         <link rel="stylesheet" href="css/1lib_home.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    </head>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <script>
+            $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
+        
     </head>
     <body>
+        <!-- Loader icon -->
+        <div class="se-pre-con"></div>
+        <!-- Loader icon -->
         <br><br><br><br><br><br>
         <div class="start">
             <img src="logo_tbar.png">
@@ -21,8 +34,16 @@
             <div class="header-logo">Takshashila Library</div>
             <div class="header-menu">
                 <ul>
-                    <li><a href="logout.html" class="button3">Logout</a></li>
-                    <li><a href="#">Books</a></li>
+                    <li><a href="8_clogout.html" class="button3">Logout</a></li>
+                    <li>
+                        <div class="dropdown">                            
+                            <a>Books</a>
+                            <div class="dropdown-content">
+                              <a href="1lib_book_history.html">Books history</a>
+                              <a href="1lib_update_book.html">Update Books</a>
+                            </div>
+                          </div> 
+                    </li>
                     <li><a href="#">KYC Verification</a></li>
                     <li>
                         <div class="dropdown">                            
