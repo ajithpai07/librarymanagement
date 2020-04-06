@@ -5,6 +5,7 @@ body {
     color: white;
 }
 
+
 /* Loader icon */
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
@@ -14,8 +15,8 @@ body {
 	top: 0px;
 	width: 100%;
 	height: 100%;
-    z-index: 9999;
-    transition: 100s;
+  z-index: 9999;
+  transition: 100s;
 	background: url(load1.gif) center no-repeat black;
 }
 /* Loader icon */
@@ -95,7 +96,7 @@ li {
     padding-right: 70px;
     background-color: black;
     width: 350px;
-    height: 1850px;
+    height: 1800px;
     border: 4px solid #be5504;    
     margin: 100px auto;
     border-radius: 30px;
@@ -112,6 +113,7 @@ form {
   }
   
   input[type="text"],
+  input[type="text"],
   input[type="password"],
   input[type="date"],
   input[type="datetime"],
@@ -121,8 +123,7 @@ form {
   input[type="tel"],
   input[type="time"],
   input[type="url"],
-  textarea,
-  select {
+  textarea, select {
     width: 116%;
     color: #FFA07A;
     font-weight: 300;
@@ -141,6 +142,21 @@ form {
     margin-bottom: 27px;
   }
     
+.slct-img{  
+    outline:none;
+    border-radius: 20px;
+    border: 4px solid grey; 
+    background-color: black;
+    border-color: grey;
+    color: #FFA07A;
+    width:115%;
+}
+
+.slct-img:focus{
+  border: 4px solid #003355;  
+  color: #EF7215;      
+}
+
   fieldset {
     margin-bottom: 30px;
     border: none;
@@ -176,7 +192,8 @@ form {
     border-radius: 100%;
   }
   .submit {
-    border-radius: 5em;
+    outline:none;
+    border-radius: 1em;
     color: #fff;
     background: #be5504;
     border: 0;
@@ -186,6 +203,22 @@ form {
     padding-top: 10px;
     margin-left: 35%;
     font-size: 15px;
+    font-weight: 550;
+}
+.submit:hover {  
+  font-weight: 550;
+  transition: 5s;
+  outline:none;
+  border-radius: 10em;
+  color: #000;
+  background: #be5504;
+  border: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: 35%;
+  font-size: 15px;
 }
 
 .slct:focus{
@@ -193,19 +226,7 @@ form {
   color: #FFA07A;      
 }
 
-.slct-img{  
-    border-radius: 30px;
-    border: 4px solid grey; 
-    background-color: black;
-    border-color: grey;
-    color: #FFA07A;
-    width:115%;
-}
 
-.slct-img:focus{
-  border: 4px solid #003355;  
-  color: #EF7215;      
-}
   
 @media screen and (min-width: 480px) {
   
