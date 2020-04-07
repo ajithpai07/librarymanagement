@@ -60,14 +60,9 @@ signupForm.addEventListener('submit',(e) =>{
               p3: p3,
               KYCtype: KYCtype,
               Kycid: Kycid,
-<<<<<<< HEAD
               Kycstatus: "Pending",
               wallet:0,
               role: "customer"
-=======
-              wallet:0,
-              Kstatus:pending
->>>>>>> acbfed90e4ceced2b68e9d30ec9a746fa4b5f509
             });
             setTimeout(function() {
               alert("Successfully signed up");
