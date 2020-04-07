@@ -13,7 +13,17 @@
             // Animate loader off screen
             $(".se-pre-con").fadeOut("slow");;
             });
-        </script>        	
+        </script>      
+        <!-- logout script -->
+        <script>
+            function logoutfunction() {
+              var r = confirm("Are you sure want to logout?");
+              if (r == true) {
+                window.location.href = "8_clogout.html";
+              }
+            }
+        </script>
+        <!-- logout script -->  	
 
     </head>
     <body>
@@ -24,7 +34,7 @@
             <div class="header-logo">Takshashila Library</div>
             <div class="header-menu">
                 <ul>
-                    <li><a href="8_clogout.html" class="button3">Logout</a></li>
+                    <li><a onclick="logoutfunction()" class="button3">Logout</a></li>
                     <li><a href="6_cart.html">Booking</a></li>
                     <li><a href="5_wallet.html">Wallet</a></li>
                     <li class="active"><a href="4_2_profilem.html">Profile management</a></li>
