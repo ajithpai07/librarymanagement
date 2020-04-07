@@ -4,7 +4,7 @@
         <title>Profile Management: KYC</title>
         <meta charset="UTF-8">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
-        <link rel="stylesheet" href="css/css4.css">
+        <link rel="stylesheet" href="css/css4kyc.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -48,7 +48,43 @@
                 <a href="4_3_profilem.html">Update My Profile</a>
                 <a href="4_4_profilem.html">KYC Status</a>
                 <a href="4_1_profilem.html">Help</a>
-            </div>      
+            </div>  
+            <div class="show-profile" id="profile">
+                <h2>KYC Status</h2>    
+
+                <h5>Status: <span>Pending</span></h5>                
+               
+                <h3 id="fld1">Name:<br>
+                </h3>
+                <h3 id="fld4">Date of birth:<br>
+                </h3>
+                <h3 id="fld5">Address:<br>
+                </h3>
+                <h3 id="fld10"></h3>
+                <h3 id="fld11"></h3>
+                <h3 id="fld12"></h3>
+                <h3 id="fld8">KYC document type:<br>
+                </h3>
+                <h3 id="fld9">KYC id number:<br>
+                </h3>  
+
+                <br><hr>
+                <!-- Take input for KYC document image in this form -->
+                <form id="#">
+                    <h4>Upload Your Selfie </h4>
+                    <input type="file" class="slct-img" accept="image/*" required><br><br>    
+                    <input type="submit" value="Upload" class="submit">
+                </form> 
+
+                <br>   
+                <hr>
+                <br><br>
+                
+                
+                <iframe src="kyc_details.html" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            
+              
            <!-- <form> 
                 <progress value="0" id="uploader" max="100">0%</progress><br><br> 
                 
@@ -58,19 +94,15 @@
                 <button id="submit_link"type="submit" name="button">Save</button> 
                 </form> -->
                 
-                      
-            <div class="main-profile">
-                
-                <h2>KYC Status</h2><br>
-                <label class="upload-group">
+                <!-- <label class="upload-group">
                     Upload KYC:<br>
                     <input type="file" class="upload" id="file" accept="image/*">
                 </label>
-               <button type="button" class="uploadbutton" id="uploadButton" onclick="uploadFile()">SUBMIT</button>
-                <h3>Status: <span>Pending</span></h3>
-                   <iframe src="kyc_details.html" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>              
-            </div>
+               <button type="button" class="uploadbutton" id="uploadButton" onclick="uploadFile()">SUBMIT</button> -->
+                      
         </div>
+
+
         <div class="footer">
             <div class="footer-cright">
                 <p>Copyright &#169 2020 Takshashila Lib. All rights reserved</p>
