@@ -321,10 +321,28 @@ form {
     border-radius: 100%;
   }
   .submit {
+    cursor: pointer;
     outline: none;
-    border-radius: 5em;
+    border-radius: 1em;    
+    font-weight: 550;
     color: #fff;
     background: brown;
+    border: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-left: 120px;
+    font-size: 15px;
+}
+.submit:hover {
+    cursor: pointer;
+    outline: none;
+    border-radius: 10em;    
+    font-weight: 550;
+    color: #000;
+    background: #e9510b;
+    transition: 5s;
     border: 0;
     padding-left: 50px;
     padding-right: 50px;
