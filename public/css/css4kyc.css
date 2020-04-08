@@ -215,14 +215,15 @@ iframe{
 }
 
 .show-profile h3{
-    color: lightblue;
-    font-weight: normal;    
+    color: rgb(82, 83, 2);
+    font-weight: 600;    
     font-size: larger;
+    text-align: left;
 }
 
 .show-profile h4{
-    color: lightblue;
-    font-weight: normal;    
+    color: rgb(82, 83, 2);
+    font-weight: bold;    
     font-size: x-large;
 }
 
@@ -232,7 +233,12 @@ iframe{
     font-size: x-large;
     font-style: italic;
 }
-
+.show-profile h9{    
+    color: darkred;
+    font-weight: normal; 
+    font-size: small;
+    font-style: italic;
+}
 .show-profile hr{
     border: none;
     height: 3px;

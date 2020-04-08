@@ -24,7 +24,6 @@
             }
         </script>
         <!-- logout script -->
-        
     </head>
     <body>
         <!-- Loader icon -->
@@ -53,10 +52,23 @@
                 <h2>Profile Management</h2><br><br>
                 <h3 id="fld1">Hello, </h3>
                 <br>
-                <p>In "Profile Management", you can do the following operations:<br>
-                1. You can view the profile.<br>
-                2. You can update/edit the profile.<br>                
-                3. You can check the KYC status.</p>
+
+
+                <button class="accordion">How do I sign up?</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <button class="accordion">Question 2</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                
+                <button class="accordion">Question 3</button>
+                <div class="panel">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
             </div>
         </div>
         <div class="footer">
@@ -81,5 +93,24 @@
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
     
         <script src="js/profile1.js"></script>
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("ative");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+
+
     </body>
 </html>
