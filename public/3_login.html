@@ -32,7 +32,8 @@
         <div class="main">
             <form id="login">
                 <input class="un" autocomplete="off" type="text" align="center" id="email" placeholder="Username" required pattern="[a-zA-Z0-9|.]+@[a-zA-z]+[.][a-zA-Z]+" title="Sorry, only letters, numbers, periods(.) are allowed." autofocus>
-                <input type="password" class="pass"  align="center" id="password" placeholder="Password" name="psw" required pattern="(?=.*\d).{8,16}" onkeydown="if(event.ctrlKey && event.keyCode==86){return false;}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
+                <input type="password" class="pass" align="center" id="password" placeholder="Password" name="psw" required pattern="(?=.*\d).{8,16}" onkeydown="if(event.ctrlKey && event.keyCode==86){return false;}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
+                <input type="checkbox" onclick="myFunction()"> Show Password<br><br>
                 <input type="submit" value="LOGIN" class="submit">
             </form>            
             <a class="login-links-left" href="#">Forgot Password</a>
@@ -62,5 +63,17 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
 
     <script src="js/login.js"></script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
     </body>
 </html>
