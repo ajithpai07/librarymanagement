@@ -3,30 +3,31 @@ iframe{
     margin-right: 0px;
 }
 
-.main-book{     
-    margin-left: 10px;
+.main-cart{        
+    margin-left: 270px;
     color: grey;
 }
 
-.main-book h2{    
+.main-cart h2{    
     font-weight: 600;    
     font-size: 35px;
     color: grey;
 }
 
-.main-book h3{    
+.main-cart h3{    
     color: white;
     font-weight: normal;    
     font-size: 30px;
 }
 
-.main-book span{
+
+.main-cart span{
     color: orangered;    
     font-weight: normal;
     font-size: 30px;
 }
 
-.main-book p{
+.main-cart p{
     text-align: justify;
     color: skyblue;    
     font-weight: 200;
@@ -148,7 +149,7 @@ li {
     padding-top: 20px;
     padding-bottom: 80px; 
     padding-left: 0px;
-    padding-right: 80px;
+    padding-right: 20px;
 
 }
 
@@ -226,6 +227,7 @@ li {
 
 
 .glow-on-hover {
+    float:right;
     font-size: 15px;
     font-weight: 650;
     margin-left: 580px;
@@ -246,6 +248,7 @@ li {
     padding-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
+    border: 2px solid gold;
   }
   .glow-on-hover:before {
     content: '';
@@ -262,19 +265,26 @@ li {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 20px;
+    border: none;
   }
   
   .glow-on-hover:active {
-    color: #000
+    color: #000;
   }
   
   .glow-on-hover:active:after {
     background: transparent;
+    border: none;
     
   }
+  .glow-on-hover:hover{
+      border: 2px solid black;
+      outline: none;
+  }
   
-  .glow-on-hover:hover:before {
+  .glow-on-hover:hover:before{
     opacity: 1;
+    border: none;
   }
   
   .glow-on-hover:after {
@@ -287,10 +297,46 @@ li {
     left: 0;
     top: 0;    
     border-radius: 50px;
+    border: none;
   }
   
   @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+  }
+
+
+  /* Table CSS */
+
+  table {
+    background-color: white;
+    text-align: left;
+    position: relative;
+    border-collapse: collapse;     
+    border: 2px double white;
+    width: 80%;
+    margin-left: 240px;
+  }
+  td {
+    padding: 0.25rem;
+  }
+
+  tr {
+    padding: 0.25rem;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+  tr.red th {
+    background: black;
+    color: white;
+    border: 2px double white;
+  }
+  th {      
+    padding: 0.25rem;
+    background: black;
+    background-color: white;
+    position: sticky;
+    top: 0;
   }
