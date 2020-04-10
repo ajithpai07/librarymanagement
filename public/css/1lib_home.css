@@ -164,7 +164,6 @@ body {
         background-color: #dcf8c6;
         color: green;
         height: 120px;
-        margin: 10px;
     }
     
     .footer-cright {
@@ -174,7 +173,7 @@ body {
     }
     
     .footer-left{
-        margin-left:-130px;
+        margin-left:-110px;
     }
     .footer-left pre{
         color: green;

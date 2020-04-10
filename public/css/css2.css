@@ -282,12 +282,11 @@ body {
         margin-top: 30px;
     }
         
-    .footer {
+  .footer {
       border: 2px solid white; 
       background-color: black;
       color: green;
       height: 120px;
-      margin: 10px;
   }
   
   .footer-cright {
@@ -297,7 +296,7 @@ body {
   }
   
   .footer-left{
-      margin-left:-130px;
+      margin-left:-110px;
   }
   .footer-left pre{
       color: green;

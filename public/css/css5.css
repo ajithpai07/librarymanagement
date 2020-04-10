@@ -130,7 +130,6 @@ span{
   background-color: black;
   color: green;
   height: 120px;
-  margin: 10px;
 }
 
 .footer-cright {
@@ -140,7 +139,7 @@ span{
 }
 
 .footer-left{
-  margin-left:-130px;
+  margin-left:-110px;
 }
 .footer-left pre{
   color: green;
