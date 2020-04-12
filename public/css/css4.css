@@ -232,25 +232,48 @@ iframe{
 }
 
 .footer {
-    border: 2px solid white; 
-    background-color: black;
-    color: green;
-    height: 200px;
-}
-
-.footer-cright {
-    font-weight: bold;        
-    text-align: left;        
-    padding-left: 30px;
-}
-
-.footer-menu {       
-    float: left;
-    font-size: 16px;        
-    padding-top: 5px;
-    padding-left: 30px;
-    padding-right: 20px;
-}
+      border: 2px solid white; 
+      background-color: black;
+      color: green;
+      height: 120px;
+  }
+  
+  .footer-cright {
+      font-weight: bold;        
+      text-align: left;        
+      padding-left: 30px;
+  }
+  
+  .footer-left{
+      margin-left:-130px;
+  }
+  .footer-left pre{
+      color: green;
+      padding: 5px;
+      font-size: 18px;
+  }
+  
+  .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+      font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-links a:before {
+      content: "|";
+      font-weight:300;
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+    
+  .footer-links .link-1:before {
+      content: none;
+    }
 
 
 

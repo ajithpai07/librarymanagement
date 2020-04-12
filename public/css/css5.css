@@ -5,6 +5,15 @@ body {
     color: white;
 }
 
+.top img{
+  filter: invert(98);
+  opacity: 0.6;
+  width: 300px;
+  height: 300px;
+  background-repeat: none;
+  margin-left: 50px;
+}
+
 /* Loader icon */
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
@@ -117,26 +126,48 @@ span{
 }
 
 .footer {
-    border: 2px solid white; 
-    background-color: black;
-    color: green;
-    height: 200px;
+  border: 2px solid white; 
+  background-color: black;
+  color: green;
+  height: 120px;
 }
 
 .footer-cright {
-    font-weight: bold;        
-    text-align: left;        
-    padding-left: 30px;
+  font-weight: bold;        
+  text-align: left;        
+  padding-left: 30px;
 }
 
-.footer-menu {       
-    float: left;
-    font-size: 16px;        
-    padding-top: 5px;
-    padding-left: 30px;
-    padding-right: 20px;
+.footer-left{
+  margin-left:-110px;
+}
+.footer-left pre{
+  color: green;
+  padding: 5px;
+  font-size: 18px;
 }
 
+.footer-links a{
+display:inline-block;
+line-height: 1.8;
+  font-weight:400;
+text-decoration: none;
+color:  inherit;
+}
+
+.footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-links .link-1:before {
+  content: none;
+}
 
 
 .amount {
