@@ -362,3 +362,46 @@ li {
     position: sticky;
     top: 0;
   }
+
+/* checkout button */
+  .checkout {
+    float: right;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: greenyellow;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .checkout span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .checkout span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .checkout:hover span {
+    padding-right: 25px;
+  }
+  
+  .checkout:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
