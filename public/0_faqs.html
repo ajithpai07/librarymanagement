@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FAQ's | TL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/icon type" href="logo_tbar.png">    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <script>
+            $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
+
+        <style>
+            body {
+                overflow: hidden;
+                user-select: none;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: rgba(139, 86, 155, 0.253);
+                color: black;
+                padding: 0px;
+                margin:0px;
+            }
+
+            .example {
+                height: 500px;
+                overflow-y: scroll; /* Add the ability to scroll */
+            }
+            
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            .example::-webkit-scrollbar {
+                display: none;
+            }
+            
+            /* Hide scrollbar for IE and Edge */
+            .example {
+                -ms-overflow-style: none;
+            }
+
+            /* Loader icon */
+            .no-js #loader { display: none;  }
+            .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+            .se-pre-con {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+                transition: 100s;
+                background: url(load1.gif) center no-repeat black;
+            }
+            /* Loader icon */
+
+            .header {
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0;
+                background-color: black;
+                width: auto;
+                color: rgb(139, 86, 155);
+                height: 90px;
+                border: 4px solid black; 
+                z-index: 1;
+            }
+            
+            .header-logo {
+                font-weight: bolder;
+                float: left;
+                font-size: 36px;
+                padding: 20px 40px;
+            }
+            
+            .main {
+                padding: 30px;
+                text-align: justify;
+                scroll-behavior: smooth;
+            }
+            .accordion{
+                margin-left: 100px;
+                width: 80%;
+                text-align: justify;
+            }
+            .accordion a {
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem 3rem 1rem 1rem;
+            color: #000;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border-bottom: 1px solid #e5e5e5;
+            }
+            .accordion a:hover,
+            .accordion a:hover::after {
+            cursor: pointer;
+            color: rgb(139, 86, 155);
+            }
+            .accordion a:hover::after {
+            border: 1px solid rgb(139, 86, 155);
+            }
+            .accordion a.active {
+            color: rgb(139, 86, 155);
+            border-bottom: 1px solid rgb(139, 86, 155);
+            }
+            .accordion a.active::after {
+            color: rgb(139, 86, 155);
+            border: 1px solid rgb(139, 86, 155);
+            }
+            .accordion .content {
+            width: 103.1%;
+            padding: 0 1rem;
+            max-height: 0;
+            border-bottom: 1px solid rgba(139, 86, 155, 0.253);
+            border-left: 1px solid rgba(139, 86, 155, 0.253);
+            border-right: 1px solid rgba(139, 86, 155, 0.253);
+            overflow: hidden;
+            -webkit-transition: all 0.2s ease 0.15s;
+            -o-transition: all 0.2s ease 0.15s;
+            transition: all 0.2s ease 0.15s;
+            }
+            .accordion .content p {
+            font-size: 1rem;
+            font-weight: 300;
+            }
+            .accordion .content.active {
+            opacity: 1;
+            padding: 1rem;
+            max-height: 100%;
+            -webkit-transition: all 0.35s ease 0.15s;
+            -o-transition: all 0.35s ease 0.15s;
+            transition: all 0.35s ease 0.15s;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <!-- Loader icon -->
+        <div class="se-pre-con"></div>
+        <!-- Loader icon -->
+        <div class="header">
+            <div class="header-logo">Takshashila Library</div>
+        </div>
+        <div class="main example">
+          <h2 align="center">Frequently Asked Questions</h2>
+          <div class="accordion">
+            <div class="accordion-item">
+              <a>How do I sign-up?</a>
+              <div class="content">
+                <p>After navigating to the website, click on the sign-up option in the rightmost end. There, you can sign-up if you are a new user and want to be a member of the library.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <a>How do I delete my account?</a>
+              <div class="content">
+                <p>Please submit an application to the librarian for the deletion of a membership, any outstanding amount - the balance amount in the account will need to be paid/refunded, and the librarian shall delete the account.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <a>How can I update my profile?</a>
+              <div class="content">
+                <p>Firstly, log in to the account and click on 'Profile Management' over there and choose the <b>update profile</b> option to update your details.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <a>How can I access my account data?</a>
+              <div class="content">
+                <p>After logging in to your account, click on the 'Profile Management' which is present at the top-right and there you can view your data.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <a>How does the Takshashila Library notify me when I have overdue books?</a>
+              <div class="content">
+                <p>The overdue books can be seen in the <b>books owed</b> section of 'Booking'. Also, there is an option of book renewal.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <a>How many books can I check out?</a>
+                <div class="content">
+                  <p>A user can take as many books as needed to check out. And, all the books available can be checked out.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>What data will the application be collecting?</a>
+                <div class="content">
+                  <p><b>1.</b> You need to add the basic details like Name, Date of Birth, Email, Phone Number, Password and choose a file to upload your selfie.<br>
+                    <b>2.</b> And again, Address details like Door/Flat number, Street name, City and Postal Code. <br>
+                    <b>3.</b> It also asks for your book preferences, where at least one preference is mandatory.<br>
+                    <b>4.</b> Finally, It asks for your KYC details such as KYC id number and type which are required for the KYC approval.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Can I get a list of the items I have checked out?</a>
+                <div class="content">
+                  <p>In the 'Booking' menu, choose the <b>previous booking</b> option to get the list of all books checked out.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <a>Who uses the site?</a>
+                <div class="content">
+                  <p>"Takshashila Library" is used by anyone with interest in the wider world. Students, teachers, scholars etc. may approach it in different ways, but there is something of interest for everyone.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+        <script>
+            const items = document.querySelectorAll(".accordion a");            
+            function toggleAccordion(){
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
+            }            
+            items.forEach(item => item.addEventListener('click', toggleAccordion));
+        </script>
+    </body>
+</html>
