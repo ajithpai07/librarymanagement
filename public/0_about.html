@@ -5,6 +5,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">    
+
+        <style>
+
+            /* Create three equal columns that floats next to each other */
+            .column {
+                margin-left: 65px;
+                align-items: center;
+                float: left;
+                width: 25%;
+                padding: 10px;
+                height: 250px; /* Should be removed. Only for demonstration */
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                left: 0;
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -99,8 +120,31 @@
           <h2 align="center">About Takshashila Library</h2>
           <p>Give your about text here</p>
           <hr>
-          <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="yvsravan2000"><a class="LI-simple-link" href='https://in.linkedin.com/in/yvsravan2000?trk=profile-badge'>Y V Sravan Kumar Reddy</a></div>
+          <h2 align="center">Developers</h2>
+            <div class="row">
+                <div class="column" style="background-color: transparent;">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="yvsravan2000"><a class="LI-simple-link" href='https://in.linkedin.com/in/yvsravan2000?trk=profile-badge'>Y V Sravan Kumar Reddy</a></div>
+                </div>
+                <div class="column" style="background-color: transparent;">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="eskala-srekar-a547bb150"><a class="LI-simple-link" href='https://in.linkedin.com/in/eskala-srekar-a547bb150?trk=profile-badge'>Eskala Srekar</a></div>
+                </div>
+                <div class="column" style="background-color: transparent;">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="prem-chand-thanikonda-18805a1a7"><a class="LI-simple-link" href='https://in.linkedin.com/in/prem-chand-thanikonda-18805a1a7?trk=profile-badge'>Prem chand Thanikonda</a></div>
+                </div>
+                <div class="column" style="background-color: transparent">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="ajith-pai-237a66171"><a class="LI-simple-link" href='https://in.linkedin.com/in/ajith-pai-237a66171?trk=profile-badge'>Ajith Pai</a></div>
+                </div>
+                <div class="column" style="background-color: transparent">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="akhil-vandanapu-102a77179"><a class="LI-simple-link" href='https://in.linkedin.com/in/akhil-vandanapu-102a77179?trk=profile-badge'>Akhil Vandanapu</a></div>
+                </div>
+                <div class="column" style="background-color: transparent">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="kamal-kandula-077859175"><a class="LI-simple-link" href='https://in.linkedin.com/in/kamal-kandula-077859175?trk=profile-badge'>Kamal Kandula</a></div>
+                </div>
+            </div>
         </div>
+        
+
+        
 
         <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     </body>
