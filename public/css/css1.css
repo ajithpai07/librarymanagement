@@ -101,19 +101,20 @@
     }
     
     .right-img img{
-        border-radius: 500px;
+        /* border-radius: 80px; */
         float: right;
         height: 250px;
         width: 250px;
-        padding: 20px;
+        padding-left: 20px;
     }
 
     .left-img img{
-        border-radius: 500px;
+        /* border-radius: 80px; */
         float: left;
         height: 250px;
         width: 250px;
-        padding: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
     }
     
     .contents-item p{        
@@ -144,6 +145,7 @@
     }
         
     .footer {
+      margin-top: -50px;  
       border: 2px solid white; 
       background-color: black;
       color: green;
