@@ -50,36 +50,12 @@
               <a href="6_bookowed.html">Book owed</a>
             </div> 
             <div class="main-book">
-                <div class="dropdown">
-                    <button onclick="myFunctionGenre()" class="dropbtn">Search-Genre</button>
-                    <div id="myDropdownGenre" class="dropdown-content">
-                      <input type="text" placeholder="Search.." id="myInputGenre" onkeyup="filterFunctionGenre()">
-                      <a href="#">Historical fiction</a>
-                      <a href="#">Science fiction</a>
-                      <a href="#">Short story</a>
-                      <a href="#">Fantasy</a>
-                      <a href="#">Horror</a>
-                      <a href="#">Poetry</a>
-                      <a href="#">Satire</a>
-                      <a href="#">Travel</a>
-                      <a href="#">Drama</a>
-                      <a href="#">Art</a>
-                    </div>
-                  </div>
-                  <div class="dropdown">
-                    <button onclick="myFunctionAuthor()" class="dropbtn">Search-Author</button>
-                    <div id="myDropdownAuthor" class="dropdown-content">
-                      <input type="text" placeholder="Search.." id="myInputAuthor" onkeyup="filterFunctionAuthor()">
-                      <a href="#">RK</a>
-                      <a href="#">A1</a>
-                      <a href="#">BS7</a>
-                      <a href="#">AJ</a>
-                      <a href="#">S</a>
-                      <a href="#">SR</a>
-                      <a href="#">PR</a>
-                    </div>
-                  </div>   
-                </div>
+              <div id="wrap">
+                <form action="" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="Search"><input id="search_submit" value="Rechercher" type="submit">
+                </form>
+              </div>
+            </div>
             <br><br><br><br><br><br><br><br><br><br>
             
             <div class="container">
@@ -907,48 +883,6 @@
             </pre>
           </div>
          </div>
-
-        <script>
-            function myFunctionGenre() {
-              document.getElementById("myDropdownGenre").classList.toggle("show");
-            }
-              
-            function filterFunctionGenre() {
-              var input, filter, ul, li, a, i;
-              input = document.getElementById("myInputGenre");
-              filter = input.value.toUpperCase();
-              div = document.getElementById("myDropdownGenre");
-              a = div.getElementsByTagName("a");
-              for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  a[i].style.display = "";
-                } else {
-                  a[i].style.display = "none";
-                }
-              }
-            }
-    
-            function myFunctionAuthor() {
-              document.getElementById("myDropdownAuthor").classList.toggle("show");
-            }
-              
-            function filterFunctionAuthor() {
-              var input, filter, ul, li, a, i;
-              input = document.getElementById("myInputAuthor");
-              filter = input.value.toUpperCase();
-              div = document.getElementById("myDropdownAuthor");
-              a = div.getElementsByTagName("a");
-              for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  a[i].style.display = "";
-                } else {
-                  a[i].style.display = "none";
-                }
-              }
-            }
-            </script>
 
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 

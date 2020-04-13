@@ -264,73 +264,7 @@ iframe{
   font-weight: 300;
   color: black;
   font-weight: bold;
-}
-
-
-
-.dropbtn {
-    background-color: gold;
-    color: black;
-    font-weight: 600;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px double yellow;
-    cursor: pointer;
-    border-radius: 10px;
-    text-emphasis: none;
-    text-decoration: none;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: darkgoldenrod;
-  }
-  
-  #myInputGenre, #myInputAuthor {
-    box-sizing: border-box;
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #myInputGenre, #myInputAuthor:focus {outline: 3px solid #ddd;}
-  
-  .dropdown {
-    float: right;
-    padding-left: 100px;
-    margin-right: 52px;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 20px;
-    overflow: auto;
-    border: 1px solid #ddd;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {
-      font-weight: 500;
-      background-color: #ddd;
-  }
-  
-  .show {display: block;}
-
-
+} 
 
 body {
     user-select: none;
@@ -525,4 +459,73 @@ li {
     
   .footer-links .link-1:before {
       content: none;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+    @import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+    #wrap {
+      margin-top: 100px;
+      margin-right: -30px;
+      display: inline-block;
+      position: relative;
+      height: 30px;
+      float: right;
+      padding: 0;
+      position: relative;
+    }
+    
+    input[type="text"] {
+      height: 30px;
+      font-size: 20px;
+      display: inline-block;
+      font-weight: normal;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 3px;
+      padding-right: 0px;
+      width: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: none;
+      z-index: 3;
+      transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+      cursor: pointer;
+    }
+    
+    input[type="text"] {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-style: normal;
+      width: 200px;
+      z-index: 1;
+      color: white;
+      border-bottom: 1px solid grey;
+      cursor: text;
+    }
+    input[type="text"]:focus{
+      color: white;
+      border-bottom: 1px solid red;
+    }
+
+    input[type="submit"] {
+      outline: none;
+      height: 30px;
+      width: 50px;
+      display: inline-block;
+      color:red;
+      float: right;
+      background: url(search.png) center center no-repeat;
+      text-indent: -10000px;
+      border: none;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      opacity: 1;
+      cursor: pointer;
+      transition: opacity .4s ease;
+    }
+    
+    input[type="submit"]:hover {
+      opacity: 0.8;
     }
