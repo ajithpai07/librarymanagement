@@ -53,7 +53,7 @@
                             </div>
                           </div> 
                     </li>
-                    <li><a href="#">KYC Verification</a></li>
+                    <li><a href="1lib_kyc_verify.html">KYC Verification</a></li>
                     <li>
                         <div class="dropdown">                            
                             <a>Profile management</a>
@@ -67,11 +67,11 @@
                 </ul>
             </div>
         </div>
+        <br><br><br><br>
         <div class="main">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="pie" id="user-details1"></div><br>
+          <div class="pie" id="book-details"></div><br>
+          <div class="pie" id="book-genres"></div>
         </div>
         <div class="footer">
             <div class="footer-cright">
@@ -83,6 +83,61 @@
               </pre>
             </div>
         </div>
+
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var user_data1 = google.visualization.arrayToDataTable([
+          ['Task', 'Collect users data'],
+          ['KYC verified users', 2],
+          ['KYC pending users', 4]
+          ]);
+
+          var book_data = google.visualization.arrayToDataTable([
+          ['Task', 'All details about books in Library'],
+          ['Total books', 8],
+          ['Books expired', 2],
+          ['Books issued', 6],          
+          ['Books returned', 6]
+          ]);
+
+          var genre_data = google.visualization.arrayToDataTable([
+          ['Task', 'Count of books with their categories'],
+          ['Art', 4],
+          ['Music', 4],
+          ['Poetry', 4],
+          ['Humour', 4],
+          ['Fantasy', 4],
+          ['Business', 4],
+          ['Biography', 4],
+          ['Cookbooks', 4],
+          ['Engineering', 4],
+          ['Young adult', 4]
+          ]);
+
+
+          // Optional; add a title and set the width and height of the chart
+          var user1 = {'title':'User Details - KYC', 'width':550, 'height':400};
+          var book = {'title':'Book Details', 'width':550, 'height':400};
+          var genre = {'title':'Book Genres', 'width':550, 'height':400};
+
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('user-details1'));
+          chart.draw(user_data1, user1);
+          var chart = new google.visualization.PieChart(document.getElementById('book-details'));
+          chart.draw(book_data, book);
+          var chart = new google.visualization.PieChart(document.getElementById('book-genres'));
+          chart.draw(genre_data, genre);
+        }
+        </script>
+
+
 
             <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 

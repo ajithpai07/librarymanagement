@@ -1,0 +1,232 @@
+body {
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #dcf8c6;
+    color: black;
+}
+
+/* Loader icon */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+position: fixed;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+z-index: 9999;
+transition: 100s;
+background: url(load1.gif) center no-repeat black;
+}
+/* Loader icon */
+
+.start img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+.start h9{
+    color: black;
+    font-size: 120px;
+    display: block;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+}
+
+.button3 {             
+    text-decoration: none ;   
+    padding: 2px 24px;
+    border-radius: 5px;
+    background-color: red; 
+    color: black; 
+    border: 2px solid black;
+}
+  
+.button3:hover {
+    background-color: black;
+    color: black;    
+    border: 2px solid red;        
+    transition-duration: 0.5s;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: #dcf8c6;
+    /* background-color: black; */
+    color: green;
+    height: 90px;
+    border: 4px solid black; 
+    z-index: 1;
+}
+
+.header-logo {
+    font-weight: bolder;
+    float: left;
+    font-size: 36px;
+    padding: 20px 40px;
+}
+
+/* menu
+dropdown
+*/
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;   
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /*End*/
+
+.header-menu li {
+    font-weight: bold;
+    float: right;
+    padding-top: 20px;
+    padding-bottom: 33px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.header-menu a{
+    text-decoration: none ;
+    color: black;
+}
+
+.activ a{
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+.header-menu a:hover{
+    text-decoration: none;
+    /* text-decoration: 10px;
+    text-decoration-color: black; */
+    color: darkorange;
+}
+
+.activ a:hover{
+    text-decoration: none;
+    color: red;
+}
+
+.main {
+    padding-top: 20px;
+    padding-bottom: 100px; 
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+    
+.footer {
+    border: 4px solid black; 
+    background-color: #dcf8c6;
+    color: green;
+    height: 120px;
+}
+
+.footer-cright {
+    font-weight: bold;        
+    text-align: left;        
+    padding-left: 30px;
+}
+
+.footer-left{
+    margin-left:-130px;
+}
+.footer-left pre{
+    color: green;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: black;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+.footer-links .link-1:before {
+    content: none;
+  }
+
+.show-profile{
+    margin-left: 50px;
+    color: grey;
+}
+
+.show-profile h2{    
+    font-weight: 600;    
+    font-size: 25px;
+    color: black;
+}
+
+.show-profile pre{   
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    color: darkred;
+    font-weight: normal;    
+    font-size: 18px;    
+}
+
+.show-profile span{
+    font-weight: 500;
+    color: darkmagenta; 
+    font-weight: light;
+    font-size: normal;
+}
+

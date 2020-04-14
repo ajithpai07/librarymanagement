@@ -73,6 +73,7 @@ body {
         color: green;
         height: 90px;
         border: 4px solid black; 
+        z-index: 1;
     }
     
     .header-logo {
@@ -202,4 +203,10 @@ body {
     .footer-links .link-1:before {
         content: none;
       }
+
+    .pie{
+        width: 50%;
+        margin-left: 25%;
+        background-color: green;
+    }
     
