@@ -75,7 +75,7 @@ auth.onAuthStateChanged(function(user) {
               const fd7=document.querySelector("#fd7");
               fd7.textContent="Updated Successfully";
               setTimeout(function() {
-                fd7.reset();
+                fd7.textContent="";
               }, 3000);
 
         })
