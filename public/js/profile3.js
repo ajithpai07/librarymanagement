@@ -82,6 +82,12 @@ auth.onAuthStateChanged(function(user) {
                 City:fd9,
                 pcode:fd10
               });
+              const fd12=document.querySelector("#fd12");
+              fd12.textContent="Updated Successfully";
+              setTimeout(function() {
+                fd12.textContent="";
+              }, 3000);
+
 
         })
         
