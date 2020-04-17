@@ -57,7 +57,7 @@ body {
     background-color: yellow;
     font-weight: 400;
     outline-style: dashed;    
-    outline-color: blue;
+    outline-color: black;
 }
 
 span{
@@ -172,4 +172,12 @@ span{
     border: 3px solid yellow;
     right: -25%;    
     transition: all .35s;
+  }
+
+  .main img{
+    margin-top: -100px;
+    padding: 5px;
+    width: 400px;
+    height: 400px;
+    float: left;
   }
