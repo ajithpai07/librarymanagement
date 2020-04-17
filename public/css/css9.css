@@ -56,8 +56,9 @@ body {
     color: black;
     background-color: yellow;
     font-weight: 400;
-    outline-style: dashed;    
-    outline-color: black;
+    /* outline-style: dashed;     */
+    /* outline-color: black; */
+    border: none;
 }
 
 span{
@@ -124,6 +125,7 @@ span{
   
   .main a{
     margin-left: 30px;
+    margin-top: 180px;
     display: block;
     width: 250px;
     height: 50px;
@@ -140,6 +142,8 @@ span{
   }
   
   .icon{
+    margin-left: 100px;
+    margin-top: 180px;
     width: 50px;
     height: 50px;
     border: 3px solid transparent;
@@ -176,9 +180,13 @@ span{
   }
 
   .main img{
+      border: double;
+    border: 5px double lightgoldenrodyellow;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: -100px;
     padding: 5px;
-    width: 400px;
-    height: 400px;
-    float: left;
+    width: 300px;
+    height: 300px;
   }
