@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
-        <link rel="stylesheet" href="css/1lib_booku.css">
+        <link rel="stylesheet" href="css/book_update.css">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -61,10 +61,45 @@
                 </ul>
             </div>
         </div>
+        
         <div class="main">
-            
+          <div class="show-profile" id="profile">
+            <h2>Update book details</h2><br>
+            <img src="book_u.png">
+          </div>
+
+          <form id="#">
+            <fieldset>
+              <input placeholder="Book ID" type="text" class="slct" id="" required title="Enter the book ID to update">
+              <input type="submit" value="SUBMIT" class="submit">
+            </fieldset>
+          </form>         
+          
+          <form id="#">
+            <fieldset>
+              <input placeholder="Book ID" type="text" class="slct wrong" id="" required title="Book ID update is not possible" readonly disabled>
+              <select class="slct" id=""  title="Select Genre">
+                  <option value="Art">Art</option>
+                  <option value="Music">Music</option>
+                  <option value="Poetry">Poetry</option>
+                  <option value="Humour">Humour</option>
+                  <option value="Fantasy">Fantasy</option>
+                  <option value="Business">Business</option>
+                  <option value="Biography">Biography</option>
+                  <option value="Cookbooks">Cookbooks</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Young Adult">Young Adult</option>
+              </select>            
+              <input placeholder="Book name" type="text" class="slct" id="" required pattern="" title="">
+              <input placeholder="Author" type="text" class="slct" id="" required pattern="" title="">
+              <input placeholder="Publisher" type="text" class="slct" id="" required pattern="" title="">
+              <input placeholder="Book Price" type="number" class="slct" id="" required pattern="" title="">
+              <input placeholder="Quantity" type="number" class="slct" id="" required pattern="" title="">
+              <input type="file" class="slct-img" accept="image/*" required title="Upload book image"><br><br>
+              <input type="submit" value="Update" class="submit">
+            </fieldset>
+          </form>
         </div>
-        <br><br><br><br>
         <div class="footer">
             <div class="footer-cright">
                 <p>&#169 2020 Takshashila Library. All rights reserved</p>
