@@ -10,8 +10,13 @@ User will be able to manage library user accounts including updating details, ex
 The application will provide search function on books based on genre, title, author, year. 
 
  The project's client has determined that this application will provide the following benefits:
-     • Provide additional flexibility and convenience to the library users. 
-     • Provide better reliability and security of the library information. 
-     • Provide a more productive environment for the library staff member. 
-     • Reduce the cost of the library operations. 
+   
+   • Provide additional flexibility and convenience to the library users. 
+   
+   • Provide better reliability and security of the library information. 
+   
+   • Provide a more productive environment for the library staff member. 
+   
+   • Reduce the cost of the library operations. 
+
 The availability of information at any time in any place.
