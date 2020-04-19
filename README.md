@@ -1,5 +1,6 @@
 # librarymanagement
 Software Engineering project for library management system. It is a web application.
+
 The purpose of this software development project is to create a new application called: LIBRARY MANAGEMENT SYSTEM. The client for this project wishes to enter the PC-based internet environment. The Library Management System will be PC-base with internet, allowing library users to search for books, view previously borrowed book, manage wallet, extend currently borrowed booking and library staff members to manage the book inventory and user database. The application will provide the following capabilities: 
 
 The application will be access via internet on a PC/Mobile at any place. 
