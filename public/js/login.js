@@ -30,16 +30,16 @@ loginForm.addEventListener('submit',(e) =>{
               if(doc.exists) {
                 console.log("data is ", doc.data());
                 if(doc.data().role=="customer"){
-                  alert("login successful");
+                  alert("Login successful");
                   window.location="2_home.html";
                 }
                 else{
                   if(doc.data().role=="admin"){
-                    alert("login successful");
+                    alert("Login successful");
                     window.location="1lib_home.html";
                   }
                   else{
-                    alert("login unsuccessful");
+                    alert("Login unsuccessful");
                   }
                 }
               }
