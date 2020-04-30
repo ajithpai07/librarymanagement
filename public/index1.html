@@ -1,104 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- Add two inputs for "phoneNumber" and "code" -->
-    <input type="tel" id="phoneNumber" /><br><br>
+<head>
+  <meta charset="UTF-8">
+  <title>Login-Authentication</title>
+  <link rel="icon" type="image/icon type" href="logo_tbar.png">
 
-    <!-- Add two buttons to submit the inputs -->
-    <button id="sign-in-button" onclick="submitPhoneNumberAuth()">
-      SIGN IN WITH PHONE
-    </button><br><br>
-
-    <!-- Add a container for reCaptcha -->
-    <div id="recaptcha-container"></div><br><br>
-
-    <input type="text" id="code" />br><br>
-
-    
-    <button id="confirm-code" onclick="submitPhoneNumberAuthCode()">
-      ENTER CODE
-    </button><br><br>
-
-    
-
-    <!-- Add the latest firebase dependecies from CDN -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
-
-    <script>
-      // Paste the config your copied earlier
-      var firebaseConfig = {
-        apiKey: "AIzaSyD785HpCFg_dudUjcuTy66k3mQ-zNXQgA4",
-        authDomain: "takshashila-lib.firebaseapp.com",
-        databaseURL: "https://takshashila-lib.firebaseio.com",
-        projectId: "takshashila-lib",
-        storageBucket: "takshashila-lib.appspot.com",
-        messagingSenderId: "100677328500",
-        appId: "1:100677328500:web:b9c9a4bb54f7af77463b21",
-        measurementId: "G-PW6GQEYMM9"
-      };
-
-      firebase.initializeApp(firebaseConfig);
-
-      // Create a Recaptcha verifier instance globally
-      // Calls submitPhoneNumberAuth() when the captcha is verified
-      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-        "recaptcha-container",
-        {
-          size: "normal",
-          callback: function(response) {
-            submitPhoneNumberAuth();
-          }
-        }
-      );
-
-      // This function runs when the 'sign-in-button' is clicked
-      // Takes the value from the 'phoneNumber' input and sends SMS to that phone number
-      function submitPhoneNumberAuth() {
-        var phoneNumber = document.getElementById("phoneNumber").value;
-        var appVerifier = window.recaptchaVerifier;
-        firebase
-          .auth()
-          .signInWithPhoneNumber(phoneNumber, appVerifier)
-          .then(function(confirmationResult) {
-            window.confirmationResult = confirmationResult;
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-      }
-
-      // This function runs when the 'confirm-code' button is clicked
-      // Takes the value from the 'code' input and submits the code to verify the phone number
-      // Return a user object if the authentication was successful, and auth is complete
-      function submitPhoneNumberAuthCode() {
-        var code = document.getElementById("code").value;
-        confirmationResult
-          .confirm(code)
-          .then(function(result) {
-            var user = result.user;
-            console.log(user);
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-      }
-
-      //This function runs everytime the auth state changes. Use to verify if the user is logged in
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          console.log("USER LOGGED IN");
-        } else {
-          // No user is signed in.
-          console.log("USER NOT LOGGED IN");
-        }
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <script>
+      $(window).load(function() {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");;
       });
-    </script>
-  </body>
+  </script>
+
+	<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
+	<script>
+	  var config = {
+      apiKey: "AIzaSyD785HpCFg_dudUjcuTy66k3mQ-zNXQgA4",
+      authDomain: "takshashila-lib.firebaseapp.com",
+      databaseURL: "https://takshashila-lib.firebaseio.com",
+      projectId: "takshashila-lib",
+      storageBucket: "takshashila-lib.appspot.com",
+      messagingSenderId: "100677328500"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+  <!-- Loader icon -->
+  <div class="se-pre-con"></div>
+  <!-- Loader icon -->
+  <div class="header">
+      <div class="header-logo">Takshashila Library</div>
+      <div class="header-menu">
+          <ul>
+              <li><a href="3_login.html" class="button button1">Login</a></li>
+              <li><a href="7_regform.html" class="button button2">Sign Up</a></li>
+          </ul>
+      </div>
+  </div>
+  <br><br><br><br>
+    <div id="container">
+      <div id="loading">Loading...</div>
+      <div id="loaded" class="hidden">
+        <div id="main">
+          <div id="user-signed-in" class="hidden">
+            <div id="user-info" class="hidden">
+              <div id="phone"></div>
+              <div class="clearfix"></div>
+            </div>
+            <p>
+              <a id="sign-out"></a>
+            </p>
+          </div>
+          <div id="user-signed-out" class="hidden">
+            <div id="firebaseui-spa">
+              <div id="firebaseui-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="footer">
+      <div class="footer-cright">
+          <p>&#169 2020 Takshashila Library. All rights reserved</p>
+      </div>
+      <div class="footer-left">
+        <pre class="footer-links">
+                    <a href="0_about.html" class="link-1" target='_blank'>About   </a> <a href="0_faqs.html" target='_blank'>   FAQ's   </a> <a href="0_customer_support.html" target='_blank'>   Customer Support   </a> <a href="0_privacy_policy.html" target='_blank'>   Privacy Policy   </a> <a href="0_terms.html" target='_blank'>   Terms of Service   </a>
+        </pre>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
 </html>

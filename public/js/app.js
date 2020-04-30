@@ -9,7 +9,7 @@ function getUiConfig() {
     'signInFlow': 'popup',
     'signInOptions': [
     
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     {
         provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
         recaptchaParameters: {
@@ -27,7 +27,7 @@ function getUiConfig() {
 }
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    window.location = 'registeration.html'; //After successful login, user will be redirected to registeration.html
+    window.location = '2_home.html'; //After successful login, user will be redirected to registeration.html
   }
 });
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -53,6 +53,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 var initApp = function() {
   document.getElementById('sign-out').addEventListener('click', function() {
     firebase.auth().signOut();
+    window.location = 'logout.html';
   });
 };
 
