@@ -39,7 +39,9 @@ auth.onAuthStateChanged(function(user) {
         const fd6= document.createElement('span');
         const fd7= document.createElement('span');
         const fd8= document.createElement('span');
-
+        const image=document.querySelector('#image');
+        const staus=document.querySelector('#Kycstatus');
+        
         fd1.textContent=doc.data().name;
         fd2.textContent=doc.data().Dob;
         fd3.textContent=doc.data().dno;
@@ -48,7 +50,7 @@ auth.onAuthStateChanged(function(user) {
         fd6.textContent=doc.data().pcode;
         fd7.textContent=doc.data().KYCtype;
         fd8.textContent=doc.data().Kycid;
-        
+        status.textContent=doc.data().Kycstatus;
 
         fld1.appendChild(fd1);
         fld2.appendChild(fd2);
@@ -58,6 +60,7 @@ auth.onAuthStateChanged(function(user) {
         fld6.appendChild(fd6);
         fld7.appendChild(fd7);
         fld8.appendChild(fd8);
+        image.src=doc.data().Kycimg;
       }
 
       db.collection('Users').doc(user.uid).get().then(function(doc) {

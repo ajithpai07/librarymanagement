@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
 const db=firebase.firestore();
 const auth=firebase.auth();
+const ref = firebase.storage().ref();
 
 const signupForm=document.querySelector("#Register");
 
@@ -34,8 +35,7 @@ signupForm.addEventListener('submit',(e) =>{
   const p3=signupForm['p3'].value;
   const KYCtype=signupForm['KYCtype'].value;
   const Kycid=signupForm['Kycid'].value;
-  const pending="pending";
-  // const Kycimg=signupForm['Kycimg'].value;
+  let url1;
   
   auth.createUserWithEmailAndPassword(email, password).then(cred =>{
     //signing user in
@@ -45,6 +45,19 @@ signupForm.addEventListener('submit',(e) =>{
           if (user) {
             // User is signed in.
             const userId=user.uid;
+
+            const file=document.querySelector("#Kycimg").files[0];
+            
+            const p_name=new Date()+'-'+file.name;
+
+            const metadata ={
+              contentType:file.type
+            }
+
+            const task=ref.child(p_name).put(file,metadata);
+
+            task.then(snapshot => snapshot.ref.getDownloadURL()).then(url => { url1 = url});
+            
             db.collection('Users').doc(userId).set({
               name: name,
               Dob: Dob,
@@ -61,6 +74,7 @@ signupForm.addEventListener('submit',(e) =>{
               KYCtype: KYCtype,
               Kycid: Kycid,
               Kycstatus: "Pending",
+              Kycimg: url1,
               wallet:0,
               role: "customer"
             });
