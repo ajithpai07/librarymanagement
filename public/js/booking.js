@@ -16,27 +16,7 @@ const auth=firebase.auth();
 
 auth.onAuthStateChanged(function(user) {
     if (user) {
-      const fld1=document.querySelector("#fld1");
-      
-      function render(doc){
-        const fd1= document.createElement('span');
-
-        fd1.textContent=doc.data().name;
-
-        fld1.appendChild(fd1);
-      }
-      db.collection('Users').doc(user.uid).get().then(function(doc) {
-        if(doc.exists) {
-          console.log("data is ", doc.data());
-          render(doc);
-        }
-        else {
-          console.log("no document");
-        }
-      })
-        .catch(function(error) {
-          console.log("error"+error);
-        });
+      console.log(user.uid)
     } else {
       // No user is signed in.
       console.log("not present");

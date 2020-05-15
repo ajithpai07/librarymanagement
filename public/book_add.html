@@ -67,9 +67,10 @@
             <h2>New book</h2><br>
             <img src="book_a.png">
           </div>
-          <form id="#">
+          <h3 id="fld12", style="color: red;"></h3>
+          <form id="addbook">
             <fieldset>
-              <select class="slct" id=""  title="Select Genre">
+              <select class="slct" id="fld1"  title="Select Genre">
                 <option value="Art">Art</option>
                 <option value="Music">Music</option>
                 <option value="Poetry">Poetry</option>
@@ -81,13 +82,11 @@
                 <option value="Engineering">Engineering</option>
                 <option value="Young Adult">Young Adult</option>
             </select>
-              <input placeholder="Book name" type="text" class="slct" id="" required pattern="[a-zA-Z0-9|' ']{3,30}" title="Minimum of 3 characters and can be either letters or digits">
-              <input placeholder="Author" type="text" class="slct" id="" required pattern="[a-zA-Z|' ']{3,30}" title="Minimum of 3 characters including only letters">
-              <input placeholder="Publisher" type="text" class="slct" id="" required pattern="[a-zA-Z0-9|' ']{3,30}" title="Minimum of 3 characters and can be either letters or digits">
-              <input placeholder="Book Price" type="number" class="slct" id="" required pattern="(?=.*\d).{1,}" title="Example: 99, 615">
-              <input placeholder="Quantity" type="number" class="slct" id="" required pattern="(?=.*\d).{1,}" title="Example: 4, 2">
-              <input placeholder="Book ID" type="text" class="slct" id="" required pattern="[TLB](?=.*\d).{1,}" title="Example: TLB1234, TLB36910">
-              <input type="file" class="slct-img" accept="image/*" required title="Upload book image"><br><br>
+              <input placeholder="Book name" type="text" class="slct" id="fld2" required pattern="[a-zA-Z0-9|' ']{3,30}" title="Minimum of 3 characters and can be either letters or digits">
+              <input placeholder="Author" type="text" class="slct" id="fld3" required pattern="[a-zA-Z|' ']{3,30}" title="Minimum of 3 characters including only letters">
+              <input placeholder="Publisher" type="text" class="slct" id="fld4" required pattern="[a-zA-Z0-9|' ']{3,30}" title="Minimum of 3 characters and can be either letters or digits">
+              <input placeholder="Book Price" type="number" class="slct" id="fld5" required pattern="(?=.*\d).{1,}" title="Example: 99, 615">
+              <input type="file" class="slct-img" accept="image/*" required title="Upload book image" id="bookimg"><br><br>
               <input type="submit" value="ADD" class="submit">
             </fieldset>
           </form>
@@ -102,6 +101,14 @@
               </pre>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+      
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+      
+        <script src="js/addBook.js"></script>
     </body>
 </html>
