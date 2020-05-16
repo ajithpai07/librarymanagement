@@ -42,7 +42,7 @@ auth.onAuthStateChanged(function(user) {
             function remverr2(){
                 db.collection("Books").doc("APeHpv6rzI8vRTeF8gPj").update({
                     count: count
-                });
+                }).then(function() {window.location="book_add.html";});
             }
             function remverr(){
             db.collection('Books').doc("APeHpv6rzI8vRTeF8gPj").get().then(function(doc) {
@@ -54,7 +54,10 @@ auth.onAuthStateChanged(function(user) {
                     const str2=count
                     const bookId = str1.concat(str2);
                     console.log(bookId);
-            
+                    
+                    const fd12=document.querySelector("#fld12");
+                    fd12.textContent="Added Successfully";
+
                     db.collection('Books').doc(bookId).set({
                         booktype: fld1,
                         bname: fld2,
@@ -64,9 +67,7 @@ auth.onAuthStateChanged(function(user) {
                         bavial: 1,
                         bimg: url1
                     });
-
-                    const fd12=document.querySelector("#fld12");
-                    fd12.textContent="Added Successfully";
+        
                 }
                 else {
                     console.log("no document");
