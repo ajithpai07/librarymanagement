@@ -56,8 +56,8 @@ signupForm.addEventListener('submit',(e) =>{
 
             const task=ref.child(p_name).put(file,metadata);
 
-            task.then(snapshot => snapshot.ref.getDownloadURL()).then(url => { url1 = url});
-            
+            task.then(snapshot => snapshot.ref.getDownloadURL()).then(url => { url1 = url}).then(function() {remverr()});
+            function remverr(){
             db.collection('Users').doc(userId).set({
               name: name,
               Dob: Dob,
@@ -77,12 +77,13 @@ signupForm.addEventListener('submit',(e) =>{
               Kycimg: url1,
               wallet:0,
               role: "customer"
-            });
-            setTimeout(function() {
-              alert("Successfully signed up");
-              location="9_clogin.html"
-            }, 5000);
+            }).then(function() {remverr2();});
             
+          }
+            function remverr2(){
+              alert("Successfully Signedup!");
+              window.location="9_clogin.html";
+            }
           }
           else{
             //no user signed in
