@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
-        <link rel="stylesheet" href="css/1lib_booku.css">
+        <link rel="stylesheet" href="css/book_delete.css">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -62,9 +62,34 @@
             </div>
         </div>
         <div class="main">
-            
+          <div class="show-profile" id="profile">
+            <h2>Remove book</h2><br>
+            <img src="book_d.png">
+          </div>
+
+          <form id="">
+            <fieldset>
+              <input placeholder="Book ID" type="text" class="slct" id="" required title="Enter the book ID to update">
+              <input type="submit" value="SUBMIT" class="submit">
+            </fieldset>
+          </form>         
+
+          <form id="">
+            <fieldset>
+              <h1 class="form-heading">Book details</h1>
+              <br>
+              <pre class="details" id="">Book ID          :     </pre>
+              <pre class="details" id="">Genre            :     </pre>
+              <pre class="details" id="">Title            :     </pre>
+              <pre class="details" id="">Author           :     </pre>
+              <pre class="details" id="">Publisher        :     </pre>
+              <pre class="details" id="">Price            :     </pre>
+              <br>
+              <input type="submit" value="Delete" class="submit">
+            </fieldset>
+          </form>            
         </div>
-        <br><br><br><br>
+        <br><br><br>
         <div class="footer">
             <div class="footer-cright">
                 <p>&#169 2020 Takshashila Library. All rights reserved</p>
