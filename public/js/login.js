@@ -39,7 +39,7 @@ loginForm.addEventListener('submit',(e) =>{
                     window.location="1lib_home.html";
                   }
                   else{
-                    alert("Login unsuccessful");
+                    alert("Your account is not secure please contact us in help");
                   }
                 }
               }
@@ -59,7 +59,7 @@ loginForm.addEventListener('submit',(e) =>{
     }
     })
     .catch(function(error) {
-      alert("Username or Password entered is invalid");
-      window.location="3_login.html";
+      const fd12=document.querySelector("#fld12");
+      fd12.textContent="*Invalid username or password";
     });
 });

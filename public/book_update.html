@@ -67,18 +67,20 @@
             <h2>Update book details</h2><br>
             <img src="book_u.png">
           </div>
-
-          <form id="#">
+          
+          <h3 id="fld13" style="color: red"></h3>
+          <form id="Submit">
             <fieldset>
-              <input placeholder="Book ID" type="text" class="slct" id="" required title="Enter the book ID to update">
+              <input placeholder="Book ID" type="text" class="slct" id="fld1" required title="Enter the book ID to update">
               <input type="submit" value="SUBMIT" class="submit">
             </fieldset>
           </form>         
           
-          <form id="#">
+          <h3 id="fld12" style="color: green"></h3>
+          <form id="Update">
             <fieldset>
-              <input placeholder="Book ID" type="text" class="slct wrong" id="" required title="Book ID update is not possible" readonly disabled>
-              <select class="slct" id=""  title="Select Genre">
+              <input placeholder="Book ID" type="text" class="slct wrong" id="fld7" required title="Book ID update is not possible" readonly disabled>
+              <select class="slct" id="fld2"  title="Select Genre">
                   <option value="Art">Art</option>
                   <option value="Music">Music</option>
                   <option value="Poetry">Poetry</option>
@@ -90,12 +92,10 @@
                   <option value="Engineering">Engineering</option>
                   <option value="Young Adult">Young Adult</option>
               </select>            
-              <input placeholder="Book name" type="text" class="slct" id="" required pattern="" title="">
-              <input placeholder="Author" type="text" class="slct" id="" required pattern="" title="">
-              <input placeholder="Publisher" type="text" class="slct" id="" required pattern="" title="">
-              <input placeholder="Book Price" type="number" class="slct" id="" required pattern="" title="">
-              <input placeholder="Quantity" type="number" class="slct" id="" required pattern="" title="">
-              <input type="file" class="slct-img" accept="image/*" required title="Upload book image"><br><br>
+              <input placeholder="Book name" type="text" class="slct" id="fld3" required title="">
+              <input placeholder="Author" type="text" class="slct" id="fld4" required title="">
+              <input placeholder="Publisher" type="text" class="slct" id="fld5" required title="">
+              <input placeholder="Book Price" type="number" class="slct" id="fld6" required title="">
               <input type="submit" value="Update" class="submit">
             </fieldset>
           </form>
@@ -110,6 +110,12 @@
               </pre>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/updateBook.js"></script>
     </body>
 </html>
