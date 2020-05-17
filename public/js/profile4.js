@@ -60,7 +60,7 @@ auth.onAuthStateChanged(function(user) {
         fld6.appendChild(fd6);
         fld7.appendChild(fd7);
         fld8.appendChild(fd8);
-        image.src=doc.data().Kycimg;
+        image.src=doc.data().proimg;
       }
 
       db.collection('Users').doc(user.uid).get().then(function(doc) {
