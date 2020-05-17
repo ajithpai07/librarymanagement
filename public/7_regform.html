@@ -44,7 +44,7 @@
                   <label>New Password</label>
                   <input type="password" class="slct" id="password" autocomplete="off" required pattern="(?=.*\d).{8,16}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
                   <label>Upload Your Selfie</label>
-                  <input type="file" class="slct-img" accept="image/*" required>
+                  <input type="file" class="slct-img" id="Kycimg" accept="image/*" required>
                 </fieldset>          
                            
                 <fieldset>
@@ -115,7 +115,7 @@
                     <label>KYC id number</label>
                     <input type="text" class="slct" id="Kycid" required pattern="[0-9]{12}" title="Aadhaar Card identification number is of 12 digits." class="slct">
                     <label for="img">KYC image</label>
-                    <input type="file" class="slct-img" id="Kycimg" accept="image/*">
+                    <input type="file" class="slct-img" accept="image/*">
                 </fieldset> 
                 
                 <input type="submit" value="Sign Up" class="submit">
@@ -147,7 +147,6 @@
 <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
-
 
 <script src="js/register.js"></script>
     </body>
