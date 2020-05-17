@@ -81,7 +81,7 @@ signupForm.addEventListener('submit',(e) =>{
             
           }
             function remverr2(){
-              alert("Successfully Signedup!");
+              alert("Successfully created your account!");
               window.location="9_clogin.html";
             }
           }
