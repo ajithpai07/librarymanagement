@@ -67,23 +67,23 @@
             <img src="book_d.png">
           </div>
 
-          <form id="">
+          <form id="Submit">
             <fieldset>
-              <input placeholder="Book ID" type="text" class="slct" id="" required title="Enter the book ID to update">
+              <input placeholder="Book ID" type="text" class="slct" id="fld1" required title="Enter the book ID to update">
               <input type="submit" value="SUBMIT" class="submit">
             </fieldset>
           </form>         
-
-          <form id="">
+          <h3 id="fld12" style="color: green"></h3>
+          <form id="Delete">
             <fieldset>
               <h1 class="form-heading">Book details</h1>
               <br>
-              <pre class="details" id="">Book ID          :     </pre>
-              <pre class="details" id="">Genre            :     </pre>
-              <pre class="details" id="">Title            :     </pre>
-              <pre class="details" id="">Author           :     </pre>
-              <pre class="details" id="">Publisher        :     </pre>
-              <pre class="details" id="">Price            :     </pre>
+              <pre class="details" id="fld7">Book ID          :     </pre>
+              <pre class="details" id="fld2">Genre            :     </pre>
+              <pre class="details" id="fld3">Title            :     </pre>
+              <pre class="details" id="fld4">Author           :     </pre>
+              <pre class="details" id="fld5">Publisher        :     </pre>
+              <pre class="details" id="fld6">Price            :     </pre>
               <br>
               <input type="submit" value="Delete" class="submit">
             </fieldset>
@@ -100,6 +100,14 @@
               </pre>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+
+        <script src="js/delBook.js"></script>
     </body>
 </html>
