@@ -13,13 +13,13 @@ firebase.initializeApp(firebaseConfig);
 
 const db=firebase.firestore();
 const auth=firebase.auth();
-
+const storage=firebase.storage();
 auth.onAuthStateChanged(function(user) {
     if (user) {
         console.log(user.uid);
 
         const submit = document.querySelector("#Submit");
-        const update = document.querySelector("#Update");
+        const update = document.querySelector("#Delete");
 
         let a0=0;
         let a1=0;
@@ -31,17 +31,7 @@ auth.onAuthStateChanged(function(user) {
         let a7=0;
         let a8=0;
         let a9=0;
-
-        let b0=0;
-        let b1=0;
-        let b2=0;
-        let b3=0;
-        let b4=0;
-        let b5=0;
-        let b6=0;
-        let b7=0;
-        let b8=0;
-        let b9=0;
+        let bId;
 
         function func2(doc,bookId){
             const fld2 = document.querySelector('#fld2');     
@@ -51,15 +41,16 @@ auth.onAuthStateChanged(function(user) {
             const fld6 = document.querySelector('#fld6');      
             const fld7 = document.querySelector('#fld7');     
             
-            fld2.value = doc.data().booktype;
-            fld3.value = doc.data().bname;
-            fld4.value = doc.data().bauthor;
-            fld5.value = doc.data().publisher;
-            fld6.value = doc.data().bprice;
-            fld7.value = bookId;
+            fld2.textContent = "Genre            :     "+doc.data().booktype;
+            fld3.textContent = "Title            :     "+doc.data().bname;
+            fld4.textContent = "Author           :     "+doc.data().bauthor;
+            fld5.textContent = "Publisher        :     "+doc.data().publisher;
+            fld6.textContent = "Price            :     "+doc.data().bprice;
+            fld7.textContent = "Book ID          :     "+bookId;
 
             const type = doc.data().booktype;
-
+            bId = bookId;
+            
             a0=0;
             a1=0;
             a2=0;
@@ -70,7 +61,7 @@ auth.onAuthStateChanged(function(user) {
             a7=0;
             a8=0;
             a9=0;
-            
+
             if(type == "Art"){
                 a0=-1;
             }
@@ -143,80 +134,18 @@ auth.onAuthStateChanged(function(user) {
         update.addEventListener('submit',(e) => {
             e.preventDefault();
 
-            const fd2=update['fld2'].value;
-            const fd3=update['fld3'].value;
-            const fd4=update['fld4'].value;
-            const fd5=update['fld5'].value;
-            const fd6=update['fld6'].value;
-            const bId=update['fld7'].value;
-
-            if(fd2 == "Art"){
-                b0=1;
-            }
-            else{
-                if(fd2 == "Music"){
-                    b1=1;
-                }
-                else{
-                    if(fd2 == "Poetry"){
-                        b2=1;
-                    }
-                    else{
-                        if(fd2 == "Humour"){
-                            b3=1;
-                        }
-                        else{
-                            if(fd2 == "Fantasy"){
-                                b4=1;
-                            }
-                            else{
-                                if(fd2 == "Business"){
-                                    b5=1;
-                                }
-                                else{
-                                    if(fd2 == "Biography"){
-                                        b6=1;
-                                    }
-                                    else{
-                                        if(fd2 == "Cookbooks"){
-                                            b7=1;
-                                        }
-                                        else{
-                                            if(fd2 == "Engineering"){
-                                                b8=1;
-                                            }
-                                            else{
-                                                b9=1;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            db.collection('Books').doc(bId).update({
-                booktype: fd2,
-                bname: fd3,
-                bauthor: fd4,
-                publisher: fd5,
-                bprice: fd6
-            })
-            .then(function() {
                 db.collection('Books').doc("APeHpv6rzI8vRTeF8gPj").get().then(function(doc) {
                     if(doc.exists) {
-                        a0 = a0+b0+doc.data().Art;
-                        a1 = a1+b1+doc.data().Music;                    
-                        a2 = a2+b2+doc.data().Poetry;                    
-                        a3 = a3+b3+doc.data().Humour;                    
-                        a4 = a4+b4+doc.data().Fantasy;                    
-                        a5 = a5+b5+doc.data().Business;                    
-                        a6 = a6+b6+doc.data().Biography;                    
-                        a7 = a7+b7+doc.data().Cookbooks;                    
-                        a8 = a8+b8+doc.data().Engineering;                    
-                        a9 = a9+b9+doc.data().Youngadult;
+                        a0 = a0+doc.data().Art;
+                        a1 = a1+doc.data().Music;                    
+                        a2 = a2+doc.data().Poetry;                    
+                        a3 = a3+doc.data().Humour;                    
+                        a4 = a4+doc.data().Fantasy;                    
+                        a5 = a5+doc.data().Business;                    
+                        a6 = a6+doc.data().Biography;                    
+                        a7 = a7+doc.data().Cookbooks;                    
+                        a8 = a8+doc.data().Engineering;                    
+                        a9 = a9+doc.data().Youngadult;
                         console.log(a0,a1,a2,a3,a4,a5,a6,a7,a8,a9);
                     }
                     else{
@@ -237,13 +166,19 @@ auth.onAuthStateChanged(function(user) {
                         Youngadult: a9
                     })
                     .then(function() {
-                        const fd12=document.querySelector("#fld12");
-                        fd12.textContent="Updated Successfully";
-                        window.location="book_update.html";
-                    })
+                        db.collection("Books").doc(bId).get()
+                        .then(function() {
+                                db.collection("Books").doc(bId).delete()
+                                .then(function() {
+                                    const fd12=document.querySelector("#fld12");
+                                    fd12.textContent="Deleted Successfully";
+                                    window.location="book_delete.html";
+                                })
+                            })
+                        })
                 })
             })
-        })
+            
 
     } else {
       // No user is signed in.
