@@ -331,16 +331,19 @@ li {
 
   /* Table CSS */
 
-  table {
+  table 
+  {
     background-color: white;
     text-align: left;
     position: relative;
     border-collapse: collapse;     
     border: 2px double white;
     width: 80%;
+    table-layout: auto;
     margin-left: 240px;
   }
   td {
+    color: black;
     padding: 0.25rem;
   }
 
