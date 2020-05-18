@@ -85,7 +85,7 @@
               <input placeholder="Book name" type="text" class="slct" id="fld2" required pattern="[a-zA-Z0-9|' ']{3,30}" title="Minimum of 3 characters and can be either letters or digits">
               <input placeholder="Author" type="text" class="slct" id="fld3" required pattern="[a-zA-Z|' ']{3,30}" title="Minimum of 3 characters including only letters">
               <input placeholder="Publisher" type="text" class="slct" id="fld4" required pattern="[a-zA-Z0-9|' ']{3,30}" title="Minimum of 3 characters and can be either letters or digits">
-              <input placeholder="Book Price" type="number" class="slct" id="fld5" required pattern="(?=.*\d).{1,}" title="Example: 99, 615">
+              <input placeholder="Book Price" type="number" class="slct" id="fld5" required min="1" max="9999" title="Example: 99, 615">
               <input type="file" class="slct-img" accept="image/*" required title="Upload book image" id="bookimg"><br><br>
               <input type="submit" value="ADD" class="submit">
             </fieldset>
