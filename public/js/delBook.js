@@ -45,7 +45,7 @@ auth.onAuthStateChanged(function(user) {
             fld3.textContent = "Title            :     "+doc.data().bname;
             fld4.textContent = "Author           :     "+doc.data().bauthor;
             fld5.textContent = "Publisher        :     "+doc.data().publisher;
-            fld6.textContent = "Price            :     "+doc.data().bprice;
+            fld6.textContent = "Price            :     ₹ "+doc.data().bprice;
             fld7.textContent = "Book ID          :     "+bookId;
 
             const type = doc.data().booktype;

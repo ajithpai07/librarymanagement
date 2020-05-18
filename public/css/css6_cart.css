@@ -348,6 +348,7 @@ li {
   }
 
   tr {
+    color:black;
     padding: 0.25rem;
     border: 2px solid black;
     border-radius: 10px;
