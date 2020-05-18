@@ -50,11 +50,11 @@ auth.onAuthStateChanged(function(user) {
       fld6.setAttribute('class'," text _q ");
       fld7.textContent=doc.data().bname;
       // fld8.textContent="Edition :1";
-      fld9.textContent="Genre :"+doc.data().booktype;
-      fld10.textContent="Author :"+doc.data().bauthor;
-      fld11.textContent="Publisher :"+doc.data().publisher;
+      fld9.textContent="Genre : "+doc.data().booktype;
+      fld10.textContent="Author : "+doc.data().bauthor;
+      fld11.textContent="Publisher : "+doc.data().publisher;
       fld13.setAttribute('class','ppd');
-      fld16.textContent="₹";
+      fld16.textContent="₹ ";
       fld17.textContent= doc.data().bprice;
       fld14.setAttribute('class','addtoc');
       fld15.href="";
