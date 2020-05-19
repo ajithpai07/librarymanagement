@@ -241,15 +241,22 @@ iframe{
     font-size: 25px;
 }
 
-
 .sidebar {   
+  float: left;
+  border-radius: 5px;
+  border: 4px solid gold;
+  height: 148px;
+  width: 215px;
+  background-color: #111;
+}
+/* .sidebar {   
   float: left;
   border-radius: 5px;
   border: 4px solid gold;
   height: 194px;
   width: 223px;
   background-color: #111;
-}
+} */
 
 .sidebar a {
   padding: 10px 10px;
