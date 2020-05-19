@@ -30,7 +30,7 @@ auth.onAuthStateChanged(function(user) {
       const fld5 = document.createElement('div');
       const fld6 = document.createElement('div');
       const fld7 = document.createElement('h4');
-      const fld8 = document.createElement('p');
+      // const fld8 = document.createElement('p');
       const fld9 = document.createElement('p');
       const fld10 = document.createElement('p');
       const fld11 = document.createElement('p');
@@ -49,12 +49,12 @@ auth.onAuthStateChanged(function(user) {
       fld5.setAttribute('class'," hover _br ");
       fld6.setAttribute('class'," text _q ");
       fld7.textContent=doc.data().bname;
-      fld8.textContent="Edition :1";
-      fld9.textContent="Genre :"+doc.data().booktype;
-      fld10.textContent="Author :"+doc.data().bauthor;
-      fld11.textContent="Publisher :"+doc.data().publisher;
+      // fld8.textContent="Edition :1";
+      fld9.textContent="Genre : "+doc.data().booktype;
+      fld10.textContent="Author : "+doc.data().bauthor;
+      fld11.textContent="Publisher : "+doc.data().publisher;
       fld13.setAttribute('class','ppd');
-      fld16.textContent="$";
+      fld16.textContent="₹ ";
       fld17.textContent= doc.data().bprice;
       fld14.setAttribute('class','addtoc');
       fld15.href="";
@@ -70,7 +70,7 @@ auth.onAuthStateChanged(function(user) {
       fld3.appendChild(fld5);
       fld5.appendChild(fld6);
       fld6.appendChild(fld7);
-      fld6.appendChild(fld8);
+      // fld6.appendChild(fld8);
       fld6.appendChild(fld9);
       fld6.appendChild(fld10);
       fld6.appendChild(fld11);

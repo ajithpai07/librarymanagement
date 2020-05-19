@@ -91,12 +91,12 @@
                   <option value="Cookbooks">Cookbooks</option>
                   <option value="Engineering">Engineering</option>
                   <option value="Young Adult">Young Adult</option>
-              </select>            
-              <input placeholder="Book name" type="text" class="slct" id="fld3" required title="">
-              <input placeholder="Author" type="text" class="slct" id="fld4" required title="">
-              <input placeholder="Publisher" type="text" class="slct" id="fld5" required title="">
-              <input placeholder="Book Price" type="number" class="slct" id="fld6" required title="">
-              <input type="submit" value="Update" class="submit">
+              </select>   
+              <input placeholder="Book name" type="text" class="slct" id="fld3" required minlength="3" title="Minimum of 3 characters required">
+              <input placeholder="Author" type="text" class="slct" id="fld4" required minlength="3" title="Minimum of 3 characters required">
+              <input placeholder="Publisher" type="text" class="slct" id="fld5" required minlength="3" title="Minimum of 3 characters required">
+              <input placeholder="Book Price" type="number" class="slct" id="fld6" required min="1" max="9999" title="Example: 99, 615">
+              <input type="submit" value="Update" class="submit">         
             </fieldset>
           </form>
         </div>
