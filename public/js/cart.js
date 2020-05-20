@@ -21,7 +21,10 @@ auth.onAuthStateChanged(function(user) {
 
       const tabbody = document.querySelector("#tabbody");
       let sum=0;
+      let bkingcnt;
       const tamt = document.querySelector("#totall");
+      const chckout1 = document.querySelector("#chckout1");
+      const chckout2 = document.querySelector("#chckout2");
 
       function render(doc){
         if(doc.data().usrid==user.uid){
@@ -70,6 +73,61 @@ auth.onAuthStateChanged(function(user) {
         snapshot.docs.forEach(doc => {
           render(doc);
         })
+      })
+
+      function render2(doc){
+        if(doc.data().usrid==user.uid){
+            
+            db.collection('Bookings').doc('Count').get().then(function(docu) {
+                bkingcnt=docu.data().count+1;
+            })
+            .then(function() {
+                const str1="Booking";
+                const str2=bkingcnt;
+                const xD = str1.concat(str2);
+                const today = new Date();
+                const newdate = new Date();
+                newdate.setDate(today.getDate()+15);
+
+                db.collection('Bookings').doc(xD).set({
+                    usrid: user.uid,
+                    bookid: doc.data().bookid,
+                    issuedon: today,
+                    duedate: newdate
+                })
+                .then(function() {
+                    db.collection('Cart').doc(doc.id).delete()
+                    .then(function() {
+                        db.collection('Bookings').doc('Count').update({
+                            count: bkingcnt
+                        })
+                    })
+                })
+                
+            }) 
+        }
+      }
+      
+      chckout1.addEventListener('click',(e) => {
+        e.stopPropagation();
+
+        db.collection('Cart').get().then((snapshot) => {
+            snapshot.docs.forEach(doc => {
+              render2(doc);
+            })
+        })
+          
+      })
+
+      chckout2.addEventListener('click',(e) => {
+        e.stopPropagation();
+
+        db.collection('Cart').get().then((snapshot) => {
+            snapshot.docs.forEach(doc => {
+              render2(doc);
+            })
+        })
+          
       })
 
     } else {
