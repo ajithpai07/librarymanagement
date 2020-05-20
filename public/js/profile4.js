@@ -21,6 +21,7 @@ auth.onAuthStateChanged(function(user) {
 
       let url1;
       let url2;
+      let KYCstatus;
 
       const fld1=document.querySelector("#fld1");
       const fld2=document.querySelector("#fld2");
@@ -30,6 +31,7 @@ auth.onAuthStateChanged(function(user) {
       const fld6=document.querySelector("#fld6");
       const fld7=document.querySelector("#fld7");
       const fld8=document.querySelector("#fld8");
+      const appear=document.querySelector("#appear");
 
       function render(doc){
         const fd1= document.createElement('span');
@@ -51,7 +53,14 @@ auth.onAuthStateChanged(function(user) {
         fd6.textContent=doc.data().pcode;
         fd7.textContent=doc.data().KYCtype;
         fd8.textContent=doc.data().Kycid;
-        status.textContent=doc.data().Kycstatus;
+        staus.textContent=doc.data().Kycstatus;
+
+        if(doc.data().Kycstatus=="Approved"){
+          appear.style.display="none";
+        }
+        else{
+          appear.style.display="block";
+        }
 
         fld1.appendChild(fd1);
         fld2.appendChild(fd2);

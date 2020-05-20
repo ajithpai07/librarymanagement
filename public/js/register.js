@@ -76,7 +76,8 @@ signupForm.addEventListener('submit',(e) =>{
               Kycstatus: "Pending",
               proimg: url1,
               wallet:0,
-              role: "customer"
+              role: "customer",
+              saved: 0
             }).then(function() {remverr2();});
             
           }

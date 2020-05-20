@@ -43,7 +43,9 @@ auth.onAuthStateChanged(function(user) {
       db.collection('Users').doc(user.uid).get().then(function(doc) {
           if(doc.exists) {
             console.log("data is ", doc.data());
-            render(doc);
+            if(doc.data().saved==1){
+              render(doc);
+            }
           }
           else {
             console.log("no document");
@@ -71,6 +73,9 @@ auth.onAuthStateChanged(function(user) {
                   const cbal=(fd1+bal);
                   db.collection("Users").doc(user.uid).update({
                       wallet: cbal
+                  })
+                  .then(function() {
+                    window.location="5_wallet.html";
                   });
               }
           });
@@ -81,13 +86,13 @@ auth.onAuthStateChanged(function(user) {
                   cardholder: fd3,
                   expire_m: fd4,
                   expire_y: fd5,
-                  cvc: fd6
+                  cvc: fd6,
+                  saved: 1
+                })
+                .then(function() {
+                  window.location="5_wallet.html";
                 });
           }
-          card.reset();
-          setTimeout(function() {
-              location.reload();
-            }, 5000);
       });
 
 
