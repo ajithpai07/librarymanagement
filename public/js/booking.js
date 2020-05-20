@@ -20,6 +20,7 @@ auth.onAuthStateChanged(function(user) {
     console.log(user.uid);
     
     const ulmain=document.querySelector("#ulmain");
+    let counter;
 
     function render(doc){
       if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
@@ -39,8 +40,9 @@ auth.onAuthStateChanged(function(user) {
       const fld16 = document.createElement('a');
       const fld17 = document.createElement('b');
       const fld14 = document.createElement('div');
-      const fld15 = document.createElement('a');
+      const fld15 = document.createElement('p');
       const fld18 = document.createElement('br');
+      
       fld2.setAttribute('class'," overlay-image _bp ");
       fld3.href = "book2.png";
       fld4.setAttribute('class'," image _bq ");
@@ -57,7 +59,6 @@ auth.onAuthStateChanged(function(user) {
       fld16.textContent="₹ ";
       fld17.textContent= doc.data().bprice;
       fld14.setAttribute('class','addtoc');
-      fld15.href="";
       fld15.textContent="Add to cart";
 
       console.log("Hi");
@@ -80,6 +81,40 @@ auth.onAuthStateChanged(function(user) {
       fld16.appendChild(fld17);
       fld1.appendChild(fld14);
       fld14.appendChild(fld15);
+
+      fld15.addEventListener('click',(e) => {
+        e.stopPropagation();
+
+        db.collection('Books').doc(doc.id).update({
+          bavial: 0
+        })
+        .then(function() { 
+          db.collection('Cart').doc('Random').get().then(function(docu) {
+            count=docu.data().random;
+          })
+          .then(function() {
+            count=count+1;
+            const str1="item";
+            const str2=count;
+            const xD = str1.concat(str2);
+            db.collection('Cart').doc(xD).set({
+              usrid: user.uid,
+              bookid: doc.id
+            })
+            .then(function() {
+              db.collection('Cart').doc('Random').update({
+                random: count
+              })
+              .then(function() {
+                window.location="6_newbooking.html";
+              })
+              
+            })
+          }
+
+          )
+        })
+      })
 
       }
     }

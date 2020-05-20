@@ -19,67 +19,49 @@ auth.onAuthStateChanged(function(user) {
       // User is signed in. 
       console.log(user.uid);
 
-      const tabbody = document.querySelector("#tabbody")
+      const tabbody = document.querySelector("#tabbody");
+      let sum=0;
+      const tamt = document.querySelector("#totall");
 
       function render(doc){
-        if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
-        const fld1 = document.createElement('li');      
-        const fld2 = document.createElement('div');
-        const fld3 = document.createElement('a');
-        const fld4 = document.createElement('img');
-        const fld5 = document.createElement('div');
-        const fld6 = document.createElement('div');
-        const fld7 = document.createElement('h4');
-        // const fld8 = document.createElement('p');
-        const fld9 = document.createElement('p');
-        const fld10 = document.createElement('p');
-        const fld11 = document.createElement('p');
-        const fld12 = document.createElement('hr');
-        const fld13 = document.createElement('div');      
-        const fld16 = document.createElement('a');
-        const fld17 = document.createElement('b');
-        const fld14 = document.createElement('div');
-        const fld15 = document.createElement('a');
-        const fld18 = document.createElement('br');
-        fld2.setAttribute('class'," overlay-image _bp ");
-        fld3.href = "book2.png";
-        fld4.setAttribute('class'," image _bq ");
-        fld4.src = doc.data().bimg;
-        fld4.alt = "Alt text";
-        fld5.setAttribute('class'," hover _br ");
-        fld6.setAttribute('class'," text _q ");
-        fld7.textContent=doc.data().bname;
-        // fld8.textContent="Edition :1";
-        fld9.textContent="Genre : "+doc.data().booktype;
-        fld10.textContent="Author : "+doc.data().bauthor;
-        fld11.textContent="Publisher : "+doc.data().publisher;
-        fld13.setAttribute('class','ppd');
-        fld16.textContent="₹ ";
-        fld17.textContent= doc.data().bprice;
-        fld14.setAttribute('class','addtoc');
-        fld15.href="";
-        fld15.textContent="Add to cart";
-  
-        console.log("Hi");
-  
-        ulmain.appendChild(fld1);
-        fld1.appendChild(fld18);
-        fld1.appendChild(fld2);
-        fld2.appendChild(fld3);
-        fld3.appendChild(fld4);
-        fld3.appendChild(fld5);
-        fld5.appendChild(fld6);
-        fld6.appendChild(fld7);
-        // fld6.appendChild(fld8);
-        fld6.appendChild(fld9);
-        fld6.appendChild(fld10);
-        fld6.appendChild(fld11);
-        fld1.appendChild(fld12);
-        fld1.appendChild(fld13);
-        fld13.appendChild(fld16);
-        fld16.appendChild(fld17);
-        fld1.appendChild(fld14);
-        fld14.appendChild(fld15);
+        if(doc.data().usrid==user.uid){
+        const fld1 = document.createElement('tr');      
+        const fld2 = document.createElement('td');
+        const fld3 = document.createElement('td');
+        const fld4 = document.createElement('td');
+        const fld5 = document.createElement('td');
+        const fld6 = document.createElement('button');
+
+        db.collection('Books').doc(doc.data().bookid).get().then(function(docu) {
+            fld2.textContent=docu.id;
+            fld3.textContent=docu.data().bname;
+            fld4.textContent=docu.data().bprice;
+            fld6.textContent="Delete";
+            sum=sum+Number(docu.data().bprice);
+        })
+        .then(function() {
+            tabbody.appendChild(fld1);
+            fld1.appendChild(fld2);
+            fld1.appendChild(fld3);
+            fld1.appendChild(fld4);
+            fld1.appendChild(fld5);
+            fld5.appendChild(fld6);
+            const str1=" Total price = ₹ ";
+            const str2=sum;
+            const xD = str1.concat(str2);
+            tamt.textContent = xD;
+        })
+        
+        fld6.addEventListener('click',(e) => {
+            db.collection('Books').doc(doc.data().bookid).update({
+                bavial: 1
+            })
+            .then(function() {
+                db.collection('Cart').doc(doc.id).delete().then(function() {
+                    window.location="6_cart.html";
+                })
+            })
+        })
   
         }
       }
