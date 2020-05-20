@@ -60,10 +60,10 @@ auth.onAuthStateChanged(function(user) {
       fld14.setAttribute('class','addtoc');
       fld15.href="";
       if(doc.data().bavial==0){
-      fld15.textContent="Not avilable";
+      fld15.textContent="Not available";
       }
       else{
-        fld15.textContent="Avilable";
+        fld15.textContent="Available";
       }
       console.log("Hi");
 
