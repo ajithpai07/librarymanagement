@@ -203,3 +203,154 @@ dropdown
 .footer-links .link-1:before {
     content: none;
   }
+
+/* Newly added by Srekar*/
+
+.container{
+    margin-left:-72px;
+    margin-right: -88px;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-auto-columns: 1fr 200px;
+}
+  
+.content {
+    grid-column: 1;
+}
+
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+    z-index: 9999;
+    transition: 100s;
+	background: url(load1.gif) center no-repeat black;
+}
+
+ul.rig {
+    list-style: none;
+    font-size: 0px;
+    /* should match li left margin */
+}
+  
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 2.5%;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 0px #000000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  border-image-repeat: none;
+  margin: 0 0 10px;
+}
+
+
+ul.rig li h3 {
+  margin: 0 0 10px;
+}
+
+ul.rig li p {
+  font-size: 1.0em;
+  line-height: 1.5em;
+  color: darkcyan;
+}
+
+
+/* class for 2 columns */
+
+ul.rig.columns-2 li {
+  width: 47.5%;
+  /* this value + 2.5 should = 50% */
+}
+
+
+/* class for 3 columns */
+
+ul.rig.columns-3 li {
+  width: 30.83%;
+  /* this value + 2.5 should = 33% */
+}
+
+
+/* class for 4 columns */
+  
+  ul.rig.columns-4 li {
+    width: 22.2%;
+    /* this value + 2.5 should = 25% */
+    background-color: transparent;
+      border: 4px solid white;
+      border-radius: 5px;
+  }
+  
+  .overlay-image {
+    position: relative;
+    width: 100%;
+   }
+   .overlay-image .image {
+    display: block;
+    width: 100%;
+    height: auto;
+   }
+   .overlay-image .text {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5em;
+    text-shadow: 2px 2px 2px #000;
+    text-align: left;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+   }
+   .overlay-image .hover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+   }
+   .overlay-image:hover .hover {
+    opacity: 1;
+    background-color: black;
+   }
+   .overlay-image .normal {
+    transition: .5s ease;
+   }
+   .overlay-image:hover .normal {
+    opacity: 0;
+   }
+   .overlay-image .hover {
+     opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+   }
+
+.addtoc p{
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none ;  
+    padding: 2px 15px;
+    background-color: skyblue; 
+    color: black; 
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    text-align: center;
+    float: right;
+}
