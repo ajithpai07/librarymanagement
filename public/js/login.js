@@ -61,8 +61,9 @@ loginForm.addEventListener('submit',(e) =>{
     .catch(function(error) {
       const fd12=document.querySelector("#fld12");
       fd12.textContent="*Invalid username or password";
-      // setTimeout(function() {
-      //   window.location="3_login.html";
-      // },3000);
+      alert('Invalid username or password!');
+      setTimeout(function() {
+        window.location="3_login.html";
+      },3000);
     });
 });
