@@ -26,7 +26,7 @@ auth.onAuthStateChanged(function(user) {
       if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
       const fld1 = document.createElement('li');      
       const fld2 = document.createElement('div');
-      const fld3 = document.createElement('a');
+      const fld3 = document.createElement('p');
       const fld4 = document.createElement('img');
       const fld5 = document.createElement('div');
       const fld6 = document.createElement('div');
