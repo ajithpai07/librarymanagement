@@ -44,6 +44,8 @@ auth.onAuthStateChanged(function(user) {
             fld6.textContent="Delete";
             fld8.textContent="Checkout"
             sum=sum+Number(docu.data().bprice);
+            fld6.style.cursor="pointer";
+            fld8.style.cursor="pointer";
         })
         .then(function() {
             tabbody.appendChild(fld1);

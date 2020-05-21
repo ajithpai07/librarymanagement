@@ -60,6 +60,7 @@ auth.onAuthStateChanged(function(user) {
       fld17.textContent= doc.data().bprice;
       fld14.setAttribute('class','addtoc');
       fld15.textContent="Add to cart";
+      fld15.style.cursor="pointer";
 
       console.log("Hi");
 
