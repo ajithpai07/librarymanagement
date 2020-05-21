@@ -22,9 +22,8 @@ auth.onAuthStateChanged(function(user) {
       const tabbody = document.querySelector("#tabbody");
       let sum=0;
       let bkingcnt;
+      let walletamt;
       const tamt = document.querySelector("#totall");
-      const chckout1 = document.querySelector("#chckout1");
-      const chckout2 = document.querySelector("#chckout2");
 
       function render(doc){
         if(doc.id!="Random" && doc.data().usrid==user.uid){
@@ -76,38 +75,50 @@ auth.onAuthStateChanged(function(user) {
         fld8.addEventListener('click', (e) => {
           e.stopPropagation();
 
-          db.collection('Bookings').doc('Count').get().then(function(docu) {
-            bkingcnt=docu.data().count+1;
+          db.collection('Users').doc(user.uid).get().then(function(docm) {
+            walletamt=docm.data().wallet;
           })
           .then(function() {
-            const str1="Booking";
-            const str2=bkingcnt;
-            const xD = str1.concat(str2);
-            const today = new Date();
-            const newdate = new Date();
-            newdate.setDate(today.getDate()+15);
+            if(walletamt>=0){
+              db.collection('Bookings').doc('Count').get().then(function(docu) {
+                bkingcnt=docu.data().count+1;
+              })
+              .then(function() {
+                const str1="Booking";
+                const str2=bkingcnt;
+                const xD = str1.concat(str2);
+                const today = new Date();
+                const newdate = new Date();
+                newdate.setDate(today.getDate()+15);
 
-            db.collection('Bookings').doc(xD).set({
-                usrid: user.uid,
-                bookid: doc.data().bookid,
-                issuedon: today,
-                duedate: newdate,
-                bprice: doc.data().bprice,
-                return: 0
-            })
-            .then(function() {
-                db.collection('Cart').doc(doc.id).delete()
+                db.collection('Bookings').doc(xD).set({
+                  usrid: user.uid,
+                  bookid: doc.data().bookid,
+                  issuedon: today,
+                  duedate: newdate,
+                  bprice: doc.data().bprice,
+                  return: 0
+                })
                 .then(function() {
+                  db.collection('Cart').doc(doc.id).delete()
+                  .then(function() {
                     db.collection('Bookings').doc('Count').update({
-                        count: bkingcnt
+                      count: bkingcnt
                     })
                     .then(function() {
                       alert('Checkedout successfully!!');
                       window.location="6_cart.html";
                     })
-                })
-            }) 
-          })
+                  })
+                }) 
+              })
+            }
+            else{
+              alert('Please clear your dues and book again');
+              window.location="5_wallet.html";
+            }
+         })
+          
         })
 
         }
@@ -118,9 +129,6 @@ auth.onAuthStateChanged(function(user) {
           render(doc);
         })
       })
-
-      
-
 
     } else {
       // No user is signed in.
