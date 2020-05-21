@@ -37,7 +37,7 @@ auth.onAuthStateChanged(function(user) {
 
         
         fld2.textContent=doc.data().bookid;
-        fld3.textContent=doc.data().issuedon.Date;
+        fld3.textContent=doc.data().issuedon.toDate();
         if(doc.data().return==0){
           fld4.textContent="NOT RETURNED";
           fld6.textContent="Return";
@@ -45,6 +45,10 @@ auth.onAuthStateChanged(function(user) {
           sum=sum+Number(doc.data().bprice);
           fld6.style.cursor="pointer";
           fld8.style.cursor="pointer";
+          const str1=" Total due = ₹ ";
+          const str2=sum;
+          const xD = str1.concat(str2);
+          tamt.textContent = xD;
         }
         else{
           fld4.textContent="RETURNED";
@@ -69,11 +73,14 @@ auth.onAuthStateChanged(function(user) {
                 })
                 .then(function() {
                     db.collection('Users').doc(user.uid).get().then(function(docu) {
-                      walletamt=doc.data().wallet;
+                      walletamt=docu.data().wallet;
                     })
                     .then(function() {
-                      let balance=Number(walletamt)-Number(doc.data().bprice);
-                      if(walletamt-doc.data().bprice>=0){
+                      let balance=parseInt(walletamt)-parseInt(doc.data().bprice);
+                      console.log(parseInt(walletamt));
+                      console.log(parseInt(doc.data().bprice));
+                      console.log(balance);
+                      if(parseInt(walletamt)-parseInt(doc.data().bprice)>=0){
                         db.collection('Users').doc(user.uid).update({
                           wallet: balance 
                         })
@@ -84,11 +91,11 @@ auth.onAuthStateChanged(function(user) {
                       }
                       else{
                         db.collection('Users').doc(user.uid).update({
-                          wallet: walletamt-doc.data().bprice
+                          wallet: balance
                         })
                         .then(function() {
-                          alert("Clear balance for future bookings")
-                          window.location="6_prevbooking.html";
+                          // alert("Clear balance for future bookings")
+                          // window.location="6_prevbooking.html";
                         })
                       }
                     })

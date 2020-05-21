@@ -84,14 +84,14 @@ auth.onAuthStateChanged(function(user) {
                 bkingcnt=docu.data().count+1;
               })
               .then(function() {
-                const str1="Booking";
-                const str2=bkingcnt;
-                const xD = str1.concat(str2);
+                const stri1="Booking";
+                const stri2=bkingcnt;
+                const xD1 = stri1.concat(stri2);
                 const today = new Date();
                 const newdate = new Date();
                 newdate.setDate(today.getDate()+15);
 
-                db.collection('Bookings').doc(xD).set({
+                db.collection('Bookings').doc(xD1).set({
                   usrid: user.uid,
                   bookid: doc.data().bookid,
                   issuedon: today,
