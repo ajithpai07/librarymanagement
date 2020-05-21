@@ -27,19 +27,22 @@ auth.onAuthStateChanged(function(user) {
       const chckout2 = document.querySelector("#chckout2");
 
       function render(doc){
-        if(doc.data().usrid==user.uid){
+        if(doc.id!="Random" && doc.data().usrid==user.uid){
         const fld1 = document.createElement('tr');      
         const fld2 = document.createElement('td');
         const fld3 = document.createElement('td');
         const fld4 = document.createElement('td');
         const fld5 = document.createElement('td');
         const fld6 = document.createElement('button');
+        const fld7 = document.createElement('td');
+        const fld8 = document.createElement('button');
 
         db.collection('Books').doc(doc.data().bookid).get().then(function(docu) {
             fld2.textContent=docu.id;
             fld3.textContent=docu.data().bname;
             fld4.textContent=docu.data().bprice;
             fld6.textContent="Delete";
+            fld8.textContent="Checkout"
             sum=sum+Number(docu.data().bprice);
         })
         .then(function() {
@@ -49,6 +52,8 @@ auth.onAuthStateChanged(function(user) {
             fld1.appendChild(fld4);
             fld1.appendChild(fld5);
             fld5.appendChild(fld6);
+            fld1.appendChild(fld7);
+            fld7.appendChild(fld8);
             const str1=" Total price = ₹ ";
             const str2=sum;
             const xD = str1.concat(str2);
@@ -65,7 +70,44 @@ auth.onAuthStateChanged(function(user) {
                 })
             })
         })
-  
+        
+        fld8.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          db.collection('Bookings').doc('Count').get().then(function(docu) {
+            bkingcnt=docu.data().count+1;
+          })
+          .then(function() {
+            const str1="Booking";
+            const str2=bkingcnt;
+            const xD = str1.concat(str2);
+            const today = new Date();
+            const newdate = new Date();
+            newdate.setDate(today.getDate()+15);
+
+            db.collection('Bookings').doc(xD).set({
+                usrid: user.uid,
+                bookid: doc.data().bookid,
+                issuedon: today,
+                duedate: newdate,
+                bprice: doc.data().bprice,
+                return: 0
+            })
+            .then(function() {
+                db.collection('Cart').doc(doc.id).delete()
+                .then(function() {
+                    db.collection('Bookings').doc('Count').update({
+                        count: bkingcnt
+                    })
+                    .then(function() {
+                      alert('Checkedout successfully!!');
+                      window.location="6_cart.html";
+                    })
+                })
+            }) 
+          })
+        })
+
         }
       }
   
@@ -75,60 +117,8 @@ auth.onAuthStateChanged(function(user) {
         })
       })
 
-      function render2(doc){
-        if(doc.data().usrid==user.uid){
-            
-            db.collection('Bookings').doc('Count').get().then(function(docu) {
-                bkingcnt=docu.data().count+1;
-            })
-            .then(function() {
-                const str1="Booking";
-                const str2=bkingcnt;
-                const xD = str1.concat(str2);
-                const today = new Date();
-                const newdate = new Date();
-                newdate.setDate(today.getDate()+15);
-
-                db.collection('Bookings').doc(xD).set({
-                    usrid: user.uid,
-                    bookid: doc.data().bookid,
-                    issuedon: today,
-                    duedate: newdate
-                })
-                .then(function() {
-                    db.collection('Cart').doc(doc.id).delete()
-                    .then(function() {
-                        db.collection('Bookings').doc('Count').update({
-                            count: bkingcnt
-                        })
-                    })
-                })
-                
-            }) 
-        }
-      }
       
-      chckout1.addEventListener('click',(e) => {
-        e.stopPropagation();
 
-        db.collection('Cart').get().then((snapshot) => {
-            snapshot.docs.forEach(doc => {
-              render2(doc);
-            })
-        })
-          
-      })
-
-      chckout2.addEventListener('click',(e) => {
-        e.stopPropagation();
-
-        db.collection('Cart').get().then((snapshot) => {
-            snapshot.docs.forEach(doc => {
-              render2(doc);
-            })
-        })
-          
-      })
 
     } else {
       // No user is signed in.

@@ -99,13 +99,15 @@ auth.onAuthStateChanged(function(user) {
             const xD = str1.concat(str2);
             db.collection('Cart').doc(xD).set({
               usrid: user.uid,
-              bookid: doc.id
+              bookid: doc.id,
+              bprice: doc.data().bprice
             })
             .then(function() {
               db.collection('Cart').doc('Random').update({
                 random: count
               })
               .then(function() {
+                alert("Added to cart!!")
                 window.location="6_newbooking.html";
               })
               
