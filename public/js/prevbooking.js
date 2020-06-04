@@ -110,7 +110,7 @@ auth.onAuthStateChanged(function(user) {
           newdate.setDate(today.getDate()+15);
             db.collection('Bookings').doc(doc.id).update({
                duedate: newdate,
-               bprice: doc.data().bprice+10
+               bprice: Number(doc.data().bprice+20)
              })
           })
 

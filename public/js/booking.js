@@ -101,7 +101,7 @@ auth.onAuthStateChanged(function(user) {
             db.collection('Cart').doc(xD).set({
               usrid: user.uid,
               bookid: doc.id,
-              bprice: doc.data().bprice
+              bprice: Number(100)
             })
             .then(function() {
               db.collection('Cart').doc('Random').update({

@@ -35,9 +35,6 @@ auth.onAuthStateChanged(function(user) {
           const fld6 = document.createElement('button');
           const fld7 = document.createElement('td');
           const fld8 = document.createElement('br');
-          
-
-          console.log("HI");
 
           fld2.textContent = doc.data().name;
           fld3.textContent = doc.data().Dob;
