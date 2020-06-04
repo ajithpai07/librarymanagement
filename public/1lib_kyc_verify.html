@@ -62,20 +62,20 @@
         <div class="main">
           <h2 class="heading">KYC Verification</h2>
 
-          <form>
+          <form id="sbmt">
 
             <br><br><br>
             <div class="row">
               <div class="column">
-                <img src="kycf.jpg" alt="KYC FRONT IMAGE" style="width:100%">
+                <img id="kycf" alt="KYC FRONT IMAGE" style="width:100%">
               </div>
               <div class="column">
-                <img src="kycb.jpg" alt="KYC BACK IMAGE" style="width:100%">
+                <img id="kycb" alt="KYC BACK IMAGE" style="width:100%">
               </div>              
-             <img class="ppic" src="logo_tbar.png" alt="PROFILE PICTURE">
+             <img id="propic" class="ppic" alt="PROFILE PICTURE">
             </div>
             <br>
-            <select class="slct" required>
+            <select id="status" class="slct" required>
               <option value="Pending">Select KYC Status:</option>
               <option value="Approved">Approve</option>
               <option value="Rejected">Reject</option>
@@ -88,69 +88,25 @@
 
 
 
-          <table>
+          <table id="tabbody">
             <tr>
               <th>Name</th>
               <th>DOB</th>
-              <th>Address</th>
+              <th>City</th>
               <th>KYC No.</th>
               <th>Action</th>
             </tr>
-            <tr>
+            <!-- <tr>
               <td>Sravan</td>
               <td>18/07/2000</td>
-              <td>503           <br>
-                  janatha colony<br>
-                  BLR           <br>
+              <td>503,
+                  janatha colony,
+                  BLR,
                   560035
               </td>
               <td>850085118522</td>
               <td><button>START</button></td>
-            </tr>
-            <tr>
-              <td>Sravan</td>
-              <td>18/07/2000</td>
-              <td>503           <br>
-                  janatha colony<br>
-                  BLR           <br>
-                  560035
-              </td>
-              <td>850085118522</td>
-              <td><button>START</button></td>
-            </tr>
-            <tr>
-              <td>Sravan</td>
-              <td>18/07/2000</td>
-              <td>503           <br>
-                  janatha colony<br>
-                  BLR           <br>
-                  560035
-              </td>
-              <td>850085118522</td>
-              <td><button>START</button></td>
-            </tr>
-            <tr>
-              <td>Sravan</td>
-              <td>18/07/2000</td>
-              <td>503           <br>
-                  janatha colony<br>
-                  BLR           <br>
-                  560035
-              </td>
-              <td>850085118522</td>
-              <td><button>START</button></td>
-            </tr>
-            <tr>
-              <td>Sravan</td>
-              <td>18/07/2000</td>
-              <td>503           <br>
-                  janatha colony<br>
-                  BLR           <br>
-                  560035
-              </td>
-              <td>850085118522</td>
-              <td><button>START</button></td>
-            </tr>
+            </tr> -->
           </table>
 
           <br><br><br><br>
@@ -166,6 +122,12 @@
               </pre>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/KYCverification.js"></script>
     </body>
 </html>
