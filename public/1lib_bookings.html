@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lib | Update Book</title>
+        <title>Lib | Bookings</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
-        <link rel="stylesheet" href="css/book_update.css">
+        <link rel="stylesheet" href="css/1lib_bookings.css">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -62,44 +62,34 @@
                 </ul>
             </div>
         </div>
-        
         <div class="main">
-          <div class="show-profile" id="profile">
-            <h2>Update book details</h2><br>
-            <img src="book_u.png">
-          </div>
+          <h2 class="heading">Bookings</h2>
+          <br><br><br>
+          <table>
+            <tr>
+              <th>Booking ID</th>
+              <th>Booking date and time</th>
+              <th>Due date and time</th>
+              <th>User name</th>
+              <th>User email ID</th>
+            </tr>
+          </table>
+
           
-          <h3 id="fld13" style="color: red"></h3>
-          <form id="Submit">
-            <fieldset>
-              <input placeholder="Book ID" type="text" class="slct" id="fld1" required title="Enter the book ID to update">
-              <input type="submit" value="SUBMIT" class="submit">
-            </fieldset>
-          </form>         
-          
-          <h3 id="fld12" style="color: green"></h3>
-          <form id="Update">
-            <fieldset>
-              <input placeholder="Book ID" type="text" class="slct wrong" id="fld7" required title="Book ID update is not possible" readonly disabled>
-              <select class="slct" id="fld2"  title="Select Genre">
-                  <option value="Art">Art</option>
-                  <option value="Music">Music</option>
-                  <option value="Poetry">Poetry</option>
-                  <option value="Humour">Humour</option>
-                  <option value="Fantasy">Fantasy</option>
-                  <option value="Business">Business</option>
-                  <option value="Biography">Biography</option>
-                  <option value="Cookbooks">Cookbooks</option>
-                  <option value="Engineering">Engineering</option>
-                  <option value="Young Adult">Young Adult</option>
-              </select>   
-              <input placeholder="Book name" type="text" class="slct" id="fld3" required minlength="3" title="Minimum of 3 characters required">
-              <input placeholder="Author" type="text" class="slct" id="fld4" required minlength="3" title="Minimum of 3 characters required">
-              <input placeholder="Publisher" type="text" class="slct" id="fld5" required minlength="3" title="Minimum of 3 characters required">
-              <input placeholder="Book Price" type="number" class="slct" id="fld6" required min="1" max="9999" title="Example: 99, 615">
-              <input type="submit" value="Update" class="submit">         
-            </fieldset>
-          </form>
+          <!-- <tr>
+            <td>Sravan</td>
+            <td>18/07/2000</td>
+            <td>503,
+                janatha colony,
+                BLR,
+                560035
+            </td>
+            <td>850085118522</td>
+            <td><button>START</button></td>
+          </tr> -->
+
+          <br><br><br><br>
+
         </div>
         <div class="footer">
             <div class="footer-cright">
@@ -111,12 +101,5 @@
               </pre>
             </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
-
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
-    
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
-    
-        <script src="js/updateBook.js"></script>
     </body>
 </html>
