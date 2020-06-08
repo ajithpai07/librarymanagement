@@ -72,7 +72,7 @@
 
                     <!-- New Modal Content -->
 
-                    <button id="myBtn">Open Modal</button>
+                    <!-- <button id="myBtn">Open Modal</button> -->
 
                     <!--   Matter   -->
 
@@ -80,14 +80,15 @@
                         <div class="modal-content">
                           <span class="close">&times;</span>
                           <h10>Booking details</h10>
-                          <pre>Book ID        :  </pre>
-                          <pre>Name           :  </pre>
-                          <pre>Genre          :  </pre>
-                          <pre>Author         :  </pre>
-                          <pre>Publisher      :  </pre>
-                          <hr>
+                          <pre id="bid">Book ID        :  </pre>
+                          <pre id="name">Name           :  </pre>
+                          <pre id="genre">Genre          :  </pre>
+                          <pre id="author">Author         :  </pre>
+                          <pre id="publisher">Publisher      :  </pre>
+                          <pre id="price">Price      :  </pre>
+                          <!-- <hr>
                           <pre>Status         :  </pre>
-                          <pre>Booking date   :  </pre>
+                          <pre>Booking date   :  </pre> -->
                         </div>                      
                     </div>
 
@@ -113,7 +114,7 @@
             </div>
         </div>
 
-        <script>
+        <!-- <script>
             // Get the modal
             var modal = document.getElementById("myModal");
             
@@ -139,6 +140,13 @@
                 modal.style.display = "none";
               }
             }
+        </script> -->
+        <script>
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
         </script>
 
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>

@@ -23,6 +23,16 @@ auth.onAuthStateChanged(function(user) {
       let sum=0;
       let walletamt;
       const tamt = document.querySelector("#totall");
+      
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+
+      const bid = document.querySelector("#bid");
+      const name = document.querySelector("#name");
+      const genre = document.querySelector("#genre");
+      const author = document.querySelector("#author")
+      const publisher = document.querySelector("#publisher");
+      const price = document.querySelector("#price");
 
       function render(doc){
         if(doc.id!="Count" && doc.data().usrid==user.uid){
@@ -36,7 +46,7 @@ auth.onAuthStateChanged(function(user) {
         const fld8 = document.createElement('button');
         const fld9 = document.createElement('td');
 
-        
+        fld2.setAttribute('id','myBtn')
         fld2.textContent=doc.data().bookid;
         fld3.textContent=doc.data().issuedon.toDate().getDate()+"/"+Number(Number(doc.data().issuedon.toDate().getMonth())+Number(1))+"/"+doc.data().issuedon.toDate(). getFullYear();
         fld9.textContent = doc.data().duedate.toDate().getDate()+"/"+Number(Number(doc.data().duedate.toDate().getMonth())+Number(1))+"/"+doc.data().duedate.toDate(). getFullYear();
@@ -65,6 +75,33 @@ auth.onAuthStateChanged(function(user) {
         fld5.appendChild(fld6);
         fld1.appendChild(fld7);
         fld7.appendChild(fld8);
+
+        fld2.addEventListener('click', (e)=> {
+          e.stopPropagation();
+
+          modal.style.display = "block";
+          
+          bid.textContent="Book ID        : "+doc.data().bookid;
+          
+          db.collection('Books').doc(doc.data().bookid).get().then(function(docu) {
+            name.textContent = "Book name      : "+docu.data().bname;
+            genre.textContent = "Genre          : "+docu.data().booktype;
+            author.textContent = "Author         : "+docu.data().bauthor;
+            publisher.textContent = "Publisher      : "+docu.data().publisher;
+            price.textContent = "Price          : "+docu.data().bprice;
+          })
+
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+          }
+        }
+
+        })
         
         fld6.addEventListener('click',(e) => {
             db.collection('Books').doc(doc.data().bookid).update({
@@ -116,7 +153,7 @@ auth.onAuthStateChanged(function(user) {
                bprice: Number(doc.data().bprice+20)
              })
              .then(function() {
-               alert('Extended successdully');
+               alert('Extended successfully');
                window.location="6_prevbooking.html";
              })
           })

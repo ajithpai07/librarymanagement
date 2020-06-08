@@ -388,3 +388,7 @@ li {
     text-decoration: none;
     cursor: pointer;
   }
+
+  #myBtn{
+    cursor: pointer;
+  }
