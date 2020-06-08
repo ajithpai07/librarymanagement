@@ -65,11 +65,12 @@
         <div class="main">
           <h2 class="heading">Bookings</h2>
           <br><br><br>
-          <table>
+          <table id="tabbody">
             <tr>
               <th>Booking ID</th>
-              <th>Booking date and time</th>
-              <th>Due date and time</th>
+              <th>Booking date</th>
+              <th>Due date</th>
+              <th>Today date</th>
               <th>User name</th>
               <th>User email ID</th>
             </tr>
@@ -101,5 +102,12 @@
               </pre>
             </div>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/libBookings.js"></script>
     </body>
 </html>

@@ -34,10 +34,12 @@ auth.onAuthStateChanged(function(user) {
         const fld6 = document.createElement('button');
         const fld7 = document.createElement('td');
         const fld8 = document.createElement('button');
+        const fld9 = document.createElement('td');
 
         
         fld2.textContent=doc.data().bookid;
-        fld3.textContent=doc.data().issuedon.toDate();
+        fld3.textContent=doc.data().issuedon.toDate().getDate()+"/"+Number(Number(doc.data().issuedon.toDate().getMonth())+Number(1))+"/"+doc.data().issuedon.toDate(). getFullYear();
+        fld9.textContent = doc.data().duedate.toDate().getDate()+"/"+Number(Number(doc.data().duedate.toDate().getMonth())+Number(1))+"/"+doc.data().duedate.toDate(). getFullYear();
         if(doc.data().return==0){
           fld4.textContent="NOT RETURNED";
           fld6.textContent="Return";
@@ -57,6 +59,7 @@ auth.onAuthStateChanged(function(user) {
         tabbody.appendChild(fld1);
         fld1.appendChild(fld2);
         fld1.appendChild(fld3);
+        fld1.appendChild(fld9);
         fld1.appendChild(fld4);
         fld1.appendChild(fld5);
         fld5.appendChild(fld6);
@@ -94,8 +97,8 @@ auth.onAuthStateChanged(function(user) {
                           wallet: balance
                         })
                         .then(function() {
-                          // alert("Clear balance for future bookings")
-                          // window.location="6_prevbooking.html";
+                          alert("Clear balance for future bookings")
+                          window.location="5_wallet.html";
                         })
                       }
                     })
@@ -107,10 +110,14 @@ auth.onAuthStateChanged(function(user) {
           e.stopPropagation();
           const today = new Date();
           const newdate = new Date();
-          newdate.setDate(today.getDate()+15);
+          newdate.setDate(doc.data().duedate.toDate().getDate()+15);
             db.collection('Bookings').doc(doc.id).update({
                duedate: newdate,
                bprice: Number(doc.data().bprice+20)
+             })
+             .then(function() {
+               alert('Extended successdully');
+               window.location="6_prevbooking.html";
              })
           })
 
