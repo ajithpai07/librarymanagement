@@ -236,4 +236,5 @@ dropdown
     border-radius: 5px;
     margin: 10px;
     margin-left: 45%;
+    cursor: pointer;
 }
