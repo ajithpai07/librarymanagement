@@ -38,11 +38,11 @@
                   <label>Date Of Birth</label>
                   <input type="date" class="slct" id="Dob" required>
                   <label>E-mail</label>
-                  <input type="email" class="slct" id="email" autocomplete="off" required pattern="[a-zA-Z0-9|.]+@[a-zA-z]+[.][a-zA-Z]+" title="Sorry, only letters, numbers, periods(.) are allowed.">
+                  <input type="email" class="slct" id="email" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Sorry, only letters, numbers, periods(.) and '@' are allowed.">
                   <label>Phone Number</label>
                   <input type="text" class="slct" id="phno" required pattern="[6-9]{1}[0-9]{9}" title="Sorry, only numbers starting with 6,7,8,9 are allowed. Maintain the length of 10.">  
                   <label>New Password</label>
-                  <input type="password" class="slct" id="password" autocomplete="off" required pattern="(?=.*\d).{8,16}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
+                  <input type="password" class="slct" id="password" autocomplete="off" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                   <label>Upload Your Selfie</label>
                   <input type="file" class="slct-img" id="Kycimg" accept="image/*" required>
                 </fieldset>          

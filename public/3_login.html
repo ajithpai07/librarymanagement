@@ -32,8 +32,8 @@
         <div class="main">
             <p id="fld12" style="color: red;"></p>
             <form id="login">
-                <input class="un" autocomplete="off" type="text" align="center" id="email" placeholder="Email" required pattern="[a-zA-Z0-9|.]+@[a-zA-z]+[.][a-zA-Z]+" title="Sorry, only letters, numbers, periods(.) are allowed." autofocus>
-                <input type="password" class="pass" align="center" id="password" placeholder="Password" name="psw" required pattern="(?=.*\d).{8,16}" onkeydown="if(event.ctrlKey && event.keyCode==86){return false;}" title="Sorry, password must be of 8 to 16 characters including atleast one in each category: uppercase, lowercase, number and special character.">
+                <input class="un" autocomplete="off" type="text" align="center" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Sorry, only letters, numbers, periods(.) and '@' are allowed." autofocus>
+                <input type="password" class="pass" align="center" id="password" placeholder="Password" name="psw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onkeydown="if(event.ctrlKey && event.keyCode==86){return false;}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                 <input type="checkbox" onclick="myFunction()"> Show Password<br><br>
                 <input type="submit" value="LOGIN" class="submit">
             </form>            
