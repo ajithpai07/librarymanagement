@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lib | Books: Manage</title>
+        <title>Lib | Customer Requests</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
-        <link rel="stylesheet" href="css/1lib_booku.css">
+        <link rel="stylesheet" href="css/1lib_cus_req.css">
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -38,9 +38,7 @@
                     <li><a onclick="logoutfunction()" class="button3">Logout</a></li>
                     <li>
                         <div class="dropdown">                            
-                            <div class="activ">                                
-                                <a>Books</a>
-                            </div>
+                            <a>Books</a>
                             <div class="dropdown-content">
                               <a href="1lib_book_show.html">Show books</a>
                               <a href="1lib_manage_books.html">Manage Books</a>
@@ -49,8 +47,10 @@
                           </div> 
                     </li>
                     <li>
-                          <div class="dropdown">                            
-                            <a>User management</a>
+                          <div class="dropdown">   
+                            <div class="activ">                       
+                              <a>User management</a>
+                            </div>    
                             <div class="dropdown-content">
                               <a href="1lib_kyc_verify.html">KYC Verification</a>
                               <a href="1lib_cust_req.html">Customer Requests</a>
@@ -71,24 +71,15 @@
             </div>
         </div>
         <div class="main">
-            <br><br><br><br><br><br><br>
-            <div class="box-1">
-              <div class="btn btn-three">
-                <a href="book_delete.html" target='_blank'>Delete Book</a>
-              </div>
-            </div>
-            <div class="box-2">
-              <div class="btn btn-three">
-                <a href="book_update.html" target='_blank'>Update Book</a>
-              </div>
-            </div>
-            <div class="box-3">
-              <div class="btn btn-three">
-                <a href="book_add.html" target='_blank'>Add Book</a>
-              </div>
+            <h2 class="heading">Customer Queries and Feedbacks</h2>
+            <div class="query">
+                <pre>Request ID    :  </pre>
+                <pre>Name          :  </pre>
+                <pre>Email         :  </pre>
+                <pre>Subject       :  </pre>
+                <pre>Message       :  </pre>
             </div>
         </div>
-        <br><br><br><br>
         <div class="footer">
             <div class="footer-cright">
                 <p>&#169 2020 Takshashila Library. All rights reserved</p>
@@ -99,13 +90,5 @@
               </pre>
             </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
-
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
-    
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
-    
-        <script src="js/home.js"></script>
-
     </body>
 </html>
