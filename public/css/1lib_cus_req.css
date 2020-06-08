@@ -217,7 +217,8 @@ dropdown
 
 .query{
     min-height: 150px;
-    border: 2px dashed black;
+    border: 2px dotted black;
+    margin-bottom: 20px;
 }
 
 .query pre{
@@ -225,4 +226,14 @@ dropdown
     color: darkslategray;
     padding: 2px;
     margin-left: 10px;
+}
+
+.delete{
+    outline: none;
+    padding: 3px 20px;
+    background-color: ivory;
+    color: darkgreen;
+    border-radius: 5px;
+    margin: 10px;
+    margin-left: 45%;
 }
