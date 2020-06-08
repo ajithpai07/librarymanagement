@@ -27,22 +27,20 @@ auth.onAuthStateChanged(function(user) {
       const fld6=document.querySelector("#fld6");       
 
       function render(doc){
-          const fd8= document.createElement('span');            
-
-          fd8.textContent=doc.data().wallet;
 
           fld2.value=doc.data().cardno;
           fld3.value=doc.data().cardholder;            
           fld4.value=doc.data().expire_m;
           fld5.value=doc.data().expire_y;            
           fld6.value=doc.data().cvc;
-
-          fld8.appendChild(fd8);
       }
 
       db.collection('Users').doc(user.uid).get().then(function(doc) {
           if(doc.exists) {
             console.log("data is ", doc.data());
+            const fd8= document.createElement('span'); 
+            fld8.appendChild(fd8);           
+            fd8.textContent=doc.data().wallet;
             if(doc.data().saved==1){
               render(doc);
             }
