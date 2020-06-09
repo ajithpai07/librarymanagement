@@ -22,6 +22,7 @@ auth.onAuthStateChanged(function(user) {
     const ulmain=document.querySelector("#ulmain");
     let counter;
     const search = document.querySelector("#search");
+    var KYCstatus;
 
     function render(doc){
       if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
@@ -87,37 +88,48 @@ auth.onAuthStateChanged(function(user) {
       fld15.addEventListener('click',(e) => {
         e.stopPropagation();
 
-        db.collection('Books').doc(doc.id).update({
-          bavial: 0
+        db.collection('Users').doc(user.uid).get().then((doc) => {
+          KYCstatus = doc.data().Kycstatus;
         })
-        .then(function() { 
-          db.collection('Cart').doc('Random').get().then(function(docu) {
-            count=docu.data().random;
-          })
-          .then(function() {
-            count=count+1;
-            const str1="item";
-            const str2=count;
-            const xD = str1.concat(str2);
-            db.collection('Cart').doc(xD).set({
-              usrid: user.uid,
-              bookid: doc.id,
-              bprice: Number(100)
+        .then(function() {
+          if(KYCstatus=="Approved"){
+            db.collection('Books').doc(doc.id).update({
+              bavial: 0
             })
-            .then(function() {
-              db.collection('Cart').doc('Random').update({
-                random: count
+            .then(function() { 
+              db.collection('Cart').doc('Random').get().then(function(docu) {
+                count=docu.data().random;
               })
               .then(function() {
-                alert("Added to cart!!")
-                window.location="6_newbooking.html";
-              })
-              
+                count=count+1;
+                const str1="item";
+                const str2=count;
+                const xD = str1.concat(str2);
+                db.collection('Cart').doc(xD).set({
+                  usrid: user.uid,
+                  bookid: doc.id,
+                  bprice: Number(100)
+                })
+                .then(function() {
+                  db.collection('Cart').doc('Random').update({
+                    random: count
+                  })
+                  .then(function() {
+                    alert("Added to cart!!")
+                    window.location="6_newbooking.html";
+                  })
+                  
+                })
+              }
+    
+              )
             })
           }
-
-          )
+          else{
+            alert('Finish KYCSTATUS for proceeding');
+          }
         })
+
       })
 
       }
