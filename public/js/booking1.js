@@ -129,9 +129,6 @@ auth.onAuthStateChanged(function(user) {
         db.collection('Books').get().then((snapshot) => {
             snapshot.docs.forEach(doc => {
                 if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
-                    if(doc.data().genre==search){
-                        render(doc);
-                    }
                     if(doc.data().bname==search){
                         render(doc);
                     }
