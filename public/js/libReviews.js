@@ -35,6 +35,7 @@ auth.onAuthStateChanged(function(user) {
             fld4.setAttribute('class','rating');
             fld2.textContent = "Review ID      : "+doc.id;
             fld3.textContent = "Rating         : ";
+            fld5.setAttribute('class','star');
             if(doc.data().star==5){
                 fld5.src="rating/5s.png";
             }
