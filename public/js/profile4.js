@@ -114,7 +114,8 @@ auth.onAuthStateChanged(function(user) {
       function remverr(){
         db.collection('Users').doc(user.uid).set({
           KYCfront: url1,
-          KYCback: url2
+          KYCback: url2,
+          Kycstatus: "Pending"
         },{merge: true})
         .then(function() {
           const fd12=document.querySelector("#fld12");

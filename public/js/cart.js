@@ -42,7 +42,7 @@ auth.onAuthStateChanged(function(user) {
             fld4.textContent=docu.data().bprice;
             fld6.textContent="Delete";
             fld8.textContent="Checkout"
-            sum=sum+Number(docu.data().bprice);
+            sum=sum+Number(100);
             fld6.style.cursor="pointer";
             fld8.style.cursor="pointer";
         })

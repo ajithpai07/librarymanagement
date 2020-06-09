@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lib | Bookings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/icon type" href="assets/logo_tbar.png">
+        <link rel="stylesheet" href="css/1lib_bookings.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <script>
+            $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
+        <!-- logout script -->
+        <script>
+          function logoutfunction() {
+            var r = confirm("Are you sure want to logout?");
+            if (r == true) {
+              window.location.href = "8_clogout.html";
+            }
+          }
+        </script>
+        <!-- logout script -->
+        
+    </head>
+    <body>
+        <!-- Loader icon -->
+        <div class="se-pre-con"></div>
+        <!-- Loader icon -->
+        <div class="header">
+            <div class="header-logo">Takshashila Library</div>
+            <div class="header-menu">
+                <ul>
+                    <li><a onclick="logoutfunction()" class="button3">Logout</a></li>
+                    <li>
+                        <div class="dropdown">                            
+                            <div class="activ">                                
+                                <a>Books</a>
+                            </div>
+                            <div class="dropdown-content">
+                              <a href="1lib_book_show.html">Show books</a>
+                              <a href="1lib_manage_books.html">Manage Books</a>
+                              <a href="1lib_bookings.html">Bookings</a>
+                            </div>
+                          </div> 
+                    </li>
+                    <li>
+                          <div class="dropdown">                            
+                            <a>User management</a>
+                            <div class="dropdown-content">
+                              <a href="1lib_kyc_verify.html">KYC Verification</a>
+                              <a href="1lib_cust_req.html">Customer Requests</a>
+                              <a href="1lib_reviews.html">Customer Reviews</a>
+                            </div>
+                          </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a>Profile management</a>
+                            <div class="dropdown-content">
+                              <a href="1lib_profilem_view.html">View profile</a>
+                              <a href="1lib_profilem_update.html">Update profile</a>
+                            </div>
+                          </div> 
+                    </li>
+                    <li><a href="1lib_home.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+          <h2 class="heading">Bookings</h2>
+          <br><br><br>
+          <table id="tabbody">
+            <tr>
+              <th>Booking ID</th>
+              <th>Booking date</th>
+              <th>Due date</th>
+              <th>Today date</th>
+              <th>User name</th>
+              <th>User email ID</th>
+            </tr>
+          </table>
+
+          
+          <!-- <tr>
+            <td>Sravan</td>
+            <td>18/07/2000</td>
+            <td>503,
+                janatha colony,
+                BLR,
+                560035
+            </td>
+            <td>850085118522</td>
+            <td><button>START</button></td>
+          </tr> -->
+
+          <br><br><br><br>
+
+        </div>
+        <div class="footer">
+            <div class="footer-cright">
+                <p>&#169 2020 Takshashila Library. All rights reserved</p>
+            </div>
+            <div class="footer-left">
+              <pre class="footer-links">
+                <a href="0_about.html" class="link-1" target='_blank'>About   </a> <a href="0_faqs.html" target='_blank'>   FAQ's   </a> <a href="0_customer_support.html" target='_blank'>   Customer Support   </a> <a href="0_privacy_policy.html" target='_blank'>   Privacy Policy   </a> <a href="0_terms.html" target='_blank'>   Terms of Service   </a>
+              </pre>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    
+        <script src="js/libBookings.js"></script>
+    </body>
+</html>

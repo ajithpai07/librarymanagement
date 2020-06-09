@@ -3,7 +3,7 @@
     <head>
         <title>Booking: History</title>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/icon type" href="logo_tbar.png">
+        <link rel="icon" type="image/icon type" href="assets/logo_tbar.png">
         <link rel="stylesheet" href="css/css6_prev.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -35,7 +35,7 @@
             <div class="header-menu">
                 <ul>
                     <li><a onclick="logoutfunction()" class="button3">Logout</a></li>
-                    <li class="active"><a href="6_cart.html">Booking</a></li>
+                    <li class="active"><a href="6_newbooking.html">Booking</a></li>
                     <li><a href="5_wallet.html">Wallet</a></li>
                     <li><a href="4_2_profilem.html">Profile management</a></li>
                     <li><a href="2_home.html">Home</a></li>
@@ -47,7 +47,6 @@
                 <a href="6_cart.html">Cart</a>
                 <a href="6_newbooking.html">New booking</a>
                 <a href="6_prevbooking.html">Previous bookings</a>
-                <!-- <a href="6_bookowed.html">Book owed</a> -->
             </div>  
 
             <div class="heading">
@@ -63,12 +62,35 @@
                 <tr class="red">
                     <th>Book ID</th>
                     <th>Booking date</th>
+                    <th>Due date</th>
                     <th>Status</th>
                     <th>Return</th>
                     <th>Extend</th>
                 </tr>
                 </thead>
                 <tbody id="tabbody">
+
+                    <!-- New Modal Content -->
+
+                    <!-- <button id="myBtn">Open Modal</button> -->
+
+                    <!--   Matter   -->
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h10>Booking details</h10>
+                          <pre id="bid">Book ID        :  </pre>
+                          <pre id="name">Name           :  </pre>
+                          <pre id="genre">Genre          :  </pre>
+                          <pre id="author">Author         :  </pre>
+                          <pre id="publisher">Publisher      :  </pre>
+                          <pre id="price">Price      :  ₹</pre>
+                          <!-- <hr>
+                          <pre>Status         :  </pre>
+                          <pre>Booking date   :  </pre> -->
+                        </div>                      
+                    </div>
 
 
                     <!-- Add JavaScript from the below tags -->
@@ -91,6 +113,41 @@
               </pre>
             </div>
         </div>
+
+        <!-- <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script> -->
+        <script>
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
 
         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
 

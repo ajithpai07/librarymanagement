@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>Customer Support</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/icon type" href="assets/logo_tbar.png"> 
+        
+        <style>
+             *{
+                  margin: 0;
+                  padding: 0;
+              }
+              .rate {
+                  margin-top: -10px;
+                  float: left;
+                  height: 46px;
+                  padding: 0 10px;
+              }
+              .rate:not(:checked) > input {
+                  position:absolute;
+                  top:-9999px;
+              }
+              .rate:not(:checked) > label {
+                  float:right;
+                  width:1em;
+                  overflow:hidden;
+                  white-space:nowrap;
+                  cursor:pointer;
+                  font-size:30px;
+                  color:#ccc;
+              }
+              .rate:not(:checked) > label:before {
+                  content: '★ ';
+              }
+              .rate > input:checked ~ label {
+                  color: #ffc800;    
+              }
+              .rate:not(:checked) > label:hover,
+              .rate:not(:checked) > label:hover ~ label {
+                  color: #deb217;  
+              }
+              .rate > input:checked + label:hover,
+              .rate > input:checked + label:hover ~ label,
+              .rate > input:checked ~ label:hover,
+              .rate > input:checked ~ label:hover ~ label,
+              .rate > label:hover ~ input:checked ~ label {
+                  color: #c59b08;
+              }
+
+            @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: antialiased;
+            -o-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            }
+
+            body {
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            font-weight: 100;
+            font-size: 12px;
+            line-height: 30px;
+            color: #777;
+            background: transparent;
+            }
+
+            .container {
+            max-width: 400px;
+            width: 100%;
+            margin-left: 100px;
+            position: fixed;
+            }
+
+            .contact input[type="text"],
+            .contact input[type="email"],
+            .contact input[type="tel"],
+            .contact input[type="url"],
+            .contact textarea,
+            .contact button[type="submit"] {
+            font: 400 16px "Roboto", Helvetica, Arial, sans-serif;
+            }
+
+            .contact {
+            background: #F9F9F9;
+            padding: 25px;
+            margin-top: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            }
+
+            .contact h3 {
+            display: block;
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            }
+
+            .contact h4 {
+            margin: 5px 0 15px;
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            }
+
+            fieldset {
+            border: medium none !important;
+            margin: 0 0 10px;
+            min-width: 100%;
+            padding: 0;
+            width: 100%;
+            }
+
+            .contact input[type="text"],
+            .contact input[type="email"],
+            .contact input[type="tel"],
+            .contact input[type="url"],
+            .contact textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            background: #FFF;
+            margin: 0 0 5px;
+            padding: 10px;
+            }
+
+            .contact input[type="text"]:hover,
+            .contact input[type="email"]:hover,
+            .contact input[type="tel"]:hover,
+            .contact input[type="url"]:hover,
+            .contact textarea:hover {
+            -webkit-transition: border-color 0.3s ease-in-out;
+            -moz-transition: border-color 0.3s ease-in-out;
+            transition: border-color 0.3s ease-in-out;
+            border: 1px solid #aaa;
+            }
+
+            .contact textarea {
+            height: 100px;
+            max-width: 100%;
+            resize: none;
+            }
+
+            .contact button[type="submit"] {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            background: rgba(255, 208, 0, 0.431);
+            color: #000;
+            margin: 5px;
+            padding: 10px;
+            font-size: 15px;
+            }
+
+            .contact button[type="submit"]:hover {
+            transition-duration: 2s;
+            background: rgb(255, 208, 0);
+            }
+
+            .contact button[type="submit"]:active {
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+            }
+
+            .copyright {
+            text-align: center;
+            }
+
+            .contact input:focus,
+            .contact textarea:focus {
+            outline: 0;
+            border: 1px solid #aaa;
+            }
+
+            ::-webkit-input-placeholder {
+            color: #888;
+            }
+
+            :-moz-placeholder {
+            color: #888;
+            }
+
+            ::-moz-placeholder {
+            color: #888;
+            }
+
+            :-ms-input-placeholder {
+            color: #888;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">  
+            <form class="contact" id="review">
+              <h3>Service review</h3>  
+              <br>
+              <h4>Give rating for the service</h4>           
+              <div class="rate" id="star">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="5 Stars">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="4 Stars">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="3 Stars">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="2 Stars">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" checked/>
+                <label for="star1" title="1 Star">1 star</label>
+              </div>
+              <fieldset>
+                <textarea placeholder="Type your review here...." tabindex="5" id="message" required></textarea>
+              </fieldset>
+              <fieldset>
+                <button name="submit" type="submit" class="contact-submit" data-submit="...Sending">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+        
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+        
+          <script src="js/reviewBook.js"></script>
+    </body>
+</html>

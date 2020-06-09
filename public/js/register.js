@@ -73,7 +73,7 @@ signupForm.addEventListener('submit',(e) =>{
               p3: p3,
               KYCtype: KYCtype,
               Kycid: Kycid,
-              Kycstatus: "Pending",
+              Kycstatus: "UPending",
               proimg: url1,
               wallet:0,
               role: "customer",

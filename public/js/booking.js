@@ -21,6 +21,7 @@ auth.onAuthStateChanged(function(user) {
     
     const ulmain=document.querySelector("#ulmain");
     let counter;
+    const search = document.querySelector("#search");
 
     function render(doc){
       if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
@@ -101,7 +102,7 @@ auth.onAuthStateChanged(function(user) {
             db.collection('Cart').doc(xD).set({
               usrid: user.uid,
               bookid: doc.id,
-              bprice: doc.data().bprice
+              bprice: Number(100)
             })
             .then(function() {
               db.collection('Cart').doc('Random').update({
@@ -125,6 +126,17 @@ auth.onAuthStateChanged(function(user) {
     db.collection('Books').get().then((snapshot) => {
       snapshot.docs.forEach(doc => {
         render(doc);
+      })
+    })
+
+    search.addEventListener('submit',(e) => {
+      e.preventDefault(); 
+
+      db.collection('Search').doc('Value').update({
+        srch: search['searchval'].value
+      })
+      .then(function() {
+        window.location='6_newbooking1.html';
       })
     })
   } 

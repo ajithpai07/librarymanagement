@@ -3,7 +3,7 @@
     <head>
         <title>Wallet</title>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/icon type" href="logo_tbar.png">
+        <link rel="icon" type="image/icon type" href="assets/logo_tbar.png">
         <link rel="stylesheet" href="css/css5.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -30,7 +30,7 @@
             <div class="header-menu">
                 <ul>
                     <li><a onclick="logoutfunction()" class="button3">Logout</a></li>
-                    <li><a href="6_cart.html">Booking</a></li>
+                    <li><a href="6_newbooking.html">Booking</a></li>
                     <li class="active"><a href="5_wallet.html">Wallet</a></li>
                     <li><a href="4_2_profilem.html">Profile management</a></li>
                     <li><a href="2_home.html">Home</a></li>
@@ -42,7 +42,7 @@
             <h1>Wallet</h1>
             <h3 id="fld8">Total balance = <span>&#8377</span></h3>
             <br><br>
-            <img src="pay_img2.png">
+            <img src="assets/pay_img2.png">
           </div>
           <br><br><br><br><br><br>      
                  
@@ -63,7 +63,7 @@
                   <div class="exp-container">
                     <label for="card-exp">Expiration</label>
                     <input class="card-month" type="text" id="fld4" placeholder="MM" length="2" required pattern="(00|01|02|03|04|05|06|07|08|09|10|11|12)" title="Sorry, only numbers are allowed with exact length of 2 digits">
-                    <input class="card-year" type="text" id="fld5" placeholder="YY" length="2" required pattern="(2|3|4|5|6|7|8|9){1}[0-9]{1}" title="Sorry, only numbers are allowed with exact length of 2 digits">
+                    <input class="card-year" type="text" id="fld5" placeholder="YYYY" length="4" required pattern="(0|1|2|3|4|5|6|7|8|9){1}[0-9]{3}" title="Sorry, only numbers are allowed with exact length of 2 digits">
                   </div>
                   <div class="cvc-container">
                     <label for="card-cvc"> CVC/CVV</label>
