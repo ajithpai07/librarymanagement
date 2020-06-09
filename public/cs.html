@@ -152,28 +152,30 @@
     </head>
     <body>
         <div class="container">  
-            <form class="contact">
+            <form class="contact" id="support">
               <h3>Customer Support Form</h3>
               <h4>Please explain your problem or feedback</h4>
               <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                <input placeholder="Your name" id="fld1" type="text" tabindex="1" required>
               </fieldset>
               <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                <input placeholder="Your Email Address" id ="fld2" type="email" tabindex="2" required>
               </fieldset>
               <fieldset>
-                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                <input placeholder="subject" type="text" id="fld3" tabindex="3" required>
               </fieldset>
               <fieldset>
-                <input placeholder="Your subject (optional)" type="url" tabindex="4" required>
-              </fieldset>
-              <fieldset>
-                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                <textarea placeholder="Type your message here...." id="fld4" tabindex="4" required></textarea>
               </fieldset>
               <fieldset>
                 <button name="submit" type="submit" class="contact-submit" data-submit="...Sending">Submit</button>
               </fieldset>
             </form>
           </div>
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+        
+          <script src="js/feedBack.js"></script>
     </body>
 </html>
