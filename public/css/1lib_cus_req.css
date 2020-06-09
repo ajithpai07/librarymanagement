@@ -219,6 +219,8 @@ dropdown
     min-height: 150px;
     border: 2px dotted black;
     margin-bottom: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 .query pre{
@@ -226,6 +228,7 @@ dropdown
     color: darkslategray;
     padding: 2px;
     margin-left: 10px;
+
 }
 
 .delete{

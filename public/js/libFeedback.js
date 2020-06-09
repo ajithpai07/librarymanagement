@@ -32,7 +32,7 @@ auth.onAuthStateChanged(function(user) {
             const fld7 = document.createElement('button');
 
             fld1.setAttribute('class','query');
-            fld2.textContent = "REQUEST ID     : "+doc.id;
+            fld2.textContent = "Request ID     : "+doc.id;
             fld3.textContent = "Name           : "+doc.data().name;
             fld4.textContent = "Email          : "+doc.data().email;
             fld5.textContent = "Subject        : "+doc.data().subject;
