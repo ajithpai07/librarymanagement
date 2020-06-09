@@ -46,7 +46,7 @@ auth.onAuthStateChanged(function(user) {
               })
               .then(function() {
                 alert('Thanks for the review!! Hope you enjoyed the service');
-                window.parent.location=".html";
+                window.parent.location="2_home.html";
               })
             })
           })
