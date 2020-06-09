@@ -21,10 +21,11 @@ auth.onAuthStateChanged(function(user) {
     
     const ulmain=document.querySelector("#ulmain");
     let counter;
-    const search = document.querySelector("#search");
+    var search;
+    var help=0;
+    const search1 = document.querySelector("#search");
 
     function render(doc){
-      if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
       const fld1 = document.createElement('li');      
       const fld2 = document.createElement('div');
       const fld3 = document.createElement('p');
@@ -119,25 +120,49 @@ auth.onAuthStateChanged(function(user) {
           )
         })
       })
-
-      }
     }
 
-    db.collection('Books').get().then((snapshot) => {
-      snapshot.docs.forEach(doc => {
-        render(doc);
-      })
+    db.collection('Search').doc('Value').get().then((doc) => {
+        search=doc.data().srch;
+    })
+    .then(function() {
+        db.collection('Books').get().then((snapshot) => {
+            snapshot.docs.forEach(doc => {
+                if(doc.id != "APeHpv6rzI8vRTeF8gPj" && doc.data().bavial==1){
+                    if(doc.data().genre==search){
+                        render(doc);
+                    }
+                    if(doc.data().bname==search){
+                        render(doc);
+                    }
+                    if(doc.data().bauthor==search){
+                        render(doc);
+                    }
+                    if(doc.data().publisher==search){
+                        render(doc);
+                    }
+                    if(doc.data().booktype==search){
+                        render(doc);
+                    }
+                }
+            })
+        })
+        // .then(function() {
+        //     if(help==0)
+        //     alert('No valid search results');
+        //     window.location="6_newbooking.html";
+        // })
     })
 
-    search.addEventListener('submit',(e) => {
-      e.preventDefault(); 
-
-      db.collection('Search').doc('Value').update({
-        srch: search['searchval'].value
-      })
-      .then(function() {
-        window.location='6_newbooking1.html';
-      })
+    search1.addEventListener('submit',(e) => {
+        e.preventDefault(); 
+  
+        db.collection('Search').doc('Value').update({
+          srch: search1['searchval'].value
+        })
+        .then(function() {
+          window.location='6_newbooking1.html';
+        })
     })
   } 
   else {
