@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lib | Bookings</title>
+        <title>Lib | Reviews</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/icon type" href="logo_tbar.png">
-        <link rel="stylesheet" href="css/1lib_bookings.css">
+        <link rel="stylesheet" href="css/1lib_cus_req.css">
+        <style>
+        .checked {
+          color: orange;
+        }
+        .rating{
+            margin-left: 144px;
+            margin-top: -37px;
+            margin-bottom: -9px;
+        }
+        .star{
+          width: 9%;
+        }
+        </style>
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
@@ -25,6 +38,30 @@
           }
         </script>
         <!-- logout script -->
+
+        <style>
+      ::-webkit-scrollbar {
+        height: 9px;
+        width: 0px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: yellowgreen; 
+        border-radius: 10px;
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: green; 
+      }
+        </style>
         
     </head>
     <body>
@@ -37,10 +74,10 @@
                 <ul>
                     <li><a onclick="logoutfunction()" class="button3">Logout</a></li>
                     <li>
-                        <div class="dropdown">                            
-                            <div class="activ">                                
-                                <a>Books</a>
-                            </div>
+                        <div class="dropdown">    
+                            <div class="activ">                 
+                                <a>Books</a>    
+                            </div>                                            
                             <div class="dropdown-content">
                               <a href="1lib_book_show.html">Show books</a>
                               <a href="1lib_manage_books.html">Manage Books</a>
@@ -50,7 +87,7 @@
                           </div> 
                     </li>
                     <li>
-                          <div class="dropdown">                            
+                          <div class="dropdown">                 
                             <a>User management</a>
                             <div class="dropdown-content">
                               <a href="1lib_kyc_verify.html">KYC Verification</a>
@@ -71,35 +108,21 @@
                 </ul>
             </div>
         </div>
-        <div class="main">
-          <h2 class="heading">Bookings</h2>
-          <br><br><br>
-          <table id="tabbody">
-            <tr>
-              <th>Booking ID</th>
-              <th>Booking date</th>
-              <th>Due date</th>
-              <th>Today date</th>
-              <th>User name</th>
-              <th>User email ID</th>
-            </tr>
-          </table>
-
-          
-          <!-- <tr>
-            <td>Sravan</td>
-            <td>18/07/2000</td>
-            <td>503,
-                janatha colony,
-                BLR,
-                560035
-            </td>
-            <td>850085118522</td>
-            <td><button>START</button></td>
-          </tr> -->
-
-          <br><br><br><br>
-
+        <div class="main" id="mainhead">
+            <h2 class="heading">Reviews</h2>
+            <div class="query">
+                <pre>Review ID    :  </pre>
+                <pre>Rating       :  </pre>
+                <div class="rating">         
+                  <!-- <img class="star" src="rating/1s.png">
+                  <img class="star" src="rating/2s.png">
+                  <img class="star" src="rating/3s.png">
+                  <img class="star" src="rating/4s.png"> -->
+                  <img class="star" src="rating/5s.png">
+                </div>
+                <pre>Review       :  </pre>
+                <button class="delete">Delete</button>
+            </div>
         </div>
         <div class="footer">
             <div class="footer-cright">
@@ -111,12 +134,6 @@
               </pre>
             </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
-
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
-    
-        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
-    
-        <script src="js/libBookings.js"></script>
+  </body>
     </body>
 </html>
