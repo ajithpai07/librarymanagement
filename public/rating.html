@@ -193,11 +193,11 @@
     </head>
     <body>
         <div class="container">  
-            <form class="contact">
-              <h3>Book review</h3>  
+            <form class="contact" id="review">
+              <h3>Service review</h3>  
               <br>
-              <h4>Give rating for the book</h4>           
-              <div class="rate">
+              <h4>Give rating for the service</h4>           
+              <div class="rate" id="star">
                 <input type="radio" id="star5" name="rate" value="5" />
                 <label for="star5" title="5 Stars">5 stars</label>
                 <input type="radio" id="star4" name="rate" value="4" />
@@ -210,12 +210,19 @@
                 <label for="star1" title="1 Star">1 star</label>
               </div>
               <fieldset>
-                <textarea placeholder="Type your review here...." tabindex="5" required></textarea>
+                <textarea placeholder="Type your review here...." tabindex="5" id="message" required></textarea>
               </fieldset>
               <fieldset>
                 <button name="submit" type="submit" class="contact-submit" data-submit="...Sending">Submit</button>
               </fieldset>
             </form>
           </div>
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+        
+          <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+        
+          <script src="js/reviewBook.js"></script>
     </body>
 </html>

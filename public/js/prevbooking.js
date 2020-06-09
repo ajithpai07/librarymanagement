@@ -126,7 +126,7 @@ auth.onAuthStateChanged(function(user) {
                         })
                         .then(function() {
                           alert("Returned Successfully!!");
-                          window.location="6_prevbooking.html"
+                          window.location="product_review.html";
                         })
                       }
                       else{
