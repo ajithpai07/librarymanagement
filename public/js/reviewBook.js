@@ -20,14 +20,40 @@ auth.onAuthStateChanged(function(user) {
         console.log(user.uid);
 
         const review = document.querySelector('#review');
-        const rating = document.querySelector('#star')
 
         review.addEventListener('submit',(e) => {
           e.preventDefault();
             
-          const star = rating.value;
+          const star1 = document.querySelector('#star1');          
+          const star2 = document.querySelector('#star2');
+          const star3 = document.querySelector('#star3');
+          const star4 = document.querySelector('#star4');
+          const star5 = document.querySelector('#star5');
+          var star;          
           const message = review['message'].value;
-          
+          if (star5.checked) {
+            star = star5.value;
+          }
+          else{
+            if (star4.checked) {
+              star = star4.value;
+            }
+            else{
+              if (star3.checked) {
+                star = star3.value;
+              }
+              else{
+                if (star2.checked) {
+                  star = star2.value;
+                }
+                else{
+                  if (star1.checked) {
+                    star = star1.value;
+                  }
+                }
+              }
+            }
+          }
           var count;
           var rid;
 
