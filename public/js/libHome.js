@@ -19,10 +19,17 @@ auth.onAuthStateChanged(function(user) {
       // User is signed in. 
       console.log(user.uid);
 
+      var type;
+    
+      db.collection('Users').doc(user.uid).get().then((doc) => {
+        type = doc.data().role;
+      })
+      .then(function() {
+        if(type=="admin"){
         var countv=0;
         var countt=0;
         var cavail=0;
-        var totalb=0;
+        var totalb=-1;
         var a=0;
         var m=0;
         var p=0;
@@ -114,6 +121,12 @@ auth.onAuthStateChanged(function(user) {
                 })
             })
           })
+
+        }
+        else{
+          window.location="3_login.html"
+        }
+      })
     } else {
       // No user is signed in.
       console.log("not signed-in");
