@@ -81,7 +81,7 @@ auth.onAuthStateChanged(function(user) {
                     var user_data1 = google.visualization.arrayToDataTable([
                     ['Task', 'Collect users data'],
                     ['KYC verified users', countv],
-                    ['KYC pending users', countt-countv]
+                    ['KYC pending users', countt-countv-1]
                     ]);
 
                     var book_data = google.visualization.arrayToDataTable([
